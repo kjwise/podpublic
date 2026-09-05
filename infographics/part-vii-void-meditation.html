@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Path of the Dragon: Part VII Infographic</title>
+<script defer="" src="analytics.js"></script>
+<!-- Marked.js -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Crimson+Text:ital,wght@0,400;0,600;1,400&amp;family=Lato:wght@300;400&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --bg-dark: #0c0b0b;
+            --bg-panel: #161514;
+            --text-gold: #c6a655;
+            --text-gold-bright: #eecf76;
+            --text-body: #dcdbd5;
+            --text-dim: #8a8885;
+            --border-gold: #5e4f2b;
+            --nebula: rgba(68, 56, 80, 0.2);
+            --void-black: #000000;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-body);
+            font-family: 'Crimson Text', serif;
+        }
+
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Cinzel', serif;
+        }
+
+        .gold-text {
+            color: var(--text-gold);
+            background: linear-gradient(45deg, #aa893c, #eecf76, #aa893c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            background-clip: text;
+        }
+
+        .panel {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            transition: all 0.3s ease;
+        }
+        
+        .panel:hover {
+            border-color: var(--text-gold);
+            box-shadow: 0 0 20px rgba(198, 166, 85, 0.15);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px rgba(198, 166, 85, 0.3);
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.1; }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-gold); }
+
+        canvas {
+            touch-action: manipulation;
+        }
+        
+        .step-active {
+            border-left: 4px solid #eecf76;
+            background: rgba(238, 207, 118, 0.05);
+        }
+    </style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&amp;family=EB+Garamond:ital,wght@0,400;1,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/><script defer="" src="../infographic-deck-runtime.js?v=19"></script><link href="../infographic-tailwind-utilities.css?v=19" rel="stylesheet"/><link href="../infographic-deck-runtime.css?v=19" rel="stylesheet"/></head>
+<body class="min-h-screen pb-20 relative overflow-x-hidden">
+<!-- Background Nebula Effect -->
+<div class="fixed inset-0 z-0 pointer-events-none">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,var(--nebula)_0%,transparent_70%)] opacity-30"></div>
+<div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(30,40,60,0.2)_0%,transparent_70%)] opacity-30"></div>
+</div>
+<!-- Navbar -->
+<nav class="border-b border-[#333] bg-[#0f0e0d]/90 backdrop-blur-sm py-4 sticky top-0 z-50">
+<div class="max-w-4xl mx-auto flex justify-between items-center px-6">
+<div class="font-display text-xl text-[#c6a655] tracking-widest">PATH OF THE DRAGON</div>
+<div class="hidden md:flex space-x-6 font-display text-xs tracking-widest text-[#8a8885]">
+<a class="opacity-50 hover:opacity-100 hover:text-[#eecf76] transition-colors" href="part-v-the-crucible-of-flesh">PART V</a>
+<a class="opacity-50 hover:opacity-100 hover:text-[#eecf76] transition-colors" href="part-vi-ethics-and-intimacy">PART VI</a>
+<span class="text-[#eecf76]">PART VII</span>
+<a class="opacity-50 hover:opacity-100 hover:text-[#eecf76] transition-colors" href="part-viii-the-unfolding-path">PART VIII</a>
+</div>
+</div>
+</nav>
+<!-- Header -->
+<header class="max-w-3xl mx-auto text-center mt-20 px-6 mb-24 relative z-10">
+<p class="font-display text-sm tracking-[0.3em] text-[#8a8885] mb-4 uppercase">Part VII</p>
+<h1 class="text-5xl md:text-7xl text-[#eecf76] mb-8 glow-text leading-tight">Void<br/>Meditation</h1>
+<p class="text-xl md:text-2xl italic text-[#dcdbd5] opacity-90 leading-relaxed max-w-2xl mx-auto">
+            "The Void is a felt horizon—<br/>what remains when grasping lets go."
+        </p>
+<div class="flex items-center justify-center mt-12 opacity-60">
+<div class="h-px w-16 bg-gradient-to-l from-[#c6a655] to-transparent"></div>
+<div class="mx-4 text-[#c6a655] text-xl">❖</div>
+<div class="h-px w-16 bg-gradient-to-r from-[#c6a655] to-transparent"></div>
+</div>
+</header>
+<!-- 1. The Void Horizon (Singularity) -->
+<section class="max-w-6xl mx-auto px-6 mb-32 relative z-10" data-infographic-section-id="part-vii-void-meditation-section-01-the-event-horizon" data-infographic-selector="#part-vii-void-meditation-section-01-the-event-horizon" data-infographic-source="part-vii-void-meditation.html" data-infographic-status="published" id="part-vii-void-meditation-section-01-the-event-horizon">
+<h2 class="font-display text-3xl text-center text-[#c6a655] mb-4">The Event Horizon</h2>
+<p class="text-center text-[#8a8885] mb-12 text-sm uppercase tracking-widest">Threshold, Not Shutdown</p>
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<!-- Visualization -->
+<div class="panel p-1 relative h-[450px] w-full bg-[#000] flex items-center justify-center overflow-hidden">
+<canvas class="w-full h-full" id="voidCanvas"></canvas>
+<div class="absolute bottom-4 text-center w-full pointer-events-none">
+<span class="text-[#8a8885] text-xs tracking-widest bg-black/50 px-2">THE THRESHOLD</span>
+</div>
+</div>
+<!-- Explanation -->
+<div class="space-y-6">
+<div class="panel p-8 border-l-4 border-l-[#555]">
+<h3 class="font-display text-xl text-[#dcdbd5] mb-2">A Felt Edge, Not A Performance</h3>
+<p class="text-[#8a8885] mb-4">
+                        The event horizon is the felt edge where stillness deepens and familiar identity starts to loosen. The work here is not speed or spectacle. It is restraint: grasping soft enough to loosen, agency intact enough to stop, speak, or step back.
+                    </p>
+<p class="text-[#eecf76] italic text-sm">
+                        "Hold this terrain lightly and seriously at once."
+                    </p>
+</div>
+<div class="p-4 border border-[#5e4f2b] rounded bg-[#1a1816]/50">
+<strong class="block text-[#eecf76] mb-1 font-display text-sm">ENTRY CONDITIONS</strong>
+<p class="text-xs text-[#8a8885]">
+                        The air thins quickly here. Enter only with sobriety, aftercare, and real return capacity. If you cannot re-ground cleanly, this threshold is not the practice for today.
+                    </p>
+</div>
+<div class="p-4 border border-[#333] rounded bg-[#1a1816]/50">
+<strong class="block text-[#f87171] mb-1 font-display text-sm">GUARDIAN AT THE GATE</strong>
+<p class="text-xs text-[#8a8885]">
+                        Awake spaciousness stays clear, choiceful, and connected to the body. Shutdown goes numb, foggy, and less able to choose.<br/>
+                        If the tether thins into gray fog, <strong>STOP</strong>, open your eyes, orient to the room, and return to grounding before interpretation.
+                    </p>
+</div>
+</div>
+</div>
+<script>
+(function () {
+  const script = document.currentScript;
+  const root = script
+    ? script.closest(
+        '[data-infographic-section-id="part-vii-void-meditation-section-01-the-event-horizon"]'
+      )
+    : null;
+  if (!root || root.dataset.voidReady === "1") return;
+  root.dataset.voidReady = "1";
+
+  const canvas = root.querySelector("#voidCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+
+  let particles = [];
+  const numParticles = 200;
+
+  function initParticles() {
+    particles = [];
+    for (let i = 0; i < numParticles; i++) {
+      particles.push({
+        angle: Math.random() * Math.PI * 2,
+        radius: 50 + Math.random() * 300,
+        speed: 0.2 + Math.random() * 0.5,
+        size: Math.random() * 1.5,
+        alpha: Math.random(),
+      });
+    }
+  }
+
+  function resize() {
+    const parent = canvas.parentElement;
+    if (!parent) return;
+    width = Math.max(1, Math.floor(parent.clientWidth));
+    height = Math.max(1, Math.floor(parent.clientHeight));
+    dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    initParticles();
+  }
+
+  window.addEventListener("resize", resize);
+  resize();
+
+  function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+    ctx.fillRect(0, 0, width, height);
+
+    const cx = width / 2;
+    const cy = height / 2;
+
+    particles.forEach((p) => {
+      p.angle += p.speed * 0.02;
+      p.radius -= p.speed * 0.5;
+
+      if (p.radius < 5) {
+        p.radius = 200 + Math.random() * 200;
+        p.alpha = 0;
+      }
+
+      if (p.alpha < 1) p.alpha += 0.01;
+
+      const x = cx + Math.cos(p.angle) * p.radius;
+      const y = cy + Math.sin(p.angle) * p.radius * 0.6;
+
+      ctx.beginPath();
+      ctx.arc(x, y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(238, 207, 118, ${p.alpha * (p.radius / 300)})`;
+      ctx.fill();
+    });
+
+    const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, 40);
+    grad.addColorStop(0, "#000");
+    grad.addColorStop(0.5, "rgba(0,0,0,0.8)");
+    grad.addColorStop(1, "transparent");
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.arc(cx, cy, 40, 0, Math.PI * 2);
+    ctx.fill();
+
+    requestAnimationFrame(draw);
+  }
+
+  requestAnimationFrame(draw);
+})();
+</script>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-vii-void-meditation-section-01-the-event-horizon</div></section>
+<!-- 2. The Six-Phase Plunge (Scroller) -->
+<section class="max-w-4xl mx-auto px-6 mb-32 relative z-10" data-infographic-section-id="part-vii-void-meditation-section-02-the-dragons-plunge" data-infographic-selector="#part-vii-void-meditation-section-02-the-dragons-plunge" data-infographic-source="part-vii-void-meditation.html" data-infographic-status="published" id="part-vii-void-meditation-section-02-the-dragons-plunge">
+<h2 class="font-display text-3xl text-center text-[#c6a655] mb-4">The Dragon's Plunge</h2>
+<p class="text-center text-[#8a8885] mb-12 text-sm uppercase tracking-widest">Six Phases of Approach and Return</p>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Navigation -->
+<div class="md:col-span-1 space-y-2" id="plungeNav">
+<button class="p-4 cursor-pointer text-[#8a8885] hover:text-[#dcdbd5] transition-all step-active w-full text-left" data-phase-index="0" data-role="plunge-step" type="button">1. ANCHORING</button>
+<button class="p-4 cursor-pointer text-[#8a8885] hover:text-[#dcdbd5] transition-all w-full text-left" data-phase-index="1" data-role="plunge-step" type="button">2. IGNITING</button>
+<button class="p-4 cursor-pointer text-[#8a8885] hover:text-[#dcdbd5] transition-all w-full text-left" data-phase-index="2" data-role="plunge-step" type="button">3. ASCENT</button>
+<button class="p-4 cursor-pointer text-[#8a8885] hover:text-[#dcdbd5] transition-all w-full text-left" data-phase-index="3" data-role="plunge-step" type="button">4. THRESHOLD</button>
+<button class="p-4 cursor-pointer text-[#8a8885] hover:text-[#dcdbd5] transition-all w-full text-left" data-phase-index="4" data-role="plunge-step" type="button">5. IMMERSION</button>
+<button class="p-4 cursor-pointer text-[#8a8885] hover:text-[#dcdbd5] transition-all w-full text-left" data-phase-index="5" data-role="plunge-step" type="button">6. RETURN</button>
+<div class="mt-6 p-4 border border-[#5e4f2b] rounded bg-[#161514]/70">
+<strong class="block text-[#eecf76] mb-2 font-display text-sm">ENTRY REQUIREMENTS</strong>
+<p class="text-xs text-[#8a8885] leading-relaxed">
+                        Sobriety, aftercare, and the ability to stop cleanly and re-ground within 2 minutes.
+                    </p>
+</div>
+</div>
+<!-- Content Display -->
+<div class="md:col-span-2 panel p-8 flex flex-col justify-center min-h-[300px] transition-all" id="plungeContent">
+<!-- Content injected via JS -->
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-4 mt-6">
+<div class="border border-[#333] rounded bg-[#141312] p-4">
+<strong class="block text-[#dcdbd5] text-sm font-display mb-2">Guardian At The Gate</strong>
+<p class="text-xs text-[#8a8885] leading-relaxed">If stillness turns foggy, numb, paralyzed, or less choiceful, stop. Return to grounding before deciding what happened.</p>
+</div>
+<div class="border border-[#333] rounded bg-[#141312] p-4">
+<strong class="block text-[#dcdbd5] text-sm font-display mb-2">Return Is Mandatory</strong>
+<p class="text-xs text-[#8a8885] leading-relaxed">The return is not an optional epilogue. It is the most critical phase of the protocol.</p>
+</div>
+<div class="border border-[#333] rounded bg-[#141312] p-4">
+<strong class="block text-[#dcdbd5] text-sm font-display mb-2">Stop For The Day</strong>
+<p class="text-xs text-[#8a8885] leading-relaxed">If the tether breaks, descend, lock into grounding, and do not continue the practice that day.</p>
+</div>
+</div>
+<script>
+(function () {
+  const script = document.currentScript;
+  const root = script
+    ? script.closest(
+        '[data-infographic-section-id="part-vii-void-meditation-section-02-the-dragons-plunge"]'
+      )
+    : null;
+  if (!root || root.dataset.plungeReady === "1") return;
+  root.dataset.plungeReady = "1";
+
+  const steps = Array.from(root.querySelectorAll('[data-role="plunge-step"]'));
+  const content = root.querySelector("#plungeContent");
+  if (!content || !steps.length) return;
+
+  const phases = [
+    {
+      title: "ANCHORING",
+      sub: "The Form Body",
+      desc: "Center attention at the base of the spine. Feel one unmistakable anchor: hips, feet, hands, or breath. Do not proceed until something concrete registers.<br><br><em>I am held. I am solid. I am here.</em>",
+    },
+    {
+      title: "IGNITING",
+      sub: "The Eros Body",
+      desc: "Let the Serpent stir inside the Dragon's container. Warmth rises through pelvis, belly, heart, throat, and sight. If the current turns unsteady or dizzy, descend and stop there for today.<br><br><em>Inhale warmth, exhale tension.</em>",
+    },
+    {
+      title: "ASCENT",
+      sub: "Soul & Archetypal",
+      desc: "The personal self softens from container into open sky. Archetypal vastness may widen the field, but the tether must stay clear: body weight, root, and lungs still reachable from here.",
+    },
+    {
+      title: "THRESHOLD",
+      sub: "Event Horizon",
+      desc: "Approach the shimmering edge where story, archetype, and name begin to thin. Let fear bow without letting it steer. If fear is too strong, thank the threshold and descend.<br><br><em>If you are ready, surrender without force.</em>",
+    },
+    {
+      title: "IMMERSION",
+      sub: "Toward the Void Through the Void Body",
+      desc: "Release the image and let the breath breathe itself. Crossing here is not into blankness but into a fullness too quiet for object or name. If words return, let them stay provisional.",
+    },
+    {
+      title: "RETURN",
+      sub: "Re-Embodiment",
+      desc: "This is the most critical phase. Intend to return to form, descend through the centers, lock into the root, feel gravity, wiggle toes, rub palms, and name three objects immediately.",
+    },
+  ];
+
+  function setPhase(index) {
+    const i = Math.max(0, Math.min(phases.length - 1, index));
+    steps.forEach((step, stepIndex) => {
+      const isActive = stepIndex === i;
+      step.classList.toggle("step-active", isActive);
+      step.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+
+    const p = phases[i];
+    content.style.opacity = "0";
+
+    window.setTimeout(() => {
+      content.innerHTML = `
+        <h3 class="font-display text-3xl text-[#eecf76] mb-2">${p.title}</h3>
+        <span class="text-xs text-[#c6a655] tracking-widest uppercase block mb-6">${p.sub}</span>
+        <p class="text-[#dcdbd5] text-lg leading-relaxed">${p.desc}</p>
+      `;
+      content.style.opacity = "1";
+    }, 200);
+  }
+
+  steps.forEach((step) => {
+    step.addEventListener("click", () => {
+      const idx = Number.parseInt(step.dataset.phaseIndex || "0", 10);
+      if (!Number.isFinite(idx)) return;
+      setPhase(idx);
+    });
+  });
+
+  setPhase(0);
+})();
+</script>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-vii-void-meditation-section-02-the-dragons-plunge</div></section>
+<!-- 3. The Fractal Mind -->
+<section class="max-w-4xl mx-auto px-6 mb-32 relative z-10 text-center" data-infographic-section-id="part-vii-void-meditation-section-03-the-grand-fractal" data-infographic-selector="#part-vii-void-meditation-section-03-the-grand-fractal" data-infographic-source="part-vii-void-meditation.html" data-infographic-status="published" id="part-vii-void-meditation-section-03-the-grand-fractal">
+<h2 class="font-display text-3xl text-[#c6a655] mb-4">The Grand Fractal</h2>
+<p class="text-[#8a8885] mb-8 text-sm uppercase tracking-widest">Glimpses, Not Maps</p>
+<div class="panel p-1 relative h-[400px] w-full bg-[#080808] overflow-hidden flex items-center justify-center mx-auto mb-8">
+<canvas class="w-full h-full" id="fractalCanvas"></canvas>
+</div>
+<div class="grid md:grid-cols-2 gap-6 text-left">
+<div class="panel p-6">
+<p class="text-[#dcdbd5] leading-relaxed">
+                The Grand Fractal is a symbolic lens for the patterned realm: an ever-deepening fold of possibility, the luminous weaving of what could take form. Its value is not in proving a cosmology, but in loosening literalism enough for the image to breathe.
+            </p>
+</div>
+<div class="panel p-6 border-[#5e4f2b]">
+<strong class="block text-[#eecf76] mb-2 font-display text-sm">READ FROM THE SHORE</strong>
+<p class="text-sm text-[#8a8885] leading-relaxed">
+                Keep one clear body anchor closer than interpretation. If stillness turns numb, foggy, or less choiceful, stop following the image and return to grounding. The Void speaks in silence; interpretation should stay provisional.
+            </p>
+</div>
+</div>
+<script>
+(function () {
+  const script = document.currentScript;
+  const root = script
+    ? script.closest(
+        '[data-infographic-section-id="part-vii-void-meditation-section-03-the-grand-fractal"]'
+      )
+    : null;
+  if (!root || root.dataset.fractalReady === "1") return;
+  root.dataset.fractalReady = "1";
+
+  const canvas = root.querySelector("#fractalCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+  let t = 0;
+
+  function resize() {
+    const parent = canvas.parentElement;
+    if (!parent) return;
+    width = Math.max(1, Math.floor(parent.clientWidth));
+    height = Math.max(1, Math.floor(parent.clientHeight));
+    dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  window.addEventListener("resize", resize);
+  resize();
+
+  function drawFractal(x, y, size, angle, depth) {
+    if (depth === 0) return;
+
+    const x2 = x + Math.cos(angle) * size;
+    const y2 = y + Math.sin(angle) * size;
+
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x2, y2);
+    ctx.strokeStyle = `rgba(238, 207, 118, ${depth / 6})`;
+    ctx.lineWidth = depth * 0.5;
+    ctx.stroke();
+
+    const newSize = size * 0.7;
+    drawFractal(x2, y2, newSize, angle - 0.5 + Math.sin(t) * 0.1, depth - 1);
+    drawFractal(x2, y2, newSize, angle + 0.5 + Math.cos(t) * 0.1, depth - 1);
+  }
+
+  function draw() {
+    ctx.fillStyle = "rgba(0,0,0,0.2)";
+    ctx.fillRect(0, 0, width, height);
+
+    t += 0.01;
+
+    const cx = width / 2;
+    const cy = height / 2 + 50;
+
+    drawFractal(cx, cy + 100, 80, -Math.PI / 2, 7);
+    drawFractal(cx, cy - 100, 80, Math.PI / 2, 7);
+
+    requestAnimationFrame(draw);
+  }
+
+  requestAnimationFrame(draw);
+})();
+</script>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-vii-void-meditation-section-03-the-grand-fractal</div></section>
+<!-- 4. Integration Compass -->
+<section class="max-w-5xl mx-auto px-6 mb-32 relative z-10" data-infographic-section-id="part-vii-void-meditation-section-04-living-from-the-void" data-infographic-selector="#part-vii-void-meditation-section-04-living-from-the-void" data-infographic-source="part-vii-void-meditation.html" data-infographic-status="published" id="part-vii-void-meditation-section-04-living-from-the-void">
+<h2 class="font-display text-3xl text-center text-[#c6a655] mb-4">Living from the Void</h2>
+<p class="text-center text-[#8a8885] mb-12 text-sm uppercase tracking-widest">Return, Ethics, Ordinary Life</p>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="panel p-6 hover:border-[#eecf76] transition-colors group cursor-default">
+<div class="w-12 h-12 rounded-full border border-[#5e4f2b] flex items-center justify-center mb-4 group-hover:bg-[#5e4f2b] transition-colors">
+<span class="font-display text-[#eecf76] text-xl">S</span>
+</div>
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2">Serene Center</h3>
+<p class="text-sm text-[#8a8885]">
+                    Feet, breath, a clear yes/no.
+                    <br/><br>
+<span class="italic text-xs">The anchor for return is grounded enough that vastness can pass through without carrying you away.</span>
+</br></p>
+</div>
+<div class="panel p-6 hover:border-[#eecf76] transition-colors group cursor-default">
+<div class="w-12 h-12 rounded-full border border-[#5e4f2b] flex items-center justify-center mb-4 group-hover:bg-[#5e4f2b] transition-colors">
+<span class="font-display text-[#eecf76] text-xl">B</span>
+</div>
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2">Boundary</h3>
+<p class="text-sm text-[#8a8885]">
+                    "I can do Friday; tonight I'm at capacity."
+                    <br/><br/>
+<span class="italic text-xs">The quieter center gives you a cleaner yes, no, or not yet.</span>
+</p>
+</div>
+<div class="panel p-6 hover:border-[#eecf76] transition-colors group cursor-default">
+<div class="w-12 h-12 rounded-full border border-[#5e4f2b] flex items-center justify-center mb-4 group-hover:bg-[#5e4f2b] transition-colors">
+<span class="font-display text-[#eecf76] text-xl">R</span>
+</div>
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2">Repair</h3>
+<p class="text-sm text-[#8a8885]">
+                    "I’m sorry for my tone. Can we restart?"
+                    <br/><br/>
+<span class="italic text-xs">True contact sharpens repair, consequence, and relational honesty.</span>
+</p>
+</div>
+<div class="panel p-6 hover:border-[#eecf76] transition-colors group cursor-default">
+<div class="w-12 h-12 rounded-full border border-[#5e4f2b] flex items-center justify-center mb-4 group-hover:bg-[#5e4f2b] transition-colors">
+<span class="font-display text-[#eecf76] text-xl">O</span>
+</div>
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2">Oneness Shadow</h3>
+<p class="text-sm text-[#8a8885]">
+                    Unity never negates sovereignty.
+                    <br/><br/>
+<span class="italic text-xs">If non-duality makes you less choiceful, less relational, or less empathetic, pause advanced work and return to grounding.</span>
+</p>
+</div>
+</div>
+<div class="mt-8 panel p-6 text-center">
+<p class="text-[#dcdbd5]">
+                These are not rituals of elevation. They are proofs of return.
+            </p>
+<p class="text-[#8a8885] text-sm mt-3">
+                Let ordinary life test what was real: timing, boundary, repair, and one coherent action.
+            </p>
+</div>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-vii-void-meditation-section-04-living-from-the-void</div></section>
+<!-- Footer -->
+<footer class="text-center py-20 px-6 border-t border-[#1a1816] bg-[#080808]">
+<div class="max-w-2xl mx-auto">
+<div class="mb-8 opacity-40">
+<svg class="mx-auto w-12 h-12 text-[#c6a655]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+</svg>
+</div>
+<p class="font-display text-2xl text-[#eecf76] mb-4">"What matters is whether it returns with you."</p>
+<p class="text-[#5e4f2b] text-sm tracking-widest uppercase">Path of the Dragon</p>
+<a aria-label="Go to the beginning of Part VII" class="inline-flex items-center justify-center mt-6 px-5 py-2 border border-[#5e4f2b] text-[#eecf76] text-xs tracking-[0.22em] uppercase hover:bg-[#161514] transition-colors duration-300" href="../void-meditation">
+                Read Part VII From The Beginning
+            </a>
+</div>
+</footer>
+</body>
+</html>

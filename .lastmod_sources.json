@@ -1,0 +1,655 @@
+{
+  "build": {
+    "complete": true
+  },
+  "pages": {
+    "404.html": [
+      "web/frontmatter/404.md"
+    ],
+    "acknowledgments.html": [
+      "web/frontmatter/acknowledgments.md"
+    ],
+    "appendices.html": [
+      "book/parts/10_Appendices/060_01_glossary_of_archetypes.md"
+    ],
+    "archetype-portals.html": [
+      "book/parts/03_PartIII_ArchetypePortals/018_01_archetypal_pathways.md"
+    ],
+    "blogs/anxiety-as-signal-reading-the-nervous-system-dashboard.html": [
+      "web/blogs/your_anxiety_is_a_dashboard_not_a_disease.md"
+    ],
+    "blogs/are-you-dating-your-past-attachment-archetypes-and-somatic-memory.html": [
+      "web/blogs/are_you_dating_your_past.md"
+    ],
+    "blogs/awakening-the-dragon-a-compass-for-the-soul.html": [
+      "web/blogs/awakening_the_dragon.md"
+    ],
+    "blogs/beyond-love-and-light-transformation-demands-a-dance-with-destruction.html": [
+      "web/blogs/the_alchemical_fire.md"
+    ],
+    "blogs/clutter-is-postponed-integration.html": [
+      "web/blogs/clutter_is_postponed_integration.md"
+    ],
+    "blogs/containment-vs-vibes.html": [
+      "web/blogs/containment_vs_vibes.md"
+    ],
+    "blogs/depression-reframed-when-the-fire-goes-underground.html": [
+      "web/blogs/depression_reframed.md"
+    ],
+    "blogs/dialogue-with-the-mirrored-dragon-the-ethics-of-resonant-coherence.html": [
+      "web/blogs/dialogue_with_the_mirrored_dragon.md"
+    ],
+    "blogs/forged-peace.html": [
+      "web/blogs/forged_peace.md"
+    ],
+    "blogs/in-an-age-of-gurus-your-true-north-is-within.html": [
+      "web/blogs/your_true_north_is_within.md"
+    ],
+    "blogs/index.html": [
+      "web/blogs/are_you_dating_your_past.md",
+      "web/blogs/awakening_the_dragon.md",
+      "web/blogs/clutter_is_postponed_integration.md",
+      "web/blogs/containment_vs_vibes.md",
+      "web/blogs/depression_reframed.md",
+      "web/blogs/dialogue_with_the_mirrored_dragon.md",
+      "web/blogs/forged_peace.md",
+      "web/blogs/money_as_energy_from_extraction_to_circulation.md",
+      "web/blogs/parasitic_vs_symbiotic.md",
+      "web/blogs/raising_dragons_how_to_parent_without_crushing_the_serpent.md",
+      "web/blogs/red_flag_anatomy_deconstructing_magic_without_boundaries.md",
+      "web/blogs/saying_yes_to_the_universe_with_discernment.md",
+      "web/blogs/state_before_story_and_the_fundamental_attribution_error.md",
+      "web/blogs/stop_slaying_the_beast.md",
+      "web/blogs/ten_ways_we_try_to_outrank_reality.md",
+      "web/blogs/the_alchemical_fire.md",
+      "web/blogs/the_armor_of_normal_a_dragon_s_guide_to_unmasking.md",
+      "web/blogs/the_art_of_the_clean_fight_ethics_for_the_heat_of_the_moment.md",
+      "web/blogs/the_digital_horcrux.md",
+      "web/blogs/the_dragon_guards_the_lover.md",
+      "web/blogs/the_dragon_synthesis_the_hidden_physics_of_embodied_awakening.md",
+      "web/blogs/the_dragons_echo.md",
+      "web/blogs/the_end_of_healing_as_identity_from_survivor_to_architect.md",
+      "web/blogs/the_engine_of_your_reality.md",
+      "web/blogs/the_erased_ally.md",
+      "web/blogs/the_ethical_toolkit.md",
+      "web/blogs/the_ethics_of_scaling_coherence.md",
+      "web/blogs/the_geometry_of_awakening.md",
+      "web/blogs/the_ghost_in_the_blood_distinguishing_your_shadow_from_your_ancestry.md",
+      "web/blogs/the_glitch_in_the_veil.md",
+      "web/blogs/the_god_realm_delusion.md",
+      "web/blogs/the_golden_armor_spiritual_superiority.md",
+      "web/blogs/the_iterated_self_you_are_a_function_not_a_constant.md",
+      "web/blogs/the_nation_as_embodied_archetype.md",
+      "web/blogs/the_neurodivergent_archetype.md",
+      "web/blogs/the_physics_of_trust_game_theory_and_the_nash_equilibrium_of_care.md",
+      "web/blogs/the_sacred_contraction.md",
+      "web/blogs/the_sacred_pause_why_urgency_is_a_trauma_response.md",
+      "web/blogs/the_sandcastle_at_the_edge_of_chaos.md",
+      "web/blogs/the_source_code_of_the_soul.md",
+      "web/blogs/the_terror_of_the_pause_why_we_doomscroll_to_avoid_the_void.md",
+      "web/blogs/the_wolf_in_the_temple.md",
+      "web/blogs/the_wound_that_breaks_the_ouroboros.md",
+      "web/blogs/when_initiation_outruns_integration_ista_wild_love_and_the_crash_after_intensity.md",
+      "web/blogs/when_the_island_becomes_the_room.md",
+      "web/blogs/when_the_serpent_is_sleeping_the_spirituality_of_numbness.md",
+      "web/blogs/why_the_workshop_high_crashes_intensity_belonging_and_the_return_to_ordinary_life.md",
+      "web/blogs/why_you_hate_your_hero.md",
+      "web/blogs/why_your_intrusive_thoughts_are_not_manifestations.md",
+      "web/blogs/you_are_becoming.md",
+      "web/blogs/you_are_not_who_you_think_you_are.md",
+      "web/blogs/your_anxiety_is_a_dashboard_not_a_disease.md",
+      "web/blogs/your_body_the_cosmos.md",
+      "web/blogs/your_cognitive_architecture_as_spiritual_gateway.md",
+      "web/blogs/your_nervous_system_is_your_soul_s_compass.md",
+      "web/blogs/your_true_north_is_within.md"
+    ],
+    "blogs/raising-dragons-how-to-parent-without-crushing-the-serpent.html": [
+      "web/blogs/raising_dragons_how_to_parent_without_crushing_the_serpent.md"
+    ],
+    "blogs/red-flag-anatomy-deconstructing-magic-without-boundaries.html": [
+      "web/blogs/red_flag_anatomy_deconstructing_magic_without_boundaries.md"
+    ],
+    "blogs/state-before-story-and-the-fundamental-attribution-error.html": [
+      "web/blogs/state_before_story_and_the_fundamental_attribution_error.md"
+    ],
+    "blogs/stop-slaying-the-beast-why-the-heros-journey-is-burnout-and-the-dragons-path-is-wholeness.html": [
+      "web/blogs/stop_slaying_the_beast.md"
+    ],
+    "blogs/ten-ways-we-try-to-outrank-reality.html": [
+      "web/blogs/ten_ways_we_try_to_outrank_reality.md"
+    ],
+    "blogs/the-armor-of-normal-a-dragons-guide-to-unmasking.html": [
+      "web/blogs/the_armor_of_normal_a_dragon_s_guide_to_unmasking.md"
+    ],
+    "blogs/the-art-of-the-clean-fight-ethics-for-the-heat-of-the-moment.html": [
+      "web/blogs/the_art_of_the_clean_fight_ethics_for_the_heat_of_the_moment.md"
+    ],
+    "blogs/the-digital-horcrux-why-consciousness-cant-be-cloned.html": [
+      "web/blogs/the_digital_horcrux.md"
+    ],
+    "blogs/the-dragon-guards-the-lover-why-sovereignty-must-precede-connection.html": [
+      "web/blogs/the_dragon_guards_the_lover.md"
+    ],
+    "blogs/the-dragon-in-a-different-skin-neurodivergence-as-archetype.html": [
+      "web/blogs/the_neurodivergent_archetype.md"
+    ],
+    "blogs/the-dragon-synthesis-the-hidden-physics-of-embodied-awakening.html": [
+      "web/blogs/the_dragon_synthesis_the_hidden_physics_of_embodied_awakening.md"
+    ],
+    "blogs/the-dragons-echo-the-seven-ancient-laws-shaping-your-reality.html": [
+      "web/blogs/the_dragons_echo.md"
+    ],
+    "blogs/the-dragons-yes-saying-yes-with-embodied-discernment.html": [
+      "web/blogs/saying_yes_to_the_universe_with_discernment.md"
+    ],
+    "blogs/the-end-of-drama.html": [
+      "web/blogs/the_ethical_toolkit.md"
+    ],
+    "blogs/the-end-of-healing-as-identity-from-survivor-to-architect.html": [
+      "web/blogs/the_end_of_healing_as_identity_from_survivor_to_architect.md"
+    ],
+    "blogs/the-engine-of-your-reality-why-reinforcement-becomes-fate-or-path.html": [
+      "web/blogs/the_engine_of_your_reality.md"
+    ],
+    "blogs/the-erased-ally-sovereignty-in-the-shadow-of-replacement.html": [
+      "web/blogs/the_erased_ally.md"
+    ],
+    "blogs/the-ethics-of-scaling-coherence.html": [
+      "web/blogs/the_ethics_of_scaling_coherence.md"
+    ],
+    "blogs/the-geometry-of-awakening-from-ouroboros-to-hologram.html": [
+      "web/blogs/the_geometry_of_awakening.md"
+    ],
+    "blogs/the-ghost-in-the-blood-distinguishing-your-shadow-from-your-ancestry.html": [
+      "web/blogs/the_ghost_in_the_blood_distinguishing_your_shadow_from_your_ancestry.md"
+    ],
+    "blogs/the-glitch-in-the-veil-interface-theory-the-serpent-and-the-sacred-wound.html": [
+      "web/blogs/the_glitch_in_the_veil.md"
+    ],
+    "blogs/the-god-realm-delusion-when-the-sage-wears-a-shadow.html": [
+      "web/blogs/the_god_realm_delusion.md"
+    ],
+    "blogs/the-golden-armor-when-spirituality-becomes-separation.html": [
+      "web/blogs/the_golden_armor_spiritual_superiority.md"
+    ],
+    "blogs/the-hidden-costs-of-incentives.html": [
+      "web/blogs/money_as_energy_from_extraction_to_circulation.md"
+    ],
+    "blogs/the-iterated-self-you-are-a-function-not-a-constant.html": [
+      "web/blogs/the_iterated_self_you_are_a_function_not_a_constant.md"
+    ],
+    "blogs/the-nation-as-embodied-archetype-shared-values-and-sovereign-borders.html": [
+      "web/blogs/the_nation_as_embodied_archetype.md"
+    ],
+    "blogs/the-physics-of-trust-game-theory-and-the-nash-equilibrium-of-care.html": [
+      "web/blogs/the_physics_of_trust_game_theory_and_the_nash_equilibrium_of_care.md"
+    ],
+    "blogs/the-retreat-crash-intensity-belonging-and-re-entry.html": [
+      "web/blogs/why_the_workshop_high_crashes_intensity_belonging_and_the_return_to_ordinary_life.md"
+    ],
+    "blogs/the-sacred-contraction-why-falling-apart-is-part-of-becoming-whole.html": [
+      "web/blogs/the_sacred_contraction.md"
+    ],
+    "blogs/the-sacred-pause-why-urgency-is-a-trauma-response.html": [
+      "web/blogs/the_sacred_pause_why_urgency_is_a_trauma_response.md"
+    ],
+    "blogs/the-sandcastle-at-the-edge-of-chaos.html": [
+      "web/blogs/the_sandcastle_at_the_edge_of_chaos.md"
+    ],
+    "blogs/the-source-code-of-the-soul-why-archetypes-are-not-metaphors-but-mechanics.html": [
+      "web/blogs/the_source_code_of_the_soul.md"
+    ],
+    "blogs/the-terror-of-the-pause-why-we-doomscroll-to-avoid-the-void.html": [
+      "web/blogs/the_terror_of_the_pause_why_we_doomscroll_to_avoid_the_void.md"
+    ],
+    "blogs/the-vampire-in-the-temple-discerning-symbiotic-vs-parasitic-relationships.html": [
+      "web/blogs/parasitic_vs_symbiotic.md"
+    ],
+    "blogs/the-wolf-in-the-temple-why-narcissism-thrives-in-spiritual-spaces.html": [
+      "web/blogs/the_wolf_in_the_temple.md"
+    ],
+    "blogs/the-wound-that-breaks-the-ouroboros.html": [
+      "web/blogs/the_wound_that_breaks_the_ouroboros.md"
+    ],
+    "blogs/void-meditation-and-the-embodied-cosmos-you-are-the-gateway.html": [
+      "web/blogs/your_body_the_cosmos.md"
+    ],
+    "blogs/when-initiation-outruns-integration-ista-wild-love-and-the-crash-after-intensity.html": [
+      "web/blogs/when_initiation_outruns_integration_ista_wild_love_and_the_crash_after_intensity.md"
+    ],
+    "blogs/when-the-island-becomes-the-room-intimacy-erasure-and-the-ethics-of-micro-societies.html": [
+      "web/blogs/when_the_island_becomes_the_room.md"
+    ],
+    "blogs/when-the-serpent-is-sleeping-the-spirituality-of-numbness.html": [
+      "web/blogs/when_the_serpent_is_sleeping_the_spirituality_of_numbness.md"
+    ],
+    "blogs/why-you-hate-your-hero-unpacking-jealousy-as-a-golden-shadow.html": [
+      "web/blogs/why_you_hate_your_hero.md"
+    ],
+    "blogs/why-your-intrusive-thoughts-are-not-manifestations.html": [
+      "web/blogs/why_your_intrusive_thoughts_are_not_manifestations.md"
+    ],
+    "blogs/you-are-not-who-you-think-you-are.html": [
+      "web/blogs/you_are_not_who_you_think_you_are.md"
+    ],
+    "blogs/you-were-never-too-much-you-were-becoming.html": [
+      "web/blogs/you_are_becoming.md"
+    ],
+    "blogs/your-cognitive-architecture-as-spiritual-gateway-mapping-the-16-types-to-the-dragons-path.html": [
+      "web/blogs/your_cognitive_architecture_as_spiritual_gateway.md"
+    ],
+    "blogs/your-nervous-system-is-your-souls-compass.html": [
+      "web/blogs/your_nervous_system_is_your_soul_s_compass.md"
+    ],
+    "chapter-1-awakening-the-dragon.html": [
+      "book/parts/01_PartI_Introduction/003_02_awakening_the_dragon.md"
+    ],
+    "chapter-10-graphs-of-reality.html": [
+      "book/parts/02_PartII_The_Entangled_Firmament/013_07_graphs_of_reality.md"
+    ],
+    "chapter-11-the-limits-of-logic.html": [
+      "book/parts/02_PartII_The_Entangled_Firmament/014_08_the_limits_of_logic.md"
+    ],
+    "chapter-12-the-two-minds-within-the-bridge-of-perception.html": [
+      "book/parts/02_PartII_The_Entangled_Firmament/015_09_two_minds_the_bridge_of_perception.md"
+    ],
+    "chapter-13-weaving-wisdom-into-action.html": [
+      "book/parts/02_PartII_The_Entangled_Firmament/016_10_weaving_wisdom_into_action.md"
+    ],
+    "chapter-14-scientific-pathways.html": [
+      "book/parts/02_PartII_The_Entangled_Firmament/017_11_scientific_pathways.md"
+    ],
+    "chapter-15-the-shadow-threshold.html": [
+      "book/parts/03_PartIII_ArchetypePortals/019_02_the_shadow_threshold.md"
+    ],
+    "chapter-16-the-relational-dynamic.html": [
+      "book/parts/03_PartIII_ArchetypePortals/020_03_the_relational_dynamic.md"
+    ],
+    "chapter-17-archetypes-of-action.html": [
+      "book/parts/03_PartIII_ArchetypePortals/021_04_archetypes_of_action.md"
+    ],
+    "chapter-18-mirrors-of-action-and-integration.html": [
+      "book/parts/03_PartIII_ArchetypePortals/022_05_mirrors_of_action_and_integration.md"
+    ],
+    "chapter-19-reclaiming-your-innocence.html": [
+      "book/parts/04_PartIV_Embodied_Practices/024_02_reclaiming_your_innocence.md"
+    ],
+    "chapter-2-core-principles.html": [
+      "book/parts/01_PartI_Introduction/004_03_core_principles.md"
+    ],
+    "chapter-20-pearls-in-the-abyss.html": [
+      "book/parts/04_PartIV_Embodied_Practices/025_03_pearls_in_the_abyss.md"
+    ],
+    "chapter-21-the-forge-of-eros-desire-shadow-and-sovereign-relation.html": [
+      "book/parts/04_PartIV_Embodied_Practices/026_04_the_forge_of_eros_sacred_sexuality_kink_and_transgression.md"
+    ],
+    "chapter-22-structure-and-flow.html": [
+      "book/parts/04_PartIV_Embodied_Practices/027_05_structure_and_flow.md"
+    ],
+    "chapter-23-the-dragons-circuitry.html": [
+      "book/parts/05_PartV_Body_Neurons_Chemicals/029_02_the_dragon_s_circuitry.md"
+    ],
+    "chapter-24-spectrum-of-diverse-minds.html": [
+      "book/parts/05_PartV_Body_Neurons_Chemicals/030_03_spectrum_of_diverse_minds.md"
+    ],
+    "chapter-25-cellular-echoes-of-the-flesh.html": [
+      "book/parts/05_PartV_Body_Neurons_Chemicals/031_04_cellular_echoes_of_the_flesh.md"
+    ],
+    "chapter-26-the-gravity-of-craving.html": [
+      "book/parts/05_PartV_Body_Neurons_Chemicals/032_05_the_gravity_of_craving.md"
+    ],
+    "chapter-27-tides-of-the-flesh.html": [
+      "book/parts/05_PartV_Body_Neurons_Chemicals/033_06_tides_of_the_flesh.md"
+    ],
+    "chapter-28-the-souls-armor.html": [
+      "book/parts/05_PartV_Body_Neurons_Chemicals/034_07_the_soul_s_armor.md"
+    ],
+    "chapter-29-the-alchemical-body.html": [
+      "book/parts/05_PartV_Body_Neurons_Chemicals/035_08_the_alchemical_body.md"
+    ],
+    "chapter-3-primal-and-transcendent.html": [
+      "book/parts/01_PartI_Introduction/005_04_primal_transcendent.md"
+    ],
+    "chapter-30-psychedelics-potentials-and-perils.html": [
+      "book/parts/05_PartV_Body_Neurons_Chemicals/036_09_psychedelics_potentials_perils.md"
+    ],
+    "chapter-31-the-embodied-anchor.html": [
+      "book/parts/05_PartV_Body_Neurons_Chemicals/037_10_the_embodied_anchor.md"
+    ],
+    "chapter-32-the-ethical-shadow.html": [
+      "book/parts/06_PartVI_Ethics/039_02_the_ethical_shadow.md"
+    ],
+    "chapter-33-the-steward-of-fire.html": [
+      "book/parts/06_PartVI_Ethics/040_03_the_steward_of_fire.md"
+    ],
+    "chapter-34-tools-for-the-path.html": [
+      "book/parts/06_PartVI_Ethics/041_04_tools_for_the_path.md"
+    ],
+    "chapter-35-significance-of-the-void.html": [
+      "book/parts/07_PartVII_VoidMeditation/043_02_significance_of_the_void.md"
+    ],
+    "chapter-36-visions-of-the-void.html": [
+      "book/parts/07_PartVII_VoidMeditation/044_03_visions_of_the_void.md"
+    ],
+    "chapter-37-steps-into-infinity-the-dragons-plunge.html": [
+      "book/parts/07_PartVII_VoidMeditation/045_04_steps_into_infinity_the_dragon_s_plunge.md"
+    ],
+    "chapter-38-living-from-the-void.html": [
+      "book/parts/07_PartVII_VoidMeditation/046_05_living_from_the_void.md"
+    ],
+    "chapter-39-beyond-duality-reflections-in-the-void.html": [
+      "book/parts/08_PartVIII_The_Unfolding_Path/048_02_beyond_duality_reflections_in_the_void.md"
+    ],
+    "chapter-4-the-inherent-rhythm.html": [
+      "book/parts/01_PartI_Introduction/006_05_the_inherent_rhythm.md"
+    ],
+    "chapter-40-the-sages-compass.html": [
+      "book/parts/08_PartVIII_The_Unfolding_Path/049_03_the_sage_s_compass.md"
+    ],
+    "chapter-41-the-spiral-made-flesh.html": [
+      "book/parts/08_PartVIII_The_Unfolding_Path/050_04_the_spiral_made_flesh.md"
+    ],
+    "chapter-42-the-final-unveiling.html": [
+      "book/parts/08_PartVIII_The_Unfolding_Path/051_05_the_final_unveiling.md"
+    ],
+    "chapter-43-the-alchemy-of-becoming.html": [
+      "book/parts/08_PartVIII_The_Unfolding_Path/052_06_the_alchemy_of_becoming.md"
+    ],
+    "chapter-44-the-resonant-dragon.html": [
+      "book/parts/08_PartVIII_The_Unfolding_Path/053_07_the_resonant_dragon.md"
+    ],
+    "chapter-5-bridging-worlds.html": [
+      "book/parts/02_PartII_The_Entangled_Firmament/008_02_bridging_worlds.md"
+    ],
+    "chapter-6-interconnectedness.html": [
+      "book/parts/02_PartII_The_Entangled_Firmament/009_03_interconnectedness.md"
+    ],
+    "chapter-7-dynamic-emergence.html": [
+      "book/parts/02_PartII_The_Entangled_Firmament/010_04_dynamic_emergence.md"
+    ],
+    "chapter-8-participatory-reality.html": [
+      "book/parts/02_PartII_The_Entangled_Firmament/011_05_participatory_reality.md"
+    ],
+    "chapter-9-bounded-infinity.html": [
+      "book/parts/02_PartII_The_Entangled_Firmament/012_06_bounded_infinity.md"
+    ],
+    "checklists-and-materials.html": [
+      "book/parts/10_Appendices/065_06_checklists_and_materials.md"
+    ],
+    "contact.html": [
+      "web/frontmatter/contact.md"
+    ],
+    "dedication.html": [
+      "web/frontmatter/dedication.md"
+    ],
+    "disclaimer.html": [
+      "web/frontmatter/disclaimer.md"
+    ],
+    "epigraphs.html": [
+      "web/frontmatter/epigraphs.md"
+    ],
+    "epilogue-1-a-note-on-modern-synthesis-ancient-traditions-in-a-changing-world.html": [
+      "book/parts/09_Epilogues/055_02_a_note_on_modern_synthesis_ancient_traditions_in_a_changing_.md"
+    ],
+    "epilogue-2-the-mirror-of-intelligence.html": [
+      "book/parts/09_Epilogues/056_03_the_mirror_of_intelligence.md"
+    ],
+    "epilogue-3-the-cave-of-the-dragon-exploring-the-hall-of-mirrors.html": [
+      "book/parts/09_Epilogues/057_04_the_cave_of_the_dragon_exploring_the_hall_of_mirrors.md"
+    ],
+    "epilogue-4-the-breath-between-worlds.html": [
+      "book/parts/09_Epilogues/058_05_the_breath_between_worlds.md"
+    ],
+    "epilogue-5-the-dragons-everfolding-ontology.html": [
+      "book/parts/09_Epilogues/059_06_the_dragon_s_everfolding_ontology.md"
+    ],
+    "epilogues.html": [
+      "book/parts/09_Epilogues/054_01_epilogues.md"
+    ],
+    "ethics-and-intimacy.html": [
+      "book/parts/06_PartVI_Ethics/038_01_ethics_and_intimacy.md"
+    ],
+    "foundations-of-the-dragons-path.html": [
+      "book/parts/01_PartI_Introduction/002_01_foundations_of_the_dragon_s_path.md"
+    ],
+    "from-my-heart.html": [
+      "book/parts/00_Preface/001_01_from_my_heart.md"
+    ],
+    "glossary-of-archetypes.html": [
+      "book/parts/10_Appendices/060_01_glossary_of_archetypes.md"
+    ],
+    "glossary-of-extended-reference-terms.html": [
+      "book/parts/10_Appendices/062_03_glossary_of_extended_reference_terms.md"
+    ],
+    "glossary-of-key-terms.html": [
+      "book/parts/10_Appendices/061_02_glossary_of_key_terms.md"
+    ],
+    "index.html": [
+      "web/landing_page.md"
+    ],
+    "practices-for-embodied-transformation.html": [
+      "book/parts/04_PartIV_Embodied_Practices/023_01_practices_for_embodied_transformation.md"
+    ],
+    "practices-meditations-and-related-techniques.html": [
+      "book/parts/10_Appendices/064_05_practices_meditations_and_related_techniques.md"
+    ],
+    "quick-reference.html": [
+      "web/frontmatter/quick-reference.md"
+    ],
+    "search.html": [
+      "web/frontmatter/search.md"
+    ],
+    "similar-works-and-further-reading.html": [
+      "book/parts/10_Appendices/063_04_similar_works_and_further_reading.md"
+    ],
+    "the-crucible-of-flesh.html": [
+      "book/parts/05_PartV_Body_Neurons_Chemicals/028_01_the_crucible_of_flesh.md"
+    ],
+    "the-entangled-firmament.html": [
+      "book/parts/02_PartII_The_Entangled_Firmament/007_01_the_entangled_firmament.md"
+    ],
+    "the-unfolding-path.html": [
+      "book/parts/08_PartVIII_The_Unfolding_Path/047_01_the_unfolding_path.md"
+    ],
+    "toc.html": [
+      "book/parts/00_Preface/001_01_from_my_heart.md",
+      "book/parts/01_PartI_Introduction/002_01_foundations_of_the_dragon_s_path.md",
+      "book/parts/01_PartI_Introduction/003_02_awakening_the_dragon.md",
+      "book/parts/01_PartI_Introduction/004_03_core_principles.md",
+      "book/parts/01_PartI_Introduction/005_04_primal_transcendent.md",
+      "book/parts/01_PartI_Introduction/006_05_the_inherent_rhythm.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/007_01_the_entangled_firmament.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/008_02_bridging_worlds.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/009_03_interconnectedness.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/010_04_dynamic_emergence.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/011_05_participatory_reality.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/012_06_bounded_infinity.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/013_07_graphs_of_reality.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/014_08_the_limits_of_logic.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/015_09_two_minds_the_bridge_of_perception.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/016_10_weaving_wisdom_into_action.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/017_11_scientific_pathways.md",
+      "book/parts/03_PartIII_ArchetypePortals/018_01_archetypal_pathways.md",
+      "book/parts/03_PartIII_ArchetypePortals/019_02_the_shadow_threshold.md",
+      "book/parts/03_PartIII_ArchetypePortals/020_03_the_relational_dynamic.md",
+      "book/parts/03_PartIII_ArchetypePortals/021_04_archetypes_of_action.md",
+      "book/parts/03_PartIII_ArchetypePortals/022_05_mirrors_of_action_and_integration.md",
+      "book/parts/04_PartIV_Embodied_Practices/023_01_practices_for_embodied_transformation.md",
+      "book/parts/04_PartIV_Embodied_Practices/024_02_reclaiming_your_innocence.md",
+      "book/parts/04_PartIV_Embodied_Practices/025_03_pearls_in_the_abyss.md",
+      "book/parts/04_PartIV_Embodied_Practices/026_04_the_forge_of_eros_sacred_sexuality_kink_and_transgression.md",
+      "book/parts/04_PartIV_Embodied_Practices/027_05_structure_and_flow.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/028_01_the_crucible_of_flesh.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/029_02_the_dragon_s_circuitry.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/030_03_spectrum_of_diverse_minds.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/031_04_cellular_echoes_of_the_flesh.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/032_05_the_gravity_of_craving.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/033_06_tides_of_the_flesh.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/034_07_the_soul_s_armor.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/035_08_the_alchemical_body.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/036_09_psychedelics_potentials_perils.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/037_10_the_embodied_anchor.md",
+      "book/parts/06_PartVI_Ethics/038_01_ethics_and_intimacy.md",
+      "book/parts/06_PartVI_Ethics/039_02_the_ethical_shadow.md",
+      "book/parts/06_PartVI_Ethics/040_03_the_steward_of_fire.md",
+      "book/parts/06_PartVI_Ethics/041_04_tools_for_the_path.md",
+      "book/parts/07_PartVII_VoidMeditation/042_01_void_meditation.md",
+      "book/parts/07_PartVII_VoidMeditation/043_02_significance_of_the_void.md",
+      "book/parts/07_PartVII_VoidMeditation/044_03_visions_of_the_void.md",
+      "book/parts/07_PartVII_VoidMeditation/045_04_steps_into_infinity_the_dragon_s_plunge.md",
+      "book/parts/07_PartVII_VoidMeditation/046_05_living_from_the_void.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/047_01_the_unfolding_path.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/048_02_beyond_duality_reflections_in_the_void.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/049_03_the_sage_s_compass.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/050_04_the_spiral_made_flesh.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/051_05_the_final_unveiling.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/052_06_the_alchemy_of_becoming.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/053_07_the_resonant_dragon.md",
+      "book/parts/09_Epilogues/054_01_epilogues.md",
+      "book/parts/09_Epilogues/055_02_a_note_on_modern_synthesis_ancient_traditions_in_a_changing_.md",
+      "book/parts/09_Epilogues/056_03_the_mirror_of_intelligence.md",
+      "book/parts/09_Epilogues/057_04_the_cave_of_the_dragon_exploring_the_hall_of_mirrors.md",
+      "book/parts/09_Epilogues/058_05_the_breath_between_worlds.md",
+      "book/parts/09_Epilogues/059_06_the_dragon_s_everfolding_ontology.md",
+      "book/parts/10_Appendices/060_01_glossary_of_archetypes.md",
+      "book/parts/10_Appendices/061_02_glossary_of_key_terms.md",
+      "book/parts/10_Appendices/062_03_glossary_of_extended_reference_terms.md",
+      "book/parts/10_Appendices/063_04_similar_works_and_further_reading.md",
+      "book/parts/10_Appendices/064_05_practices_meditations_and_related_techniques.md",
+      "book/parts/10_Appendices/065_06_checklists_and_materials.md"
+    ],
+    "void-meditation.html": [
+      "book/parts/07_PartVII_VoidMeditation/042_01_void_meditation.md"
+    ],
+    "your-path-your-pace.html": [
+      "book/parts/00_Preface/001_01_from_my_heart.md"
+    ]
+  },
+  "rss": {
+    "rss-blogs.xml": [
+      "web/blogs/are_you_dating_your_past.md",
+      "web/blogs/awakening_the_dragon.md",
+      "web/blogs/clutter_is_postponed_integration.md",
+      "web/blogs/containment_vs_vibes.md",
+      "web/blogs/depression_reframed.md",
+      "web/blogs/dialogue_with_the_mirrored_dragon.md",
+      "web/blogs/forged_peace.md",
+      "web/blogs/money_as_energy_from_extraction_to_circulation.md",
+      "web/blogs/parasitic_vs_symbiotic.md",
+      "web/blogs/raising_dragons_how_to_parent_without_crushing_the_serpent.md",
+      "web/blogs/red_flag_anatomy_deconstructing_magic_without_boundaries.md",
+      "web/blogs/saying_yes_to_the_universe_with_discernment.md",
+      "web/blogs/state_before_story_and_the_fundamental_attribution_error.md",
+      "web/blogs/stop_slaying_the_beast.md",
+      "web/blogs/ten_ways_we_try_to_outrank_reality.md",
+      "web/blogs/the_alchemical_fire.md",
+      "web/blogs/the_armor_of_normal_a_dragon_s_guide_to_unmasking.md",
+      "web/blogs/the_art_of_the_clean_fight_ethics_for_the_heat_of_the_moment.md",
+      "web/blogs/the_digital_horcrux.md",
+      "web/blogs/the_dragon_guards_the_lover.md",
+      "web/blogs/the_dragon_synthesis_the_hidden_physics_of_embodied_awakening.md",
+      "web/blogs/the_dragons_echo.md",
+      "web/blogs/the_end_of_healing_as_identity_from_survivor_to_architect.md",
+      "web/blogs/the_engine_of_your_reality.md",
+      "web/blogs/the_erased_ally.md",
+      "web/blogs/the_ethical_toolkit.md",
+      "web/blogs/the_ethics_of_scaling_coherence.md",
+      "web/blogs/the_geometry_of_awakening.md",
+      "web/blogs/the_ghost_in_the_blood_distinguishing_your_shadow_from_your_ancestry.md",
+      "web/blogs/the_glitch_in_the_veil.md",
+      "web/blogs/the_god_realm_delusion.md",
+      "web/blogs/the_golden_armor_spiritual_superiority.md",
+      "web/blogs/the_iterated_self_you_are_a_function_not_a_constant.md",
+      "web/blogs/the_nation_as_embodied_archetype.md",
+      "web/blogs/the_neurodivergent_archetype.md",
+      "web/blogs/the_physics_of_trust_game_theory_and_the_nash_equilibrium_of_care.md",
+      "web/blogs/the_sacred_contraction.md",
+      "web/blogs/the_sacred_pause_why_urgency_is_a_trauma_response.md",
+      "web/blogs/the_sandcastle_at_the_edge_of_chaos.md",
+      "web/blogs/the_source_code_of_the_soul.md",
+      "web/blogs/the_terror_of_the_pause_why_we_doomscroll_to_avoid_the_void.md",
+      "web/blogs/the_wolf_in_the_temple.md",
+      "web/blogs/the_wound_that_breaks_the_ouroboros.md",
+      "web/blogs/when_initiation_outruns_integration_ista_wild_love_and_the_crash_after_intensity.md",
+      "web/blogs/when_the_island_becomes_the_room.md",
+      "web/blogs/when_the_serpent_is_sleeping_the_spirituality_of_numbness.md",
+      "web/blogs/why_the_workshop_high_crashes_intensity_belonging_and_the_return_to_ordinary_life.md",
+      "web/blogs/why_you_hate_your_hero.md",
+      "web/blogs/why_your_intrusive_thoughts_are_not_manifestations.md",
+      "web/blogs/you_are_becoming.md",
+      "web/blogs/you_are_not_who_you_think_you_are.md",
+      "web/blogs/your_anxiety_is_a_dashboard_not_a_disease.md",
+      "web/blogs/your_body_the_cosmos.md",
+      "web/blogs/your_cognitive_architecture_as_spiritual_gateway.md",
+      "web/blogs/your_nervous_system_is_your_soul_s_compass.md",
+      "web/blogs/your_true_north_is_within.md"
+    ],
+    "rss-book.xml": [
+      "book/parts/00_Preface/001_01_from_my_heart.md",
+      "book/parts/01_PartI_Introduction/002_01_foundations_of_the_dragon_s_path.md",
+      "book/parts/01_PartI_Introduction/003_02_awakening_the_dragon.md",
+      "book/parts/01_PartI_Introduction/004_03_core_principles.md",
+      "book/parts/01_PartI_Introduction/005_04_primal_transcendent.md",
+      "book/parts/01_PartI_Introduction/006_05_the_inherent_rhythm.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/007_01_the_entangled_firmament.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/008_02_bridging_worlds.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/009_03_interconnectedness.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/010_04_dynamic_emergence.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/011_05_participatory_reality.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/012_06_bounded_infinity.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/013_07_graphs_of_reality.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/014_08_the_limits_of_logic.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/015_09_two_minds_the_bridge_of_perception.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/016_10_weaving_wisdom_into_action.md",
+      "book/parts/02_PartII_The_Entangled_Firmament/017_11_scientific_pathways.md",
+      "book/parts/03_PartIII_ArchetypePortals/018_01_archetypal_pathways.md",
+      "book/parts/03_PartIII_ArchetypePortals/019_02_the_shadow_threshold.md",
+      "book/parts/03_PartIII_ArchetypePortals/020_03_the_relational_dynamic.md",
+      "book/parts/03_PartIII_ArchetypePortals/021_04_archetypes_of_action.md",
+      "book/parts/03_PartIII_ArchetypePortals/022_05_mirrors_of_action_and_integration.md",
+      "book/parts/04_PartIV_Embodied_Practices/023_01_practices_for_embodied_transformation.md",
+      "book/parts/04_PartIV_Embodied_Practices/024_02_reclaiming_your_innocence.md",
+      "book/parts/04_PartIV_Embodied_Practices/025_03_pearls_in_the_abyss.md",
+      "book/parts/04_PartIV_Embodied_Practices/026_04_the_forge_of_eros_sacred_sexuality_kink_and_transgression.md",
+      "book/parts/04_PartIV_Embodied_Practices/027_05_structure_and_flow.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/028_01_the_crucible_of_flesh.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/029_02_the_dragon_s_circuitry.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/030_03_spectrum_of_diverse_minds.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/031_04_cellular_echoes_of_the_flesh.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/032_05_the_gravity_of_craving.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/033_06_tides_of_the_flesh.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/034_07_the_soul_s_armor.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/035_08_the_alchemical_body.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/036_09_psychedelics_potentials_perils.md",
+      "book/parts/05_PartV_Body_Neurons_Chemicals/037_10_the_embodied_anchor.md",
+      "book/parts/06_PartVI_Ethics/038_01_ethics_and_intimacy.md",
+      "book/parts/06_PartVI_Ethics/039_02_the_ethical_shadow.md",
+      "book/parts/06_PartVI_Ethics/040_03_the_steward_of_fire.md",
+      "book/parts/06_PartVI_Ethics/041_04_tools_for_the_path.md",
+      "book/parts/07_PartVII_VoidMeditation/042_01_void_meditation.md",
+      "book/parts/07_PartVII_VoidMeditation/043_02_significance_of_the_void.md",
+      "book/parts/07_PartVII_VoidMeditation/044_03_visions_of_the_void.md",
+      "book/parts/07_PartVII_VoidMeditation/045_04_steps_into_infinity_the_dragon_s_plunge.md",
+      "book/parts/07_PartVII_VoidMeditation/046_05_living_from_the_void.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/047_01_the_unfolding_path.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/048_02_beyond_duality_reflections_in_the_void.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/049_03_the_sage_s_compass.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/050_04_the_spiral_made_flesh.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/051_05_the_final_unveiling.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/052_06_the_alchemy_of_becoming.md",
+      "book/parts/08_PartVIII_The_Unfolding_Path/053_07_the_resonant_dragon.md",
+      "book/parts/09_Epilogues/054_01_epilogues.md",
+      "book/parts/09_Epilogues/055_02_a_note_on_modern_synthesis_ancient_traditions_in_a_changing_.md",
+      "book/parts/09_Epilogues/056_03_the_mirror_of_intelligence.md",
+      "book/parts/09_Epilogues/057_04_the_cave_of_the_dragon_exploring_the_hall_of_mirrors.md",
+      "book/parts/09_Epilogues/058_05_the_breath_between_worlds.md",
+      "book/parts/09_Epilogues/059_06_the_dragon_s_everfolding_ontology.md",
+      "book/parts/10_Appendices/060_01_glossary_of_archetypes.md",
+      "book/parts/10_Appendices/061_02_glossary_of_key_terms.md",
+      "book/parts/10_Appendices/062_03_glossary_of_extended_reference_terms.md",
+      "book/parts/10_Appendices/063_04_similar_works_and_further_reading.md",
+      "book/parts/10_Appendices/064_05_practices_meditations_and_related_techniques.md",
+      "book/parts/10_Appendices/065_06_checklists_and_materials.md"
+    ]
+  }
+}
