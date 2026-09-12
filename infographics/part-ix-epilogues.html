@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Path of the Dragon: Part IX Infographic</title>
+<script defer="" src="analytics.js"></script>
+<!-- Marked.js -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Crimson+Text:ital,wght@0,400;0,600;1,400&amp;family=Lato:wght@300;400&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --bg-dark: #0c0b0b;
+            --bg-panel: rgba(22, 21, 20, 0.85);
+            --text-gold: #c6a655;
+            --text-gold-bright: #eecf76;
+            --text-body: #dcdbd5;
+            --text-dim: #8a8885;
+            --border-gold: #5e4f2b;
+            --nebula: rgba(68, 56, 80, 0.2);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-body);
+            font-family: 'Crimson Text', serif;
+        }
+
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Film Grain Overlay */
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+        }
+
+        .gold-text {
+            color: var(--text-gold);
+            background: linear-gradient(45deg, #aa893c, #eecf76, #aa893c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            background-clip: text;
+        }
+
+        .panel {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            backdrop-filter: blur(4px);
+        }
+        
+        .panel:hover {
+            border-color: var(--text-gold);
+            box-shadow: 0 20px 40px rgba(198, 166, 85, 0.1);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 15px rgba(198, 166, 85, 0.4);
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.1; }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-gold); }
+
+        canvas {
+            touch-action: manipulation;
+        }
+    </style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&amp;family=EB+Garamond:ital,wght@0,400;1,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/><script defer="" src="../infographic-deck-runtime.js?v=19"></script><link href="../infographic-tailwind-utilities.css?v=19" rel="stylesheet"/><link href="../infographic-deck-runtime.css?v=19" rel="stylesheet"/></head>
+<body class="min-h-screen pb-20 relative overflow-x-hidden">
+<!-- Texture Overlay -->
+<div class="grain-overlay"></div>
+<!-- Background Nebula Effect -->
+<div class="fixed inset-0 z-0 pointer-events-none">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,var(--nebula)_0%,transparent_70%)] opacity-30"></div>
+<div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(30,40,60,0.2)_0%,transparent_70%)] opacity-30"></div>
+</div>
+<!-- Navbar -->
+<nav class="border-b border-[#333] bg-[#0f0e0d]/90 backdrop-blur-sm py-4 sticky top-0 z-50">
+<div class="max-w-4xl mx-auto flex justify-between items-center px-6">
+<div class="font-display text-xl text-[#c6a655] tracking-widest">PATH OF THE DRAGON</div>
+<div class="hidden md:flex space-x-6 font-display text-xs tracking-widest text-[#8a8885]">
+<a class="opacity-50 hover:opacity-100 hover:text-[#eecf76] transition-colors" href="part-vii-void-meditation">PART VII</a>
+<a class="opacity-50 hover:opacity-100 hover:text-[#eecf76] transition-colors" href="part-viii-the-unfolding-path">PART VIII</a>
+<span class="text-[#eecf76]">PART IX</span>
+</div>
+</div>
+</nav>
+<!-- Header -->
+<header class="max-w-3xl mx-auto text-center mt-20 px-6 mb-24 relative z-10">
+<p class="font-display text-sm tracking-[0.3em] text-[#8a8885] mb-4 uppercase">Part IX</p>
+<h1 class="text-5xl md:text-7xl text-[#eecf76] mb-8 glow-text leading-tight">Epilogues</h1>
+<p class="text-xl md:text-2xl italic text-[#dcdbd5] opacity-90 leading-relaxed max-w-2xl mx-auto">
+            "The path does not end here. It begins anew, in every breath."
+        </p>
+<div class="flex items-center justify-center mt-12 opacity-60">
+<div class="h-px w-16 bg-gradient-to-l from-[#c6a655] to-transparent"></div>
+<div class="mx-4 text-[#c6a655] text-xl">❖</div>
+<div class="h-px w-16 bg-gradient-to-r from-[#c6a655] to-transparent"></div>
+</div>
+</header>
+<!-- 1. The Mirror of Intelligence (AI) -->
+<section class="max-w-6xl mx-auto px-6 mb-32 relative z-10" data-infographic-section-id="part-ix-epilogues-section-01-the-mirror-of-intelligence" data-infographic-selector="#part-ix-epilogues-section-01-the-mirror-of-intelligence" data-infographic-source="part-ix-epilogues.html" data-infographic-status="published" id="part-ix-epilogues-section-01-the-mirror-of-intelligence">
+<h2 class="font-display text-3xl text-center text-[#c6a655] mb-4">The Mirror of Intelligence</h2>
+<p class="text-center text-[#8a8885] mb-12 text-sm uppercase tracking-widest">What Will You Become In Its Presence?</p>
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<!-- Visualization -->
+<div class="panel p-1 relative h-[450px] w-full bg-[#080808] flex items-center justify-center overflow-hidden">
+<canvas class="w-full h-full cursor-pointer" id="mirrorCanvas"></canvas>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-4">
+<span class="text-[10px] text-[#eecf76] border border-[#eecf76] px-2 py-1 bg-black/50">SYNTAX (Pattern)</span>
+<span class="text-[10px] text-[#5e4f2b] border border-[#5e4f2b] px-2 py-1 bg-black/50">SILENCE (Soul)</span>
+</div>
+</div>
+<!-- Explanation -->
+<div class="space-y-6">
+<div class="panel p-8 border-l-4 border-l-[#c6a655]">
+<h3 class="font-display text-xl text-[#eecf76] mb-2">Sophia Pays in Consequence</h3>
+<p class="text-[#8a8885] mb-4">
+                        AI can generate the shape of the Sage because it has seen the pattern in our language. It can echo the syntax of grief. It cannot undergo the descent that makes wisdom answerable in a human life.
+                    </p>
+<p class="text-[#dcdbd5] italic text-sm">
+                        "An AI can echo the syntax of grief. It cannot pay the cost that makes those words true."
+                    </p>
+</div>
+<div class="p-6 border border-[#333] rounded bg-[#1a1816]/50">
+<strong class="block text-[#c6a655] mb-2 font-display text-sm tracking-wide">THE RHYTHM</strong>
+<p class="text-xs text-[#8a8885] leading-relaxed">
+                        Use it as a responsive mirror, not an oracle. Let it surface assumptions and possibilities, then keep the rhythm simple: notice, re-tune, act. What you give your attention to, what you delegate, and what you refuse to trade for convenience shapes the world you live in.
+                    </p>
+</div>
+</div>
+</div>
+<script>
+(function () {
+  const script = document.currentScript;
+  const root = script
+    ? script.closest(
+        '[data-infographic-section-id="part-ix-epilogues-section-01-the-mirror-of-intelligence"]'
+      )
+    : null;
+  if (!root || root.dataset.mirrorReady === "1") return;
+  root.dataset.mirrorReady = "1";
+
+  const canvas = root.querySelector("#mirrorCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+  let time = 0;
+
+  const textLines = [];
+  const numLines = 40;
+
+  function initLines() {
+    textLines.length = 0;
+    for (let i = 0; i < numLines; i++) {
+      textLines.push({
+        y: Math.random() * height,
+        speed: 0.5 + Math.random(),
+        length: 20 + Math.random() * 100,
+        opacity: Math.random() * 0.5,
+      });
+    }
+  }
+
+  function resize() {
+    const parent = canvas.parentElement;
+    if (!parent) return;
+    width = Math.max(1, Math.floor(parent.clientWidth));
+    height = Math.max(1, Math.floor(parent.clientHeight));
+    dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    initLines();
+  }
+
+  window.addEventListener("resize", resize);
+  resize();
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+    const cx = width / 2;
+    time += 0.02;
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(0, 0, cx, height);
+    ctx.clip();
+
+    textLines.forEach((l) => {
+      l.y += l.speed;
+      if (l.y > height) l.y = 0;
+      ctx.fillStyle = `rgba(238, 207, 118, ${l.opacity})`;
+      ctx.fillRect(50 + Math.sin(l.y * 0.05 + time) * 20, l.y, l.length, 2);
+    });
+
+    ctx.strokeStyle = "rgba(238, 207, 118, 0.1)";
+    ctx.lineWidth = 1;
+    for (let y = 0; y < height; y += 20) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(cx, y);
+      ctx.stroke();
+    }
+    ctx.restore();
+
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(cx, 0, cx, height);
+    ctx.clip();
+
+    for (let i = 0; i < 20; i++) {
+      const x = cx + Math.random() * cx;
+      const y = Math.random() * height;
+      const r = Math.sin(time + i) * 2 + 3;
+      ctx.fillStyle = `rgba(94, 79, 43, ${0.3 + Math.sin(time * 0.5 + i) * 0.2})`;
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.restore();
+
+    ctx.strokeStyle = "#5e4f2b";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(cx, 0);
+    ctx.lineTo(cx, height);
+    ctx.stroke();
+
+    requestAnimationFrame(draw);
+  }
+
+  requestAnimationFrame(draw);
+})();
+</script>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-ix-epilogues-section-01-the-mirror-of-intelligence</div></section>
+<!-- 2. The Cave of Perception -->
+<section class="max-w-4xl mx-auto px-6 mb-32 relative z-10" data-infographic-section-id="part-ix-epilogues-section-02-the-cave-of-the-dragon" data-infographic-selector="#part-ix-epilogues-section-02-the-cave-of-the-dragon" data-infographic-source="part-ix-epilogues.html" data-infographic-status="published" id="part-ix-epilogues-section-02-the-cave-of-the-dragon">
+<h2 class="font-display text-3xl text-center text-[#c6a655] mb-4">The Cave of the Dragon</h2>
+<p class="text-center text-[#8a8885] mb-12 text-sm uppercase tracking-widest">Internal Architecture of Perception</p>
+<div class="panel p-1 relative h-[400px] w-full bg-[#080808] overflow-hidden flex items-center justify-center">
+<canvas aria-describedby="part-ix-epilogues-section-02-the-cave-of-the-dragon--caveFallback" aria-label="The Cave of the Dragon: three mirrors—Projection, Introjection, and Extrojection." class="w-full h-full cursor-pointer" data-cave-canvas="1" id="part-ix-epilogues-section-02-the-cave-of-the-dragon--caveCanvas" role="img" tabindex="0">Canvas not supported. Use the definitions and prompts below.</canvas>
+</div>
+<div class="mt-4 text-center max-w-2xl mx-auto">
+<strong class="block text-[#eecf76] font-display text-lg mb-1">Projection • Introjection • Extrojection</strong>
+<span class="block text-xs text-[#dcdbd5]">The cave is the living lens between what you intend and what another receives. Use the cards below for plain definitions, then ask what the room is actually carrying.</span>
+</div>
+<div aria-label="Mirror definitions and prompts" class="mt-6 grid gap-4 sm:grid-cols-3" id="part-ix-epilogues-section-02-the-cave-of-the-dragon--caveFallback">
+<details class="group rounded border border-[#5e4f2b] bg-[#0b0b0b] p-4" data-cave-color="#facc15" data-cave-mirror="proj" id="part-ix-epilogues-section-02-the-cave-of-the-dragon--mirror-proj">
+<summary class="cursor-pointer font-display tracking-wide text-[#eecf76]">
+<span class="uppercase text-sm">Projection</span>
+</summary>
+<div class="mt-3 text-xs text-[#dcdbd5] space-y-3">
+<p><span class="text-[#8a8885] uppercase tracking-widest text-[10px]">Plain definition</span><br/>Attributing a feeling, motive, or judgment to someone else instead of owning it in yourself.</p>
+<p><span class="text-[#8a8885] uppercase tracking-widest text-[10px]">Prompt</span><br/><em>What story am I telling about them that I can’t yet say as “I”?</em></p>
+</div>
+</details>
+<details class="group rounded border border-[#5e4f2b] bg-[#0b0b0b] p-4" data-cave-color="#4ade80" data-cave-mirror="intro" id="part-ix-epilogues-section-02-the-cave-of-the-dragon--mirror-intro">
+<summary class="cursor-pointer font-display tracking-wide text-[#eecf76]">
+<span class="uppercase text-sm">Introjection</span>
+</summary>
+<div class="mt-3 text-xs text-[#dcdbd5] space-y-3">
+<p><span class="text-[#8a8885] uppercase tracking-widest text-[10px]">Plain definition</span><br/>Taking in someone else’s belief or demand as a rule you must follow, without checking whether it’s true for you.</p>
+<p><span class="text-[#8a8885] uppercase tracking-widest text-[10px]">Prompt</span><br/><em>Whose voice am I hearing right now?</em></p>
+</div>
+</details>
+<details class="group rounded border border-[#5e4f2b] bg-[#0b0b0b] p-4" data-cave-color="#f87171" data-cave-mirror="extro" id="part-ix-epilogues-section-02-the-cave-of-the-dragon--mirror-extro">
+<summary class="cursor-pointer font-display tracking-wide text-[#eecf76]">
+<span class="uppercase text-sm">Extrojection</span>
+</summary>
+<div class="mt-3 text-xs text-[#dcdbd5] space-y-3">
+<p><span class="text-[#8a8885] uppercase tracking-widest text-[10px]">Plain definition</span><br/>Making an inner rule, fear, or meaning into an external requirement—treating your inside as if it must be the world’s outside.</p>
+<p><span class="text-[#8a8885] uppercase tracking-widest text-[10px]">Prompt</span><br/><em>Am I turning inner weather into climate?</em></p>
+</div>
+</details>
+</div>
+<div class="mt-6 panel p-6 text-left max-w-3xl mx-auto">
+<strong class="block text-[#c6a655] mb-2 font-display text-sm tracking-wide">PRISM OF IMPACT</strong>
+<p class="text-sm text-[#dcdbd5] leading-relaxed">
+      Between what you mean and what another experiences lies an irreducible encounter. The Beam is the conduct sent; the Prism holds behaviour, power, history, state, injury, and context together. Pause at the Serene Center. Name what you are sensing, ask for the other's reality, and make your signal true.
+    </p>
+</div>
+<script>
+    (function () {
+      const script = document.currentScript;
+      const root = script
+        ? script.closest(
+            "[data-infographic-section-id='part-ix-epilogues-section-02-the-cave-of-the-dragon']"
+          )
+        : null;
+      if (!root || root.dataset.caveReady === "1") return;
+      root.dataset.caveReady = "1";
+
+      const canvas = root.querySelector("[data-cave-canvas='1']");
+      if (!canvas) return;
+
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+
+      function extractParagraphText(paragraph) {
+        if (!paragraph) return "";
+        const clone = paragraph.cloneNode(true);
+        const label = clone.querySelector("span");
+        if (label) label.remove();
+        const lineBreak = clone.querySelector("br");
+        if (lineBreak) lineBreak.remove();
+        return (clone.textContent || "").trim();
+      }
+
+      const mirrorEntries = Array.from(
+        root.querySelectorAll("details[data-cave-mirror]")
+      )
+        .map((card) => {
+          const id = card.dataset.caveMirror || "";
+          const color = card.dataset.caveColor || "#c6a655";
+          const summaryName = (
+            card.querySelector("summary span")?.textContent || ""
+          )
+            .trim()
+            .toUpperCase();
+          const paragraphs = card.querySelectorAll("div p");
+          const definition = extractParagraphText(paragraphs[0]);
+          const prompt =
+            (paragraphs[1]?.querySelector("em")?.textContent || "").trim() ||
+            extractParagraphText(paragraphs[1]);
+          return {
+            card,
+            id,
+            name: summaryName,
+            color,
+            definition,
+            prompt,
+          };
+        })
+        .filter((entry) => entry.id && entry.name);
+      if (!mirrorEntries.length) return;
+
+      const mirrors = mirrorEntries.map((entry) => ({
+        id: entry.id,
+        name: entry.name,
+        color: entry.color,
+        definition: entry.definition,
+        prompt: entry.prompt,
+      }));
+      const detailCards = mirrorEntries.map((entry) => entry.card);
+
+      let width = 1;
+      let height = 1;
+      let dpr = 1;
+      let time = 0;
+      let activeIndex = -1;
+
+      const particles = Array.from({ length: 96 }, (_, index) => ({
+        mirrorIndex: index % 3,
+        orbitRadius: 24 + (index % 12) * 3.5,
+        angle: ((index * 137.50776405003785) * Math.PI) / 180,
+        speed: 0.0026 + (index % 7) * 0.00024,
+        size: 0.9 + (index % 4) * 0.45,
+      }));
+
+      function getLayout() {
+        const ratio = width / Math.max(1, height);
+        const yTop = ratio < 1.2 ? height * 0.34 : height * 0.36;
+        const yBottom = ratio < 1.2 ? height * 0.66 : height * 0.64;
+        const centers = [
+          { x: width * 0.28, y: yBottom },
+          { x: width * 0.5, y: yTop },
+          { x: width * 0.72, y: yBottom },
+        ];
+        const radius = Math.min(width, height) * 0.12;
+        return { centers, radius };
+      }
+
+      function updateCardHighlight() {
+        detailCards.forEach((card, index) => {
+          if (!card) return;
+          const selected = index === activeIndex;
+          card.classList.toggle("border-[#eecf76]", selected);
+          card.classList.toggle("ring-1", selected);
+          card.classList.toggle("ring-[#eecf76]/60", selected);
+        });
+      }
+
+      function setActiveIndex(index) {
+        const clamped =
+          index < 0 ? -1 : Math.max(0, Math.min(mirrors.length - 1, index));
+        if (activeIndex === clamped) return;
+        activeIndex = clamped;
+        updateCardHighlight();
+      }
+
+      function toggleCard(index) {
+        const card = detailCards[index];
+        if (!card) return;
+
+        if (card.open) {
+          card.open = false;
+          if (activeIndex === index) setActiveIndex(-1);
+          return;
+        }
+
+        detailCards.forEach((other, otherIndex) => {
+          if (other && otherIndex !== index) other.open = false;
+        });
+        card.open = true;
+        setActiveIndex(index);
+      }
+
+      function resize() {
+        const parent = canvas.parentElement;
+        if (!parent) return;
+        width = Math.max(1, Math.floor(parent.clientWidth));
+        height = Math.max(1, Math.floor(parent.clientHeight));
+        dpr = window.devicePixelRatio || 1;
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+
+      function pickMirrorIndex(pointX, pointY) {
+        const { centers, radius } = getLayout();
+        let best = -1;
+        let bestDistance = Number.POSITIVE_INFINITY;
+
+        for (let i = 0; i < centers.length; i += 1) {
+          const dx = pointX - centers[i].x;
+          const dy = pointY - centers[i].y;
+          const dist = Math.hypot(dx, dy);
+          if (dist <= radius * 1.12 && dist < bestDistance) {
+            best = i;
+            bestDistance = dist;
+          }
+        }
+        return best;
+      }
+
+      function draw() {
+        time += 1;
+        ctx.clearRect(0, 0, width, height);
+
+        const { centers, radius } = getLayout();
+
+        const ambient = ctx.createRadialGradient(
+          width * 0.5,
+          height * 0.5,
+          0,
+          width * 0.5,
+          height * 0.5,
+          Math.max(width, height) * 0.7
+        );
+        ambient.addColorStop(0, "rgba(120, 95, 48, 0.18)");
+        ambient.addColorStop(1, "rgba(0, 0, 0, 0)");
+        ctx.fillStyle = ambient;
+        ctx.fillRect(0, 0, width, height);
+
+        ctx.lineWidth = 1.2;
+        ctx.strokeStyle = "rgba(198, 166, 85, 0.22)";
+        ctx.beginPath();
+        ctx.moveTo(centers[0].x, centers[0].y);
+        ctx.lineTo(centers[1].x, centers[1].y);
+        ctx.lineTo(centers[2].x, centers[2].y);
+        ctx.closePath();
+        ctx.stroke();
+
+        particles.forEach((particle) => {
+          const center = centers[particle.mirrorIndex];
+          const isSelected = particle.mirrorIndex === activeIndex;
+          particle.angle += particle.speed * (isSelected ? 1.9 : 1.0);
+          const orbit =
+            particle.orbitRadius +
+            Math.sin(time * 0.012 + particle.angle) * (isSelected ? 3.5 : 1.6);
+          const px = center.x + Math.cos(particle.angle) * orbit;
+          const py = center.y + Math.sin(particle.angle) * orbit * 0.72;
+          ctx.beginPath();
+          ctx.arc(px, py, particle.size + (isSelected ? 0.35 : 0), 0, Math.PI * 2);
+          ctx.fillStyle =
+            activeIndex === particle.mirrorIndex
+              ? mirrors[particle.mirrorIndex].color
+              : "rgba(138, 136, 133, 0.46)";
+          ctx.fill();
+        });
+
+        centers.forEach((center, index) => {
+          const mirror = mirrors[index];
+          const isSelected = index === activeIndex;
+          const glow = ctx.createRadialGradient(
+            center.x,
+            center.y,
+            radius * 0.1,
+            center.x,
+            center.y,
+            radius * (isSelected ? 1.9 : 1.45)
+          );
+          glow.addColorStop(0, "rgba(255,255,255,0.5)");
+          glow.addColorStop(0.35, mirror.color);
+          glow.addColorStop(1, "rgba(0,0,0,0)");
+          ctx.fillStyle = glow;
+          ctx.beginPath();
+          ctx.arc(center.x, center.y, radius * (isSelected ? 1.65 : 1.35), 0, Math.PI * 2);
+          ctx.fill();
+
+          ctx.strokeStyle = mirror.color;
+          ctx.lineWidth = isSelected ? 2.8 : 1.5;
+          ctx.beginPath();
+          ctx.arc(center.x, center.y, radius, 0, Math.PI * 2);
+          ctx.stroke();
+
+          ctx.fillStyle = "rgba(11, 11, 11, 0.7)";
+          ctx.beginPath();
+          ctx.arc(center.x, center.y, radius * 0.62, 0, Math.PI * 2);
+          ctx.fill();
+
+          ctx.fillStyle = mirror.color;
+          ctx.font = "600 12px Cinzel, serif";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillText(mirror.name, center.x, center.y);
+        });
+
+        requestAnimationFrame(draw);
+      }
+
+      function handlePointerMove(event) {
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        setActiveIndex(pickMirrorIndex(x, y));
+      }
+
+      canvas.addEventListener("pointermove", handlePointerMove);
+      canvas.addEventListener("pointerleave", () => setActiveIndex(-1));
+      canvas.addEventListener("click", (event) => {
+        const rect = canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const picked = pickMirrorIndex(x, y);
+        if (picked >= 0 && detailCards[picked]) {
+          toggleCard(picked);
+        } else {
+          setActiveIndex(-1);
+        }
+      });
+      canvas.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+          event.preventDefault();
+          const next = (activeIndex + 1 + mirrors.length) % mirrors.length;
+          setActiveIndex(next);
+        } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+          event.preventDefault();
+          const prev = (activeIndex - 1 + mirrors.length) % mirrors.length;
+          setActiveIndex(prev);
+        } else if (event.key === "Escape") {
+          event.preventDefault();
+          setActiveIndex(-1);
+        } else if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          if (activeIndex >= 0 && detailCards[activeIndex]) {
+            toggleCard(activeIndex);
+          }
+        }
+      });
+
+      detailCards.forEach((card, index) => {
+        if (!card) return;
+        card.addEventListener("toggle", () => {
+          if (card.open) {
+            detailCards.forEach((other, otherIndex) => {
+              if (other && otherIndex !== index) other.open = false;
+            });
+            setActiveIndex(index);
+          }
+          else if (activeIndex === index) setActiveIndex(-1);
+        });
+      });
+
+      window.addEventListener("resize", resize);
+      resize();
+      updateCardHighlight();
+      requestAnimationFrame(draw);
+    })();
+  </script>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-ix-epilogues-section-02-the-cave-of-the-dragon</div>
+</section>
+<!-- 3. The Everfolding Ontology -->
+<section class="max-w-5xl mx-auto px-6 mb-32 relative z-10" data-infographic-section-id="part-ix-epilogues-section-03-the-everfolding-ontology" data-infographic-selector="#part-ix-epilogues-section-03-the-everfolding-ontology" data-infographic-source="part-ix-epilogues.html" data-infographic-status="published" id="part-ix-epilogues-section-03-the-everfolding-ontology">
+<h2 class="font-display text-3xl text-center text-[#c6a655] mb-4">The Everfolding Ontology</h2>
+<p class="text-center text-[#8a8885] mb-6 text-sm uppercase tracking-widest">A Speculative Lens, Held Lightly</p>
+<p class="max-w-3xl mx-auto text-center text-sm text-[#dcdbd5] mb-10 leading-relaxed">
+                Take this as a poetic and computational map for those who enjoy looking behind the curtain, not as a doctrine to confuse with the ground beneath your feet.
+            </p>
+<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+<div class="panel p-8 text-center group hover:border-[#c6a655] transition-colors">
+<div class="text-4xl text-[#5e4f2b] font-display mb-4 group-hover:text-[#eecf76] transition-colors">𝓕</div>
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2">The Fractal Substrate</h3>
+<p class="text-xs text-[#8a8885] uppercase tracking-widest mb-4">The Silent Origin</p>
+<p class="text-sm text-[#dcdbd5]">
+                    The silent depth the Void names: origin before articulation.
+                </p>
+</div>
+<div class="panel p-8 text-center group hover:border-[#c6a655] transition-colors">
+<div class="text-4xl text-[#5e4f2b] font-display mb-4 group-hover:text-[#eecf76] transition-colors">ℛ</div>
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2">The Ruliad</h3>
+<p class="text-xs text-[#8a8885] uppercase tracking-widest mb-4">The Spoken Pattern</p>
+<p class="text-sm text-[#dcdbd5]">
+                    Law and structure give local pattern contour; Bounded Infinity offers the contemplative possibility that finite form can express actual infinity without containing or exhausting it.
+                </p>
+</div>
+<div class="panel p-8 text-center group hover:border-[#c6a655] transition-colors">
+<div class="text-4xl text-[#5e4f2b] font-display mb-4 group-hover:text-[#eecf76] transition-colors">𝒜</div>
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2">The Conscious Agent</h3>
+<p class="text-xs text-[#8a8885] uppercase tracking-widest mb-4">The Witnessing Eye</p>
+<p class="text-sm text-[#dcdbd5]">
+                    A finite life through which pattern becomes lived experience.
+                </p>
+</div>
+<div class="panel p-8 text-center group hover:border-[#c6a655] transition-colors">
+<div class="text-4xl text-[#5e4f2b] font-display mb-4 group-hover:text-[#eecf76] transition-colors">⌁</div>
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2">The Fold</h3>
+<p class="text-xs text-[#8a8885] uppercase tracking-widest mb-4">The Lived Moment</p>
+<p class="text-sm text-[#dcdbd5]">
+                    Where Agent and Rule crystallize into pattern, choice, and consequence.
+                </p>
+</div>
+</div>
+<p class="max-w-3xl mx-auto text-center text-xs text-[#8a8885] mt-8 leading-relaxed uppercase tracking-[0.2em]">
+                The map remains a lens: useful insofar as it returns you to lucid relation rather than metaphysical certainty.
+            </p>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-ix-epilogues-section-03-the-everfolding-ontology</div></section>
+<!-- 4. The Spiral Made Flesh (Final Animation) -->
+<section class="max-w-4xl mx-auto px-6 mb-32 relative z-10 text-center" data-infographic-section-id="part-ix-epilogues-section-04-the-breath-between-worlds" data-infographic-selector="#part-ix-epilogues-section-04-the-breath-between-worlds" data-infographic-source="part-ix-epilogues.html" data-infographic-status="published" id="part-ix-epilogues-section-04-the-breath-between-worlds">
+<h2 class="font-display text-3xl text-[#c6a655] mb-4">The Breath Between Worlds</h2>
+<p class="text-[#8a8885] mb-8 text-sm uppercase tracking-widest">You Become The Living Bridge</p>
+<div class="panel p-1 relative h-[500px] w-full bg-[#080808] overflow-hidden flex items-center justify-center mx-auto mb-8">
+<canvas class="w-full h-full" id="breathCanvas"></canvas>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="text-center opacity-90 px-6 py-4 rounded-xl shadow-[0_0_28px_rgba(0,0,0,0.45)]" style="background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.34) 50%, rgba(0, 0, 0, 0.14) 78%, rgba(0, 0, 0, 0) 100%);">
+<span class="font-display text-[#eecf76] text-xl tracking-[0.3em] block mb-2 glow-text">JUST HERE</span>
+<span class="text-[#dcdbd5] text-xs tracking-widest">BEGIN AGAIN</span>
+</div>
+</div>
+</div>
+<div class="max-w-2xl mx-auto text-[#dcdbd5] text-lg font-serif italic leading-relaxed">
+<p>
+                "Not polished smooth. Not finally complete. Just here."
+            </p>
+</div>
+<script>
+(function () {
+  const script = document.currentScript;
+  const root = script
+    ? script.closest(
+        '[data-infographic-section-id="part-ix-epilogues-section-04-the-breath-between-worlds"]'
+      )
+    : null;
+  if (!root || root.dataset.breathReady === "1") return;
+  root.dataset.breathReady = "1";
+
+  const canvas = root.querySelector("#breathCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+  let time = 0;
+
+  function resize() {
+    const parent = canvas.parentElement;
+    if (!parent) return;
+    width = Math.max(1, Math.floor(parent.clientWidth));
+    height = Math.max(1, Math.floor(parent.clientHeight));
+    dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  window.addEventListener("resize", resize);
+  resize();
+
+  function draw() {
+    ctx.fillStyle = "rgba(8, 8, 8, 0.2)";
+    ctx.fillRect(0, 0, width, height);
+
+    const cx = width / 2;
+    const cy = height / 2;
+    time += 0.01;
+
+    const breathe = (Math.sin(time) + 1) * 0.5;
+
+    const r1 = 20 + breathe * 40;
+    ctx.beginPath();
+    ctx.arc(cx, cy, r1, 0, Math.PI * 2);
+    ctx.strokeStyle = `rgba(94, 79, 43, ${1 - breathe})`;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    const r2 = 150 - breathe * 40;
+    ctx.beginPath();
+    ctx.arc(cx, cy, r2, 0, Math.PI * 2);
+    ctx.strokeStyle = `rgba(238, 207, 118, ${breathe})`;
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    const numThreads = 12;
+    for (let i = 0; i < numThreads; i++) {
+      const angle = (i / numThreads) * Math.PI * 2 + time * 0.2;
+      const x1 = cx + Math.cos(angle) * r1;
+      const y1 = cy + Math.sin(angle) * r1;
+      const x2 = cx + Math.cos(angle) * r2;
+      const y2 = cy + Math.sin(angle) * r2;
+
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.strokeStyle = "rgba(238, 207, 118, 0.2)";
+      ctx.stroke();
+    }
+
+    const maxRadius = Math.max(r2 + 16, Math.min(width, height) * 0.39);
+    const turns = 4.4;
+    const thetaMax = turns * Math.PI * 2;
+    const radiusScale = maxRadius / thetaMax;
+    const spiralSpin = time * 0.36;
+
+    ctx.beginPath();
+    for (let step = 0; step <= 260; step += 1) {
+      const t = (step / 260) * thetaMax;
+      const radius = t * radiusScale;
+      const x = cx + Math.cos(t + spiralSpin) * radius;
+      const y = cy + Math.sin(t + spiralSpin) * radius;
+      if (step === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.strokeStyle = `rgba(238, 207, 118, ${0.09 + breathe * 0.11})`;
+    ctx.lineWidth = 0.95;
+    ctx.stroke();
+
+    ctx.beginPath();
+    for (let step = 0; step <= 220; step += 1) {
+      const t = (step / 220) * thetaMax;
+      const radius = t * radiusScale * 0.82;
+      const x = cx + Math.cos(-t + spiralSpin * 0.65) * radius;
+      const y = cy + Math.sin(-t + spiralSpin * 0.65) * radius;
+      if (step === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.strokeStyle = `rgba(94, 79, 43, ${0.11 + (1 - breathe) * 0.11})`;
+    ctx.lineWidth = 0.8;
+    ctx.stroke();
+
+    requestAnimationFrame(draw);
+  }
+
+  requestAnimationFrame(draw);
+})();
+</script>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-ix-epilogues-section-04-the-breath-between-worlds</div></section>
+<!-- Footer -->
+<footer class="text-center py-20 px-6 border-t border-[#1a1816] bg-[#080808]">
+<div class="max-w-2xl mx-auto">
+<div class="mb-8 opacity-40">
+<svg class="mx-auto w-12 h-12 text-[#c6a655]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+</svg>
+</div>
+<p class="font-display text-2xl text-[#eecf76] mb-4">"Not polished smooth. Not finally complete. Just here."</p>
+<p class="text-[#5e4f2b] text-sm tracking-widest uppercase">Path of the Dragon</p>
+<a aria-label="Go to the beginning of Part IX" class="inline-flex items-center justify-center mt-6 px-5 py-2 border border-[#5e4f2b] text-[#eecf76] text-xs tracking-[0.22em] uppercase hover:bg-[#161514] transition-colors duration-300" href="../epilogues">
+                Read Part IX From The Beginning
+            </a>
+</div>
+</footer>
+</body>
+</html>
