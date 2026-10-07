@@ -1,0 +1,12 @@
+/*
+  Generated utility source for infographic fragments.
+  Regenerate with:
+  npx --yes @tailwindcss/cli \
+    -i web/resources/infographic-tailwind-utilities.input.css \
+    -o web/resources/infographic-tailwind-utilities.css \
+    --minify --cwd .
+*/
+@tailwind utilities;
+@source "./web/resources/infographic-library/fragments/**/*.html";
+@source "./web/resources/infographics/**/*.html";
+@source "./book/parts/**/*.md";
