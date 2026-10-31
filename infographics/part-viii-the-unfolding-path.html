@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Path of the Dragon: Part VIII Infographic</title>
+<script defer="" src="analytics.js"></script>
+<!-- Marked.js -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Crimson+Text:ital,wght@0,400;0,600;1,400&amp;family=Lato:wght@300;400&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --bg-dark: #0c0b0b;
+            --bg-panel: rgba(22, 21, 20, 0.85); /* Slightly transparent for texture */
+            --text-gold: #c6a655;
+            --text-gold-bright: #eecf76;
+            --text-body: #dcdbd5;
+            --text-dim: #8a8885;
+            --border-gold: #5e4f2b;
+            --nebula: rgba(68, 56, 80, 0.2);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-body);
+            font-family: 'Crimson Text', serif;
+        }
+
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Film Grain Overlay */
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+        }
+
+        .gold-text {
+            color: var(--text-gold);
+            background: linear-gradient(45deg, #aa893c, #eecf76, #aa893c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            background-clip: text;
+        }
+
+        .panel {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            backdrop-filter: blur(4px); /* Glass effect */
+        }
+        
+        .panel:hover {
+            border-color: var(--text-gold);
+            box-shadow: 0 20px 40px rgba(198, 166, 85, 0.1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-4px);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 15px rgba(198, 166, 85, 0.4);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-gold); }
+
+        canvas {
+            touch-action: manipulation;
+        }
+        
+        .octave-hover {
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .octave-hover:hover {
+            background-color: rgba(238, 207, 118, 0.05);
+            border-color: rgba(238, 207, 118, 0.2);
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(238, 207, 118, 0.1);
+        }
+    </style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&amp;family=EB+Garamond:ital,wght@0,400;1,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/><script defer="" src="../infographic-deck-runtime.js?v=19"></script><link href="../infographic-tailwind-utilities.css?v=19" rel="stylesheet"/><link href="../infographic-deck-runtime.css?v=19" rel="stylesheet"/></head>
+<body class="min-h-screen pb-20 relative overflow-x-hidden">
+<!-- Texture Overlay -->
+<div class="grain-overlay"></div>
+<!-- Background Nebula Effect -->
+<div class="fixed inset-0 z-0 pointer-events-none">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,var(--nebula)_0%,transparent_70%)] opacity-30"></div>
+<div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(30,40,60,0.2)_0%,transparent_70%)] opacity-30"></div>
+</div>
+<!-- Navbar -->
+<nav class="border-b border-[#333] bg-[#0f0e0d]/90 backdrop-blur-sm py-4 sticky top-0 z-50">
+<div class="max-w-4xl mx-auto flex justify-between items-center px-6">
+<div class="font-display text-xl text-[#c6a655] tracking-widest">PATH OF THE DRAGON</div>
+<div class="hidden md:flex space-x-6 font-display text-xs tracking-widest text-[#8a8885]">
+<a class="opacity-50 hover:opacity-100 hover:text-[#eecf76] transition-colors" href="part-vi-ethics-and-intimacy">PART VI</a>
+<a class="opacity-50 hover:opacity-100 hover:text-[#eecf76] transition-colors" href="part-vii-void-meditation">PART VII</a>
+<span class="text-[#eecf76]">PART VIII</span>
+<a class="opacity-50 hover:opacity-100 hover:text-[#eecf76] transition-colors" href="part-ix-epilogues">EPILOGUES</a>
+</div>
+</div>
+</nav>
+<!-- Header -->
+<header class="max-w-3xl mx-auto text-center mt-20 px-6 mb-24 relative z-10">
+<p class="font-display text-sm tracking-[0.3em] text-[#8a8885] mb-4 uppercase">Part VIII</p>
+<h1 class="text-5xl md:text-7xl text-[#eecf76] mb-8 glow-text leading-tight">The Unfolding<br/>Path</h1>
+<p class="text-xl md:text-2xl italic text-[#dcdbd5] opacity-90 leading-relaxed max-w-2xl mx-auto">
+            "The work stops asking to be impressive<br/>and starts asking to be livable."
+        </p>
+<div class="flex items-center justify-center mt-12 opacity-60">
+<div class="h-px w-16 bg-gradient-to-l from-[#c6a655] to-transparent"></div>
+<div class="mx-4 text-[#c6a655] text-xl">❖</div>
+<div class="h-px w-16 bg-gradient-to-r from-[#c6a655] to-transparent"></div>
+</div>
+</header>
+<!-- 1. The Recursive Spiral -->
+<section class="max-w-6xl mx-auto px-6 mb-32 relative z-10" data-infographic-section-id="part-viii-the-unfolding-path-section-01-the-recursive-spiral" data-infographic-selector="#part-viii-the-unfolding-path-section-01-the-recursive-spiral" data-infographic-source="part-viii-the-unfolding-path.html" data-infographic-status="published" id="part-viii-the-unfolding-path-section-01-the-recursive-spiral">
+<h2 class="font-display text-3xl text-center text-[#c6a655] mb-4">The Recursive Spiral</h2>
+<p class="text-center text-[#8a8885] mb-12 text-sm uppercase tracking-widest">State To Trait</p>
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<!-- Visualization -->
+<div class="panel p-1 relative h-[450px] w-full bg-[#080808] flex items-center justify-center overflow-hidden">
+<canvas class="w-full h-full" id="spiralCanvas"></canvas>
+</div>
+<!-- Explanation -->
+<div class="space-y-6">
+<div class="panel p-8 border-l-4 border-l-[#eecf76] hover-lift">
+<h3 class="font-display text-xl text-[#eecf76] mb-2">The Quiet Return</h3>
+<p class="text-[#8a8885] mb-4 leading-relaxed">
+                        The spiral returns the same tensions again and again, but you meet them with a different nervous system. A peak does not prove what has taken root. Integration practice becomes visible when your timing changes before your story does.
+                    </p>
+<div class="flex flex-wrap gap-2 mb-4 text-[10px] tracking-[0.22em] uppercase font-display">
+<span class="px-2 py-1 border border-[#4f4328] text-[#bba160] rounded-sm">Notice</span>
+<span class="px-2 py-1 border border-[#4f4328] text-[#bba160] rounded-sm">Return</span>
+<span class="px-2 py-1 border border-[#4f4328] text-[#bba160] rounded-sm">Choose Again</span>
+</div>
+<p class="text-[#dcdbd5] italic text-sm">
+                        "The work stops asking to be impressive and starts asking to be livable."
+                    </p>
+</div>
+<div class="p-6 border border-[#333] rounded bg-[#1a1816]/50">
+<strong class="block text-[#c6a655] mb-2 font-display text-sm tracking-wide">THE LAW OF INTEGRATION</strong>
+<p class="text-xs text-[#8a8885] leading-relaxed">
+                        What is reinforced becomes integrated.<br/>What is integrated reinforces itself.
+                    </p>
+<p class="text-[11px] text-[#a5a29c] mt-3 leading-relaxed">Small true returns deepen Asha. Rehearsed avoidance deepens Druj.</p>
+</div>
+</div>
+</div>
+<script>
+(function () {
+  const script = document.currentScript;
+  const root = script
+    ? script.closest(
+        '[data-infographic-section-id="part-viii-the-unfolding-path-section-01-the-recursive-spiral"]'
+      )
+    : null;
+  if (!root || root.dataset.recursiveSpiralReady === "1") return;
+  root.dataset.recursiveSpiralReady = "1";
+
+  const canvas = root.querySelector("#spiralCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+  let time = 0;
+  const tau = Math.PI * 2;
+  const maxDepth = 3;
+  const branchPoints = [0.34, 0.68];
+
+  function resize() {
+    const parent = canvas.parentElement;
+    if (!parent) return;
+    width = Math.max(1, Math.floor(parent.clientWidth));
+    height = Math.max(1, Math.floor(parent.clientHeight));
+    dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  window.addEventListener("resize", resize);
+  resize();
+
+  function spiralPoint(originX, originY, scale, rotation, t, turns) {
+    const theta = rotation + t * turns * tau;
+    const radius = scale * Math.pow(t, 1.22);
+    return {
+      x: originX + Math.cos(theta) * radius,
+      y: originY + Math.sin(theta) * radius,
+      theta,
+    };
+  }
+
+  function drawReturnRings(cx, cy, breathe) {
+    const maxRadius = Math.min(width, height) * 0.44;
+    for (let i = 1; i <= 4; i += 1) {
+      const t = i / 4;
+      const radius = maxRadius * t + Math.sin(time * 0.85 + i) * (3 + i * 1.4) * (0.45 + breathe * 0.55);
+      ctx.beginPath();
+      ctx.arc(cx, cy, Math.max(8, radius), 0, tau);
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = `rgba(94, 79, 43, ${0.07 + t * 0.08})`;
+      ctx.stroke();
+    }
+  }
+
+  function drawRecursiveSpiral(originX, originY, scale, rotation, depth, breathe) {
+    const localTwist =
+      depth === 0
+        ? 0
+        : Math.sin(time * (1.15 + depth * 0.2) + rotation * 0.4) * 0.22;
+    const turns = 2.95 - depth * 0.16 + localTwist * 0.42;
+    const points = Math.max(40, 100 - depth * 14);
+
+    ctx.beginPath();
+    for (let i = 0; i < points; i += 1) {
+      const t = i / (points - 1);
+      const point = spiralPoint(
+        originX,
+        originY,
+        scale,
+        rotation + localTwist,
+        t,
+        turns
+      );
+      if (i === 0) ctx.moveTo(point.x, point.y);
+      else ctx.lineTo(point.x, point.y);
+    }
+
+    const depthScale = depth / Math.max(1, maxDepth);
+    const alpha = Math.max(0.08, 0.4 - depthScale * 0.26 + breathe * 0.05);
+    const hue = 42 - depth * 3;
+    const sat = 78 - depth * 8;
+    const light = 58 - depth * 6;
+    ctx.lineWidth = Math.max(0.7, 2.1 - depth * 0.45);
+    ctx.strokeStyle = `hsla(${hue}, ${sat}%, ${light}%, ${alpha})`;
+    ctx.stroke();
+
+    if (depth >= maxDepth || scale < 24) return;
+
+    branchPoints.forEach((branchT, index) => {
+      const crawlSpeed = 0.06 + depth * 0.016;
+      const crawlPhase = (time * crawlSpeed + index * 0.31 + depth * 0.19) % 1;
+      const pathT = (branchT + crawlPhase) % 1;
+      const anchorPulse =
+        Math.sin(time * (1.35 + depth * 0.22) + index * 2.1 + pathT * 5.1) *
+        0.045;
+      const anchor = spiralPoint(
+        originX,
+        originY,
+        scale * (1 + anchorPulse),
+        rotation + anchorPulse * 0.9,
+        pathT,
+        turns
+      );
+
+      const tangentAhead = spiralPoint(
+        originX,
+        originY,
+        scale * (1 + anchorPulse),
+        rotation + anchorPulse * 0.9,
+        Math.min(1, pathT + 0.018),
+        turns
+      );
+      const tangentX = tangentAhead.x - anchor.x;
+      const tangentY = tangentAhead.y - anchor.y;
+      const tangentLength = Math.hypot(tangentX, tangentY) || 1;
+      const nx = -tangentY / tangentLength;
+      const ny = tangentX / tangentLength;
+      const direction = index === 0 ? 1 : -1;
+      const childScaleBase = scale * (0.58 - depth * 0.035);
+      const childScale =
+        childScaleBase *
+        (1 + Math.sin(time * (1.2 + depth * 0.26) + index * 1.7) * 0.08);
+      const childRotation =
+        anchor.theta +
+        direction * (1.08 + depth * 0.18) +
+        Math.sin(time * (0.9 + depth * 0.16) + depth * 0.6 + index) * 0.16 +
+        Math.cos(time * (0.72 + depth * 0.13) + index * 2.4) * 0.11;
+
+      const swayRadius = Math.max(0.8, 2.2 - depth * 0.4) * (0.6 + breathe * 0.35);
+      const childX =
+        anchor.x +
+        nx * Math.cos(time * (1.1 + depth * 0.2) + index * 2.1) * swayRadius;
+      const childY =
+        anchor.y +
+        ny * Math.sin(time * (1.1 + depth * 0.2) + index * 2.1) * swayRadius;
+
+      ctx.beginPath();
+      ctx.arc(anchor.x, anchor.y, Math.max(1.2, 3 - depth * 0.5), 0, tau);
+      ctx.fillStyle = `rgba(238, 207, 118, ${0.16 - depth * 0.02})`;
+      ctx.fill();
+
+      drawRecursiveSpiral(
+        childX,
+        childY,
+        childScale,
+        childRotation,
+        depth + 1,
+        breathe
+      );
+    });
+  }
+
+  function draw() {
+    ctx.globalCompositeOperation = "source-over";
+    ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+    ctx.fillRect(0, 0, width, height);
+
+    const cx = width / 2;
+    const cy = height / 2;
+    time += 0.009;
+    const breathe = (Math.sin(time * 1.2) + 1) * 0.5;
+
+    drawReturnRings(cx, cy, breathe);
+
+    ctx.globalCompositeOperation = "lighter";
+    const rootScale = Math.min(width, height) * 0.34 + breathe * 8;
+    const rootRotation = -Math.PI / 2 + time * 0.28;
+    drawRecursiveSpiral(cx, cy, rootScale, rootRotation, 0, breathe);
+    ctx.globalCompositeOperation = "source-over";
+
+    requestAnimationFrame(draw);
+  }
+
+  requestAnimationFrame(draw);
+})();
+</script>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-viii-the-unfolding-path-section-01-the-recursive-spiral</div></section>
+<!-- 2. The Five Octaves (Resonance) -->
+<section class="max-w-4xl mx-auto px-6 mb-32 relative z-10" data-default-octave-index="0" data-infographic-section-id="part-viii-the-unfolding-path-section-02-the-resonant-self" data-infographic-selector="#part-viii-the-unfolding-path-section-02-the-resonant-self" data-infographic-source="part-viii-the-unfolding-path.html" data-infographic-status="published" id="part-viii-the-unfolding-path-section-02-the-resonant-self">
+<h2 class="font-display text-3xl text-center text-[#c6a655] mb-4">The Resonant Self</h2>
+<p class="text-center text-[#8a8885] mb-3 text-sm uppercase tracking-widest">Five Octaves of One Field</p>
+<p class="text-center text-[#8a8885] mb-12 text-sm leading-relaxed max-w-2xl mx-auto">Same life, different octaves: regulation, charge, meaning, archetypal pattern, and spacious silence.</p>
+<div class="panel p-8 md:p-12 relative bg-[#080808] overflow-hidden">
+<div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(198,166,85,0.1),transparent_65%)]"></div>
+<canvas aria-hidden="true" class="w-full h-[260px] mb-6 relative z-10" id="octaveCanvas"></canvas>
+<p class="text-center text-[#8a8885] mb-6 text-xs uppercase tracking-widest relative z-10">Tap, click, or press Enter to tune the register.</p>
+<div aria-label="Octave selector" class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-xs relative z-10" role="group">
+<button aria-controls="octaveText" aria-pressed="true" class="octave-hover p-3 rounded is-active focus:outline-none focus:ring-2 focus:ring-[#eecf76]/60 focus:ring-offset-2 focus:ring-offset-[#080808]" data-octave-index="0" data-octave-text="FORM BODY: Pattern condensed into breath, posture, and regulation. Noise braces; fidelity drops weight back into gravity." data-role="octave-btn" type="button">
+<span class="block text-[#eecf76] font-display mb-1 text-sm">FORM</span>
+<span class="text-[#8a8885]">Regulation</span>
+</button>
+<button aria-controls="octaveText" aria-pressed="false" class="octave-hover p-3 rounded focus:outline-none focus:ring-2 focus:ring-[#eecf76]/60 focus:ring-offset-2 focus:ring-offset-[#080808]" data-octave-index="1" data-octave-text="EROS BODY: Pattern as charge. Noise chases or numbs; fidelity keeps aliveness and boundary together." data-role="octave-btn" type="button">
+<span class="block text-[#eecf76] font-display mb-1 text-sm">EROS</span>
+<span class="text-[#8a8885]">Charge</span>
+</button>
+<button aria-controls="octaveText" aria-pressed="false" class="octave-hover p-3 rounded focus:outline-none focus:ring-2 focus:ring-[#eecf76]/60 focus:ring-offset-2 focus:ring-offset-[#080808]" data-octave-index="2" data-octave-text="SOUL BODY: Pattern as meaning. Noise runs inherited script; fidelity is the quiet click when story, value, and choice line up." data-role="octave-btn" type="button">
+<span class="block text-[#eecf76] font-display mb-1 text-sm">SOUL</span>
+<span class="text-[#8a8885]">Meaning</span>
+</button>
+<button aria-controls="octaveText" aria-pressed="false" class="octave-hover p-3 rounded focus:outline-none focus:ring-2 focus:ring-[#eecf76]/60 focus:ring-offset-2 focus:ring-offset-[#080808]" data-octave-index="3" data-octave-text="ARCHETYPAL BODY: Pattern as role and mythic force. Noise becomes possession by the mask; fidelity wears the mantle without becoming it." data-role="octave-btn" type="button">
+<span class="block text-[#eecf76] font-display mb-1 text-sm">ARCHETYPE</span>
+<span class="text-[#8a8885]">Pattern</span>
+</button>
+<button aria-controls="octaveText" aria-pressed="false" class="octave-hover p-3 rounded focus:outline-none focus:ring-2 focus:ring-[#eecf76]/60 focus:ring-offset-2 focus:ring-offset-[#080808]" data-octave-index="4" data-octave-text="VOID BODY: Pattern at the threshold. Noise fills silence with chatter; fidelity lets spaciousness hold the waves without grasping." data-role="octave-btn" type="button">
+<span class="block text-[#eecf76] font-display mb-1 text-sm">VOID</span>
+<span class="text-[#8a8885]">Silence</span>
+</button>
+</div>
+<div aria-atomic="true" aria-live="polite" class="text-center text-[#dcdbd5] mt-10 italic min-h-[3.5em] font-serif text-lg opacity-85 relative z-10" id="octaveText" role="status">FORM BODY: Pattern condensed into breath, posture, and regulation. Noise braces; fidelity drops weight back into gravity.</div>
+</div>
+<script>
+(function () {
+  const script = document.currentScript;
+  const root = script
+    ? script.closest(
+        '[data-infographic-section-id="part-viii-the-unfolding-path-section-02-the-resonant-self"]'
+      )
+    : null;
+  if (!root || root.dataset.resonantSelfReady === "1") return;
+  root.dataset.resonantSelfReady = "1";
+
+  const canvas = root.querySelector("#octaveCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  const buttons = Array.from(root.querySelectorAll('[data-role="octave-btn"]'));
+  if (!buttons.length) return;
+  const textBox = root.querySelector("#octaveText");
+
+  const palettes = [
+    { line: "rgba(224, 191, 120, 0.9)", ghost: "rgba(224, 191, 120, 0.2)" },
+    { line: "rgba(226, 140, 104, 0.9)", ghost: "rgba(226, 140, 104, 0.2)" },
+    { line: "rgba(165, 138, 223, 0.9)", ghost: "rgba(165, 138, 223, 0.2)" },
+    { line: "rgba(120, 160, 230, 0.9)", ghost: "rgba(120, 160, 230, 0.2)" },
+    { line: "rgba(200, 216, 255, 0.95)", ghost: "rgba(200, 216, 255, 0.25)" },
+  ];
+
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+  let time = 0;
+  let activeOctave = 0;
+
+  function clampIndex(index) {
+    return Math.max(0, Math.min(buttons.length - 1, index));
+  }
+
+  function setActiveOctave(index) {
+    activeOctave = clampIndex(index);
+    buttons.forEach((button, buttonIndex) => {
+      const isActive = buttonIndex === activeOctave;
+      button.classList.toggle("is-active", isActive);
+      button.style.backgroundColor = isActive ? "rgba(26, 24, 22, 0.92)" : "";
+      button.style.borderColor = isActive ? "rgba(94, 79, 43, 0.9)" : "";
+      button.style.boxShadow = isActive
+        ? "inset 0 0 0 1px rgba(238, 207, 118, 0.18)"
+        : "";
+      button.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+    if (textBox) {
+      const nextText =
+        buttons[activeOctave].dataset.octaveText ||
+        buttons[activeOctave].textContent ||
+        "";
+      textBox.textContent = nextText.trim();
+    }
+  }
+
+  function resize() {
+    const rect = canvas.getBoundingClientRect();
+    width = Math.max(1, Math.floor(rect.width));
+    height = Math.max(1, Math.floor(rect.height));
+    dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function drawWaves() {
+    ctx.clearRect(0, 0, width, height);
+    ctx.fillStyle = "rgba(5, 5, 5, 0.24)";
+    ctx.fillRect(0, 0, width, height);
+
+    const baseline = height * 0.5;
+    const xStep = Math.max(2, Math.floor(width / 260));
+
+    for (let i = 0; i < buttons.length; i += 1) {
+      const isActive = i === activeOctave;
+      const palette = palettes[i] || palettes[0];
+      const amp = isActive ? 34 + i * 4 : 11 + i * 2;
+      const freq = 0.013 + i * 0.004;
+      const speed = 0.052 + i * 0.011;
+      const phase = i * 0.8;
+
+      ctx.beginPath();
+      for (let x = 0; x <= width; x += xStep) {
+        const y =
+          baseline +
+          Math.sin(x * freq + time * speed + phase) * amp +
+          (isActive ? Math.sin(x * 0.045 - time * 0.08) * 6 : 0);
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+
+      ctx.lineWidth = isActive ? 2.6 : 1.2;
+      ctx.strokeStyle = isActive ? palette.line : palette.ghost;
+      ctx.shadowBlur = isActive ? 10 : 0;
+      ctx.shadowColor = isActive ? palette.line : "transparent";
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+    }
+
+    const pulseRadius = 12 + Math.sin(time * 0.9) * 3;
+    const activeColor = (palettes[activeOctave] || palettes[0]).line;
+    const glow = ctx.createRadialGradient(
+      width * 0.5,
+      baseline,
+      0,
+      width * 0.5,
+      baseline,
+      80
+    );
+    glow.addColorStop(0, activeColor);
+    glow.addColorStop(0.2, "rgba(255,255,255,0.55)");
+    glow.addColorStop(1, "rgba(255,255,255,0)");
+    ctx.fillStyle = glow;
+    ctx.beginPath();
+    ctx.arc(width * 0.5, baseline, 70, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.fillStyle = activeColor;
+    ctx.beginPath();
+    ctx.arc(width * 0.5, baseline, pulseRadius, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  buttons.forEach((button, index) => {
+    button.addEventListener("click", () => setActiveOctave(index));
+    button.addEventListener("mouseenter", () => setActiveOctave(index));
+    button.addEventListener("focus", () => setActiveOctave(index));
+    button.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        setActiveOctave(index);
+      }
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        const next = clampIndex(index + 1);
+        buttons[next].focus();
+        setActiveOctave(next);
+      }
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        const prev = clampIndex(index - 1);
+        buttons[prev].focus();
+        setActiveOctave(prev);
+      }
+    });
+  });
+
+  const defaultIndex = Number.parseInt(root.dataset.defaultOctaveIndex || "0", 10);
+  setActiveOctave(Number.isFinite(defaultIndex) ? defaultIndex : 0);
+  resize();
+  window.addEventListener("resize", resize);
+
+  function animate() {
+    time += 1;
+    drawWaves();
+    requestAnimationFrame(animate);
+  }
+  requestAnimationFrame(animate);
+})();
+</script>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-viii-the-unfolding-path-section-02-the-resonant-self</div></section>
+<!-- 3. Daily Touchstones -->
+<section class="max-w-6xl mx-auto px-6 mb-32 relative z-10" data-infographic-section-id="part-viii-the-unfolding-path-section-03-daily-touchstones" data-infographic-selector="#part-viii-the-unfolding-path-section-03-daily-touchstones" data-infographic-source="part-viii-the-unfolding-path.html" data-infographic-status="published" id="part-viii-the-unfolding-path-section-03-daily-touchstones">
+<h2 class="font-display text-3xl text-center text-[#c6a655] mb-4">Daily Touchstones</h2>
+<p class="text-center text-[#8a8885] mb-12 text-sm uppercase tracking-widest">Touchstones, Not Tasks</p>
+<p class="text-center text-[#8a8885] mb-8 text-sm max-w-3xl mx-auto">Keep just enough structure to keep the path alive. These are small returns that make the day more livable before drama hardens.</p>
+<div class="grid xl:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] gap-8 items-start">
+<div class="panel p-1 relative bg-[#080808] overflow-hidden">
+<div class="relative" style="height: clamp(320px, 54vw, 500px);">
+<canvas aria-label="Daily touchstones loop: Morning, Thresholds, Overload, and Evening." class="w-full h-full cursor-pointer" id="dailyTouchstonesCanvas" style="touch-action: manipulation; display: block;"></canvas>
+<div class="absolute top-4 left-4 right-4 flex items-start justify-between gap-4 pointer-events-none">
+<div class="bg-black/45 px-3 py-2 rounded">
+<p class="text-[10px] tracking-[0.24em] uppercase text-[#8a8885]">Ordinary Thresholds</p>
+<p class="text-xs text-[#dcdbd5] mt-1">Timing matters more than force when the day keeps changing shape.</p>
+</div>
+<div class="hidden sm:block bg-black/45 px-3 py-2 rounded text-right">
+<p class="text-[10px] tracking-[0.24em] uppercase text-[#8a8885]">Interaction</p>
+<p class="text-xs text-[#dcdbd5] mt-1">Hover, tap, or click a node to redraw the day.</p>
+</div>
+</div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 px-3 py-2 rounded pointer-events-none">
+<p class="text-[10px] tracking-[0.24em] uppercase text-[#8a8885] text-center">A day is a series of thresholds, not one uninterrupted state.</p>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="panel p-6 relative overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(210,178,101,0.12),transparent_42%)] pointer-events-none"></div>
+<div class="relative">
+<div class="flex items-start justify-between gap-4 mb-4">
+<div>
+<div class="inline-flex items-center gap-2">
+<span class="inline-flex items-center justify-center min-w-[2.75rem] h-10 px-3 rounded-full border border-[#7b6536] text-[#eecf76] text-xs tracking-[0.22em] uppercase" data-role="touchstone-code">AM</span>
+<span class="text-[10px] tracking-[0.24em] uppercase text-[#8a8885]" data-role="touchstone-phrase">Bed's Edge</span>
+</div>
+<h3 class="font-display text-[#dcdbd5] text-2xl mt-4" data-role="touchstone-title">Morning</h3>
+</div>
+<div class="text-right">
+<p class="text-[10px] tracking-[0.24em] uppercase text-[#8a8885]">Why It Matters</p>
+<p class="text-sm text-[#dcdbd5] mt-2 max-w-[14rem]" data-role="touchstone-why">The day changes carriage more reliably through small contact than through grand intention.</p>
+</div>
+</div>
+<p class="text-[#dcdbd5] text-lg leading-relaxed border-l-2 border-[#5e4f2b] pl-4" data-role="touchstone-hook">Let the day start from contact, not momentum.</p>
+<div class="grid gap-3 mt-6" data-role="touchstone-bullets"></div>
+<div class="mt-6 pt-5 border-t border-[#2a2723]">
+<p class="text-[10px] tracking-[0.24em] uppercase text-[#8a8885]">Chapter Register</p>
+<p class="text-sm text-[#dcdbd5] mt-2" data-role="touchstone-register">This is the quiet heat of state becoming trait: a small return that keeps the next moment clean.</p>
+</div>
+</div>
+</div>
+<div class="grid sm:grid-cols-2 gap-3" data-role="touchstone-buttons">
+<button aria-pressed="true" class="panel p-4 text-left transition-all duration-300 border-[#eecf76]/70 shadow-[0_0_0_1px_rgba(238,207,118,0.18)]" data-role="touchstone-button" data-touchstone="morning" type="button">
+<div class="flex items-center justify-between gap-4">
+<span class="text-[10px] tracking-[0.22em] uppercase text-[#eecf76]">AM</span>
+<span class="text-[10px] tracking-[0.2em] uppercase text-[#8a8885]">Bed's Edge</span>
+</div>
+<h4 class="font-display text-[#dcdbd5] text-lg mt-3">Morning</h4>
+<p class="text-sm text-[#8a8885] mt-2">Contact before momentum.</p>
+</button>
+<button aria-pressed="false" class="panel p-4 text-left transition-all duration-300" data-role="touchstone-button" data-touchstone="thresholds" type="button">
+<div class="flex items-center justify-between gap-4">
+<span class="text-[10px] tracking-[0.22em] uppercase text-[#c8b8e8]">MID</span>
+<span class="text-[10px] tracking-[0.2em] uppercase text-[#8a8885]">Doorway Reset</span>
+</div>
+<h4 class="font-display text-[#dcdbd5] text-lg mt-3">Thresholds</h4>
+<p class="text-sm text-[#8a8885] mt-2">Pause before the next role.</p>
+</button>
+<button aria-pressed="false" class="panel p-4 text-left transition-all duration-300" data-role="touchstone-button" data-touchstone="overload" type="button">
+<div class="flex items-center justify-between gap-4">
+<span class="text-[10px] tracking-[0.22em] uppercase text-[#d28660]">OVR</span>
+<span class="text-[10px] tracking-[0.2em] uppercase text-[#8a8885]">Concrete Return</span>
+</div>
+<h4 class="font-display text-[#dcdbd5] text-lg mt-3">Overload</h4>
+<p class="text-sm text-[#8a8885] mt-2">Reduce the blast radius.</p>
+</button>
+<button aria-pressed="false" class="panel p-4 text-left transition-all duration-300" data-role="touchstone-button" data-touchstone="evening" type="button">
+<div class="flex items-center justify-between gap-4">
+<span class="text-[10px] tracking-[0.22em] uppercase text-[#79a79a]">PM</span>
+<span class="text-[10px] tracking-[0.2em] uppercase text-[#8a8885]">One Honest Line</span>
+</div>
+<h4 class="font-display text-[#dcdbd5] text-lg mt-3">Evening</h4>
+<p class="text-sm text-[#8a8885] mt-2">Name what actually happened.</p>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-8 panel p-6 text-center">
+<p class="text-[#dcdbd5]">
+                Treat these as touchstones, not tasks.
+            </p>
+<p class="text-[#8a8885] text-sm mt-3">
+                Their work is small and cumulative: they keep the day permeable to insight until the path begins to live on its own.
+            </p>
+</div>
+<script>
+(function () {
+  const script = document.currentScript;
+  const root = script
+    ? script.closest(
+        '[data-infographic-section-id="part-viii-the-unfolding-path-section-03-daily-touchstones"]'
+      )
+    : null;
+  if (!root || root.dataset.touchstonesReady === "1") return;
+  root.dataset.touchstonesReady = "1";
+
+  const canvas = root.querySelector("#dailyTouchstonesCanvas");
+  const ctx = canvas ? canvas.getContext("2d") : null;
+  const buttons = Array.from(root.querySelectorAll('[data-role="touchstone-button"]'));
+  const codeEl = root.querySelector('[data-role="touchstone-code"]');
+  const phraseEl = root.querySelector('[data-role="touchstone-phrase"]');
+  const titleEl = root.querySelector('[data-role="touchstone-title"]');
+  const whyEl = root.querySelector('[data-role="touchstone-why"]');
+  const hookEl = root.querySelector('[data-role="touchstone-hook"]');
+  const registerEl = root.querySelector('[data-role="touchstone-register"]');
+  const bulletsEl = root.querySelector('[data-role="touchstone-bullets"]');
+
+  if (
+    !canvas ||
+    !ctx ||
+    !buttons.length ||
+    !codeEl ||
+    !phraseEl ||
+    !titleEl ||
+    !whyEl ||
+    !hookEl ||
+    !registerEl ||
+    !bulletsEl
+  ) {
+    return;
+  }
+
+  const touchstones = [
+    {
+      key: "morning",
+      code: "AM",
+      phrase: "Bed's Edge",
+      title: "Morning",
+      color: "#d2b265",
+      hook: "Let the day start from contact, not momentum.",
+      why: "The day changes carriage more reliably through small contact than through grand intention.",
+      register:
+        "This is the quiet heat of state becoming trait: a small return that keeps the next moment clean.",
+      bullets: [
+        "Pause at the edge of the bed.",
+        "Name one sensation, emotion, or value.",
+        "Let the day begin from contact rather than speed.",
+      ],
+    },
+    {
+      key: "thresholds",
+      code: "MID",
+      phrase: "Doorway Reset",
+      title: "Thresholds",
+      color: "#9f8bc6",
+      hook: "Timing matters more than force at the ordinary threshold.",
+      why: "A single exhale between roles often prevents old momentum from entering the room first.",
+      register:
+        "The pause keeps the next word, boundary, or touch from arriving contaminated.",
+      bullets: [
+        "Hand on latch, rail, or doorway.",
+        "Feel the room you are entering before the role takes over.",
+        "Take one long exhale before the next sentence.",
+      ],
+    },
+    {
+      key: "overload",
+      code: "OVR",
+      phrase: "Concrete Return",
+      title: "Overload",
+      color: "#d28660",
+      hook: "Do not make unfinishedness everyone else's weather.",
+      why: "Concrete grounding reduces the blast radius before the story turns charge into atmosphere.",
+      register:
+        "The work is not to feel nothing. It is to return fast enough that the room does not have to carry your overflow.",
+      bullets: [
+        "Feel both feet on the floor.",
+        "Name one thing you can actually see.",
+        "Take one lengthened exhale, then make one honest move.",
+      ],
+    },
+    {
+      key: "evening",
+      code: "PM",
+      phrase: "One Honest Line",
+      title: "Evening",
+      color: "#79a79a",
+      hook: "End by naming the day you actually lived.",
+      why: "Small honesty keeps reflection from becoming performance and helps tomorrow start with less residue.",
+      register:
+        "The path stays alive through ordinary truth-telling, not through dramatic self-assessment.",
+      bullets: [
+        "What held today?",
+        "What frayed?",
+        "What asks to be met more truthfully tomorrow?",
+      ],
+    },
+  ];
+
+  const byKey = new Map(touchstones.map((item) => [item.key, item]));
+  let activeKey = "morning";
+  let hoverKey = null;
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+  let time = 0;
+  let nodePositions = [];
+
+  function setButtonState(key) {
+    buttons.forEach((button) => {
+      const active = button.dataset.touchstone === key;
+      button.dataset.active = active ? "1" : "0";
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+      button.classList.toggle("border-[#eecf76]/70", active);
+      button.classList.toggle("shadow-[0_0_0_1px_rgba(238,207,118,0.18)]", active);
+    });
+  }
+
+  function renderBullets(items, color) {
+    bulletsEl.innerHTML = items
+      .map(
+        (item, index) => `
+          <div class="panel p-4 text-left border-l-2" style="border-left-color: ${color}">
+            <div class="flex items-start gap-3">
+              <span class="text-[10px] tracking-[0.22em] uppercase mt-1" style="color: ${color}">0${index + 1}</span>
+              <p class="text-sm text-[#dcdbd5] leading-relaxed">${item}</p>
+            </div>
+          </div>
+        `
+      )
+      .join("");
+  }
+
+  function applyTouchstone(key) {
+    const touchstone = byKey.get(key);
+    if (!touchstone) return;
+    activeKey = key;
+    codeEl.textContent = touchstone.code;
+    codeEl.style.borderColor = touchstone.color;
+    codeEl.style.color = touchstone.color;
+    phraseEl.textContent = touchstone.phrase;
+    titleEl.textContent = touchstone.title;
+    hookEl.textContent = touchstone.hook;
+    hookEl.style.borderLeftColor = touchstone.color;
+    whyEl.textContent = touchstone.why;
+    registerEl.textContent = touchstone.register;
+    renderBullets(touchstone.bullets, touchstone.color);
+    setButtonState(key);
+  }
+
+  function resize() {
+    const parent = canvas.parentElement;
+    if (!parent) return;
+    width = Math.max(1, Math.floor(parent.clientWidth));
+    height = Math.max(1, Math.floor(parent.clientHeight));
+    dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    nodePositions = [
+      { key: "morning", x: width * 0.18, y: height * 0.26 },
+      { key: "thresholds", x: width * 0.72, y: height * 0.22 },
+      { key: "overload", x: width * 0.34, y: height * 0.7 },
+      { key: "evening", x: width * 0.8, y: height * 0.72 },
+    ];
+  }
+
+  function findNode(clientX, clientY) {
+    const rect = canvas.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
+    let picked = null;
+    let minDistance = Infinity;
+    nodePositions.forEach((node) => {
+      const dist = Math.hypot(x - node.x, y - node.y);
+      if (dist < 34 && dist < minDistance) {
+        minDistance = dist;
+        picked = node.key;
+      }
+    });
+    return picked;
+  }
+
+  function drawThread() {
+    ctx.clearRect(0, 0, width, height);
+    if (nodePositions.length !== 4) return;
+
+    const active = byKey.get(activeKey) || touchstones[0];
+    const hovered = hoverKey ? byKey.get(hoverKey) : null;
+    const emphasisColor = hovered ? hovered.color : active.color;
+
+    const background = ctx.createRadialGradient(
+      width * 0.52,
+      height * 0.48,
+      10,
+      width * 0.52,
+      height * 0.48,
+      Math.max(width, height) * 0.7
+    );
+    background.addColorStop(0, "rgba(210,178,101,0.12)");
+    background.addColorStop(1, "rgba(0,0,0,0)");
+    ctx.fillStyle = background;
+    ctx.fillRect(0, 0, width, height);
+
+    const [a, b, c, d] = nodePositions;
+    const mid1 = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 - 26 };
+    const mid2 = { x: (b.x + c.x) / 2 + 36, y: (b.y + c.y) / 2 + 14 };
+    const mid3 = { x: (c.x + d.x) / 2 - 12, y: (c.y + d.y) / 2 - 34 };
+
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y);
+    ctx.quadraticCurveTo(mid1.x, mid1.y, b.x, b.y);
+    ctx.quadraticCurveTo(mid2.x, mid2.y, c.x, c.y);
+    ctx.quadraticCurveTo(mid3.x, mid3.y, d.x, d.y);
+    ctx.strokeStyle = "rgba(138, 136, 133, 0.28)";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y);
+    ctx.quadraticCurveTo(mid1.x, mid1.y, b.x, b.y);
+    ctx.quadraticCurveTo(mid2.x, mid2.y, c.x, c.y);
+    ctx.quadraticCurveTo(mid3.x, mid3.y, d.x, d.y);
+    ctx.strokeStyle = emphasisColor;
+    ctx.globalAlpha = 0.33;
+    ctx.lineWidth = 2.2;
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+
+    time += 0.015;
+    const travel = (Math.sin(time) + 1) / 2;
+    const segment = Math.min(2.999, travel * 3);
+    const segmentIndex = Math.floor(segment);
+    const localT = segment - segmentIndex;
+    const points = [a, b, c, d];
+    const start = points[segmentIndex];
+    const end = points[segmentIndex + 1];
+    const emberX = start.x + (end.x - start.x) * localT;
+    const emberY = start.y + (end.y - start.y) * localT;
+
+    const emberGlow = ctx.createRadialGradient(emberX, emberY, 0, emberX, emberY, 26);
+    emberGlow.addColorStop(0, "rgba(255,255,255,0.9)");
+    emberGlow.addColorStop(0.35, emphasisColor);
+    emberGlow.addColorStop(1, "rgba(0,0,0,0)");
+    ctx.fillStyle = emberGlow;
+    ctx.beginPath();
+    ctx.arc(emberX, emberY, 26, 0, Math.PI * 2);
+    ctx.fill();
+
+    nodePositions.forEach((node, index) => {
+      const touchstone = byKey.get(node.key);
+      if (!touchstone) return;
+      const isActive = node.key === activeKey;
+      const isHovered = node.key === hoverKey;
+      const radius = isActive ? 18 : isHovered ? 15 : 12;
+
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, radius + 10, 0, Math.PI * 2);
+      ctx.fillStyle = isActive
+        ? `${touchstone.color}22`
+        : isHovered
+          ? `${touchstone.color}18`
+          : "rgba(255,255,255,0.03)";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, radius, 0, Math.PI * 2);
+      ctx.fillStyle = "#0c0b0b";
+      ctx.fill();
+      ctx.strokeStyle = touchstone.color;
+      ctx.lineWidth = isActive ? 2.8 : 1.7;
+      ctx.stroke();
+
+      ctx.fillStyle = touchstone.color;
+      ctx.font = "600 10px Cinzel, serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(touchstone.code, node.x, node.y);
+
+      ctx.fillStyle = isActive ? "#eecf76" : "#8a8885";
+      ctx.font = "11px Lato, sans-serif";
+      ctx.fillText(touchstone.title.toUpperCase(), node.x, node.y + radius + 22);
+
+      if (index < nodePositions.length - 1) {
+        const next = nodePositions[index + 1];
+        ctx.beginPath();
+        ctx.moveTo(node.x, node.y);
+        ctx.lineTo(next.x, next.y);
+        ctx.strokeStyle = "rgba(94, 79, 43, 0.18)";
+        ctx.setLineDash([5, 9]);
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+    });
+
+    requestAnimationFrame(drawThread);
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const key = button.dataset.touchstone;
+      if (!key) return;
+      applyTouchstone(key);
+    });
+    button.addEventListener("pointerenter", () => {
+      const key = button.dataset.touchstone;
+      if (!key) return;
+      hoverKey = key;
+      applyTouchstone(key);
+    });
+  });
+
+  canvas.addEventListener("pointermove", (event) => {
+    const picked = findNode(event.clientX, event.clientY);
+    canvas.style.cursor = picked ? "pointer" : "default";
+    if (!picked) {
+      hoverKey = null;
+      return;
+    }
+    hoverKey = picked;
+    applyTouchstone(picked);
+  });
+
+  canvas.addEventListener("pointerleave", () => {
+    hoverKey = null;
+    canvas.style.cursor = "default";
+  });
+
+  canvas.addEventListener("click", (event) => {
+    const picked = findNode(event.clientX, event.clientY);
+    if (!picked) return;
+    hoverKey = picked;
+    applyTouchstone(picked);
+  });
+
+  window.addEventListener("resize", resize);
+  resize();
+  applyTouchstone(activeKey);
+  requestAnimationFrame(drawThread);
+})();
+</script>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-viii-the-unfolding-path-section-03-daily-touchstones</div></section>
+<!-- 4. Final Integration (Serene Center) -->
+<section class="max-w-6xl mx-auto px-6 mb-32 relative z-10 text-center" data-infographic-section-id="part-viii-the-unfolding-path-section-04-the-dragon-incarnate" data-infographic-selector="#part-viii-the-unfolding-path-section-04-the-dragon-incarnate" data-infographic-source="part-viii-the-unfolding-path.html" data-infographic-status="published" id="part-viii-the-unfolding-path-section-04-the-dragon-incarnate">
+<h2 class="font-display text-3xl text-[#c6a655] mb-4">The Dragon Incarnate</h2>
+<p class="text-[#8a8885] mb-8 text-sm uppercase tracking-widest">Ordinary Evidence of the Work</p>
+<div class="panel p-1 relative h-[400px] w-full bg-[#080808] overflow-hidden flex items-center justify-center mx-auto mb-8">
+<canvas class="w-full h-full" id="centerCanvas"></canvas>
+<div class="absolute pointer-events-none text-center z-10 mix-blend-screen">
+<span class="font-display text-[#eecf76] text-2xl tracking-[0.5em] opacity-80 glow-text">COHERENCE</span>
+</div>
+</div>
+<div class="max-w-3xl mx-auto text-[#dcdbd5] text-xl font-serif italic mb-8">
+<p>
+                "The Dragon is the way you stand in line at the grocery store."
+            </p>
+</div>
+<div class="grid md:grid-cols-3 gap-6 text-left mb-8">
+<div class="panel p-6">
+<h3 class="font-display text-[#eecf76] text-lg mb-3">Breath</h3>
+<p class="text-sm text-[#8a8885] leading-relaxed">
+                Expression that stays warm and precise under pressure. The exhale clears static so the next words land clean.
+            </p>
+</div>
+<div class="panel p-6">
+<h3 class="font-display text-[#eecf76] text-lg mb-3">Claws</h3>
+<p class="text-sm text-[#8a8885] leading-relaxed">
+                Traction and definition. A clean boundary draws the line without rigidity, winning, or extra force.
+            </p>
+</div>
+<div class="panel p-6">
+<h3 class="font-display text-[#eecf76] text-lg mb-3">Scales</h3>
+<p class="text-sm text-[#8a8885] leading-relaxed">
+                Resilient permeability. Not a fortress, not a floodgate: available for contact without taking every impact inside.
+            </p>
+</div>
+</div>
+<div class="panel p-6 max-w-3xl mx-auto text-left">
+<strong class="block text-[#eecf76] mb-2 font-display text-sm tracking-wide">SERVICE CHECK</strong>
+<p class="text-sm text-[#8a8885] leading-relaxed">
+                Feeling proud of your growth is healthy. Feeling special, separate, or superior because of it is the trap. Coherence is evidence, not self-certification: keep it open to correction from body, evidence, conduct, relationship, and consequence. The bigger the Dragon, the greater the service.
+            </p>
+</div>
+<script>
+(function () {
+  const script = document.currentScript;
+  const root = script
+    ? script.closest(
+        '[data-infographic-section-id="part-viii-the-unfolding-path-section-04-the-dragon-incarnate"]'
+      )
+    : null;
+  if (!root || root.dataset.integrationReady === "1") return;
+  root.dataset.integrationReady = "1";
+
+  const canvas = root.querySelector("#centerCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+  let particles = [];
+
+  function initParticles() {
+    particles = [];
+    for (let i = 0; i < 80; i++) {
+      particles.push({
+        angle: Math.random() * Math.PI * 2,
+        radius: 60 + Math.random() * 120,
+        speed: 0.002 + Math.random() * 0.005,
+        size: Math.random() * 2.5,
+      });
+    }
+  }
+
+  function resize() {
+    const parent = canvas.parentElement;
+    if (!parent) return;
+    width = Math.max(1, Math.floor(parent.clientWidth));
+    height = Math.max(1, Math.floor(parent.clientHeight));
+    dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    initParticles();
+  }
+
+  window.addEventListener("resize", resize);
+  resize();
+
+  function draw() {
+    ctx.fillStyle = "rgba(12, 11, 11, 0.2)";
+    ctx.fillRect(0, 0, width, height);
+
+    const cx = width / 2;
+    const cy = height / 2;
+
+    ctx.lineWidth = 0.5;
+
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      p.angle += p.speed;
+
+      const x = cx + Math.cos(p.angle) * p.radius;
+      const y = cy + Math.sin(p.angle) * (p.radius * 0.6);
+
+      ctx.beginPath();
+      ctx.arc(x, y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = "#c6a655";
+      ctx.fill();
+
+      for (let j = i + 1; j < particles.length; j++) {
+        const p2 = particles[j];
+        const x2 = cx + Math.cos(p2.angle) * p2.radius;
+        const y2 = cy + Math.sin(p2.angle) * (p2.radius * 0.6);
+
+        const dist = Math.hypot(x - x2, y - y2);
+        if (dist < 50) {
+          ctx.beginPath();
+          ctx.moveTo(x, y);
+          ctx.lineTo(x2, y2);
+          ctx.strokeStyle = `rgba(198, 166, 85, ${1 - dist / 50})`;
+          ctx.stroke();
+        }
+      }
+    }
+
+    const t = Date.now() * 0.001;
+    const breathe = 30 + Math.sin(t) * 5;
+
+    const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, breathe);
+    grad.addColorStop(0, "#fff");
+    grad.addColorStop(0.4, "rgba(238, 207, 118, 0.8)");
+    grad.addColorStop(1, "transparent");
+
+    ctx.globalCompositeOperation = "screen";
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.arc(cx, cy, breathe, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalCompositeOperation = "source-over";
+
+    requestAnimationFrame(draw);
+  }
+
+  requestAnimationFrame(draw);
+})();
+</script>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-viii-the-unfolding-path-section-04-the-dragon-incarnate</div></section>
+<!-- Footer -->
+<footer class="text-center py-20 px-6 border-t border-[#1a1816] bg-[#080808]">
+<div class="max-w-2xl mx-auto">
+<div class="mb-8 opacity-40">
+<svg class="mx-auto w-12 h-12 text-[#c6a655]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+</svg>
+</div>
+<p class="font-display text-2xl text-[#eecf76] mb-4">"One breath. One boundary. One repair. Then the next."</p>
+<p class="text-[#5e4f2b] text-sm tracking-widest uppercase">Path of the Dragon</p>
+<a aria-label="Go to the beginning of Part VIII" class="inline-flex items-center justify-center mt-6 px-5 py-2 border border-[#5e4f2b] text-[#eecf76] text-xs tracking-[0.22em] uppercase hover:bg-[#161514] transition-colors duration-300" href="../the-unfolding-path">
+                Read Part VIII From The Beginning
+            </a>
+</div>
+</footer>
+</body>
+</html>
