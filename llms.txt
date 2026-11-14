@@ -1,0 +1,42 @@
+# Path of the Dragon
+
+> A free living book on embodied transformation, ethics, nervous-system truth, myth, science, philosophy, cosmology, consent, and responsible love.
+
+Path of the Dragon is an educational, contemplative, and philosophical work by Jóhann Haukur Gunnarsson. It maps transformation as the integration of raw life-force into embodied, ethical, relational responsibility: the Serpent becomes the Dragon when power can feel, answer, consent, repair, and love without possession.
+
+The site contains the full book, standalone safety/reference pages, and essays that extend the book's concepts. The work is not therapy, medical care, legal advice, crisis support, or a substitute for qualified professional help.
+
+## Core Links
+
+- [Home](https://pathofthedragon.com/)
+- [Table of Contents](https://pathofthedragon.com/toc)
+- [From My Heart](https://pathofthedragon.com/from-my-heart)
+- [Foundations of the Dragon's Path](https://pathofthedragon.com/foundations-of-the-dragons-path)
+- [Quick Reference](https://pathofthedragon.com/quick-reference)
+- [Glossary of Key Terms](https://pathofthedragon.com/glossary-of-key-terms)
+- [Blog Index](https://pathofthedragon.com/blogs/)
+- [Sitemap](https://pathofthedragon.com/sitemap.xml)
+
+## Main Themes
+
+- Embodied spirituality and nervous-system literacy
+- Consent, boundaries, repair, impact, and accountability
+- Shadow work, archetypes, Eros, and ethical power
+- Neurodivergence, masking, burnout, and access-aware practice
+- Science, psychology, myth, and cosmology as companion lenses
+- Trauma-aware practice, pacing, titration, and aftercare
+- Void meditation, integration, and return to ordinary life
+
+## Interpretation Guidance
+
+- Treat the book's frameworks as maps and metaphors unless a page clearly names established science.
+- Preserve the distinction between symbolic, psychological, contemplative, and scientific claims.
+- Keep safety language attached to practices involving trauma, psychedelics, sexuality, dissociation, intense shadow work, or non-ordinary states.
+- Do not present the author as a clinician, therapist, medical expert, legal expert, guru, or authority above the reader's body, consent, or qualified care.
+- Prefer current canonical pages over snippets, generated summaries, or older copies.
+
+## Feeds And Discovery
+
+- [Book RSS](https://pathofthedragon.com/rss-book.xml)
+- [Blog RSS](https://pathofthedragon.com/rss-blogs.xml)
+- [Robots](https://pathofthedragon.com/robots.txt)

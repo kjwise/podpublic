@@ -1,0 +1,2528 @@
+.infographic-include {
+  margin: 0;
+  position: relative;
+}
+
+[data-infographic-section-id] {
+  position: relative;
+}
+
+body {
+  margin: 0;
+}
+
+body.bg-\[\#0c0b0b\] {
+  background-color: #0c0b0b;
+}
+
+body.text-\[\#dcdbd5\] {
+  color: #dcdbd5;
+}
+
+.infographic-shell-badge {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: fit-content;
+  margin: 0.65rem 0 0 auto;
+  padding: 0.13rem 0.34rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.58);
+  color: rgba(243, 239, 227, 0.66);
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.54rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.infographic-include-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.9rem;
+  height: 1.9rem;
+  margin-bottom: 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.6);
+  color: #f3efe3;
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.8rem;
+}
+
+.infographic-include-missing {
+  padding: 0.9rem 1rem;
+  border: 1px dashed rgba(255, 120, 120, 0.75);
+  border-radius: 0.6rem;
+  color: #ffd9d9;
+  background: rgba(90, 20, 20, 0.35);
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.82rem;
+}
+
+.infographic-deck {
+  margin: 1.5rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 1rem;
+  outline: none;
+}
+
+.infographic-deck:focus-visible {
+  box-shadow: 0 0 0 2px rgba(238, 207, 118, 0.7);
+}
+
+.infographic-deck-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.infographic-deck-prev,
+.infographic-deck-next {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(0, 0, 0, 0.45);
+  color: #f0ece0;
+  border-radius: 0.5rem;
+  padding: 0.36rem 0.7rem;
+  font-size: 0.82rem;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.infographic-deck-prev:hover,
+.infographic-deck-next:hover {
+  border-color: rgba(238, 207, 118, 0.8);
+}
+
+.infographic-deck-counter {
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.78rem;
+  opacity: 0.9;
+}
+
+.infographic-deck-slides {
+  position: relative;
+}
+
+.infographic-deck-slide {
+  display: none;
+}
+
+.infographic-deck-slide.is-active {
+  display: block;
+}
+
+.infographic-deck-dots {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.infographic-deck-dot {
+  width: 0.52rem;
+  height: 0.52rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  cursor: pointer;
+}
+
+.infographic-deck-dot.is-active {
+  background: #eecf76;
+  border-color: #eecf76;
+}
+
+/* Default palette for fragments that rely on CSS variables declared in the source
+   infographic shell (review pages + chapter embeds will not have those values). */
+:where(:root) {
+  --bg-dark: #0c0b0b;
+  --bg-panel: rgba(22, 21, 20, 0.85);
+  --text-gold: #c6a655;
+  --text-gold-bright: #eecf76;
+  --text-body: #dcdbd5;
+  --text-dim: #8a8885;
+  --border-gold: #5e4f2b;
+  --nebula: rgba(68, 56, 80, 0.25);
+  --band-foundational: #4ade80;
+  --band-deepening: #facc15;
+  --band-high-intensity: #f87171;
+}
+
+/* Standalone infographic shell navigation.
+   Mirrors the main site header layout (including the left sidebar on desktop),
+   without importing the full `style.css` typography rules that would distort fragments. */
+body.pod-infographic-nav .pod-root {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+body.pod-infographic-nav .pod-page {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding-inline: clamp(0.5rem, 1vw, 1rem);
+}
+
+body.pod-infographic-nav .main-header {
+  padding: 0.5rem 0 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: radial-gradient(circle at 0 0, rgba(165, 111, 23, 0.2), rgba(7, 5, 3, 0.98));
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 5;
+}
+
+body.pod-infographic-nav .pod-header-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+body.pod-infographic-nav .pod-brand {
+  margin: 0;
+  color: #f4f4f4;
+  font-family: "EB Garamond", "Cormorant Garamond", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+body.pod-infographic-nav .pod-brand:hover {
+  color: #d49a3a;
+  text-decoration: none;
+}
+
+body.pod-infographic-nav .main-nav {
+  max-width: 1200px;
+  margin: 0.5rem auto 0;
+  padding: 0 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+body.pod-infographic-nav .main-nav a {
+  margin: 0 0.25rem;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background-color: transparent;
+  color: #a56f17;
+  font-family: "EB Garamond", "Cormorant Garamond", serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease,
+    transform 0.15s ease;
+}
+
+body.pod-infographic-nav .main-nav a:first-child {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+body.pod-infographic-nav .main-nav a:hover {
+  background-color: rgba(165, 111, 23, 0.24);
+  border-color: rgba(165, 111, 23, 0.5);
+  transform: translateY(-1px);
+}
+
+body.pod-infographic-nav .search-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.pod-infographic-nav .pod-mobile-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(165, 111, 23, 0.5);
+  border-radius: 4px;
+  color: #a56f17;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  line-height: 1;
+  background-color: rgba(165, 111, 23, 0.12);
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.pod-infographic-nav .pod-mobile-menu-toggle:hover {
+  background-color: rgba(165, 111, 23, 0.22);
+  border-color: rgba(165, 111, 23, 0.75);
+}
+
+body.pod-infographic-nav .pod-mobile-menu-toggle .pod-icon-close {
+  display: none;
+}
+
+body.pod-infographic-nav .pod-mobile-menu-toggle[aria-expanded="true"] .pod-icon-menu {
+  display: none;
+}
+
+body.pod-infographic-nav .pod-mobile-menu-toggle[aria-expanded="true"] .pod-icon-close {
+  display: inline-flex;
+}
+
+body.pod-infographic-nav .pod-mobile-drawer {
+  position: fixed;
+  inset: 0;
+  margin-top: 3.8rem;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 1.6rem;
+  max-height: calc(100vh - 3.8rem);
+  overflow-y: auto;
+  background: linear-gradient(180deg, rgba(9, 8, 5, 0.98), rgba(18, 16, 12, 0.95));
+  border-top: 1px solid rgba(165, 111, 23, 0.25);
+}
+
+body.pod-infographic-nav .pod-mobile-drawer[hidden] {
+  display: none;
+}
+
+body.pod-infographic-nav .pod-mobile-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #f4f4f4;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  width: 100%;
+  font-family: "EB Garamond", "Cormorant Garamond", serif;
+}
+
+body.pod-infographic-nav .pod-mobile-link:hover {
+  color: #d49a3a;
+  background-color: rgba(165, 111, 23, 0.2);
+  text-decoration: none;
+}
+
+body.pod-infographic-nav .pod-mobile-drawer .search-icon {
+  justify-content: flex-start;
+}
+
+body.pod-infographic-nav.pod-mobile-nav-open {
+  overflow: hidden;
+}
+
+.infographic-local-nav {
+  top: var(--ifg-global-nav-offset, 0px) !important;
+}
+
+/* Keep infographic links from falling back to browser-default blue/purple visited colors.
+   Use zero-specificity selectors so any explicit utility class (e.g. text-[#eecf76])
+   still wins for styled links. */
+:where(body.pod-infographic-nav) a,
+:where([data-infographic-section-id]) a {
+  color: inherit;
+}
+
+@media (max-width: 1023.98px) {
+  body.pod-infographic-nav .pod-mobile-menu-toggle {
+    display: inline-flex;
+  }
+
+  body.pod-infographic-nav .pod-desktop-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  body.pod-infographic-nav {
+    --pod-sidebar-width: 280px;
+  }
+
+  body.pod-infographic-nav .pod-root {
+    flex-direction: row;
+  }
+
+  body.pod-infographic-nav .main-header {
+    width: var(--pod-sidebar-width);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
+    border-bottom: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 0;
+    overflow-y: auto;
+  }
+
+  body.pod-infographic-nav .pod-header-row {
+    max-width: none;
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1.6rem;
+  }
+
+  body.pod-infographic-nav .pod-desktop-nav {
+    max-width: none;
+    margin: 1.5rem 0 0 0;
+    padding: 0 1.6rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  body.pod-infographic-nav .pod-desktop-nav a {
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    border-radius: 0.5rem;
+  }
+
+  body.pod-infographic-nav .pod-desktop-nav a:first-child {
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0;
+  }
+
+  body.pod-infographic-nav .pod-mobile-drawer {
+    display: none !important;
+  }
+}
+
+/* Minimal utility fallback for chapter-embedded infographic fragments.
+   Keeps inserted fragments usable without Tailwind CDN at runtime. */
+[data-infographic-section-id] {
+  --ifg-bg-panel: rgba(22, 21, 20, 0.85);
+  --ifg-border-gold: #5e4f2b;
+}
+
+/* Several standalone infographic shells include a film-grain overlay layer.
+   Keep it disabled in the web runtime; it reads as noise and can obscure fine lines. */
+.grain-overlay {
+  display: none;
+}
+
+/* Shared micro-utility styles used by fragments (not present in the slim utility bundle). */
+:where(.pod-infographic-content-shell) :where(.glow-text),
+:where([data-infographic-section-id]) :where(.glow-text) {
+  text-shadow: 0 0 18px rgba(198, 166, 85, 0.5);
+}
+
+@keyframes pod-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.15;
+  }
+}
+
+:where(.pod-infographic-content-shell) :where(.animate-pulse),
+:where([data-infographic-section-id]) :where(.animate-pulse) {
+  animation: pod-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+:where(.pod-infographic-content-shell) :where(.animate-pulse-slow),
+:where([data-infographic-section-id]) :where(.animate-pulse-slow) {
+  animation: pod-pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pod-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:where(.pod-infographic-content-shell) :where(.animate-spin-slow),
+:where([data-infographic-section-id]) :where(.animate-spin-slow) {
+  animation: pod-spin 14s linear infinite;
+}
+
+:where(.pod-infographic-content-shell) :where(.custom-scrollbar),
+:where([data-infographic-section-id]) :where(.custom-scrollbar) {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(198, 166, 85, 0.45) rgba(8, 8, 8, 0.85);
+}
+
+:where(.pod-infographic-content-shell) :where(.custom-scrollbar)::-webkit-scrollbar,
+:where([data-infographic-section-id]) :where(.custom-scrollbar)::-webkit-scrollbar {
+  width: 6px;
+}
+
+:where(.pod-infographic-content-shell) :where(.custom-scrollbar)::-webkit-scrollbar-track,
+:where([data-infographic-section-id]) :where(.custom-scrollbar)::-webkit-scrollbar-track {
+  background: rgba(8, 8, 8, 0.85);
+}
+
+:where(.pod-infographic-content-shell) :where(.custom-scrollbar)::-webkit-scrollbar-thumb,
+:where([data-infographic-section-id]) :where(.custom-scrollbar)::-webkit-scrollbar-thumb {
+  background: rgba(198, 166, 85, 0.3);
+  border-radius: 999px;
+}
+
+:where(.pod-infographic-content-shell) :where(.custom-scrollbar)::-webkit-scrollbar-thumb:hover,
+:where([data-infographic-section-id]) :where(.custom-scrollbar)::-webkit-scrollbar-thumb:hover {
+  background: rgba(198, 166, 85, 0.55);
+}
+
+/* Master Map / Section 01: keep the path selector buttons feeling alive when extracted. */
+[data-infographic-section-id="master-map-the-spiral-journey-section-01-the-spiral-journey"] .path-btn {
+  border-left: 3px solid transparent;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-infographic-section-id="master-map-the-spiral-journey-section-01-the-spiral-journey"] .path-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(198, 166, 85, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+[data-infographic-section-id="master-map-the-spiral-journey-section-01-the-spiral-journey"] .path-btn:hover::before,
+[data-infographic-section-id="master-map-the-spiral-journey-section-01-the-spiral-journey"] .path-btn.active::before {
+  opacity: 1;
+}
+
+[data-infographic-section-id="master-map-the-spiral-journey-section-01-the-spiral-journey"] .path-btn:hover,
+[data-infographic-section-id="master-map-the-spiral-journey-section-01-the-spiral-journey"] .path-btn.active {
+  border-left-color: #c6a655;
+  background: rgba(198, 166, 85, 0.05);
+  transform: translateX(4px);
+}
+
+[data-infographic-section-id="master-map-the-spiral-journey-section-01-the-spiral-journey"] .path-btn.active :where(a.font-display) {
+  color: #eecf76;
+}
+
+/* In chapter pages, prose styles target generic heading/paragraph/list selectors and can
+   distort embedded infographic fragments. Restore a neutral baseline here,
+   then let fragment utility classes (declared below) layer on top. */
+.chapter-content [data-infographic-section-id] {
+  font-size: 16px;
+  line-height: normal;
+}
+
+.chapter-content [data-infographic-section-id] :where(h1, h2, h3, h4, h5, h6) {
+  max-width: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.chapter-content [data-infographic-section-id] :where(p, ul, ol, li) {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Tailwind preflight normally neutralizes default button chrome.
+   Without it, browser defaults can render as light/white buttons inside dark fragments. */
+:where([data-infographic-section-id]) button {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+/* Preface / Section 01: legend selection buttons should read like tiles (not default buttons)
+   when rendered in the fragment review page or chapter embeds. */
+:where(.pod-infographic-content-shell) :where(.band-btn),
+:where([data-infographic-section-id]) :where(.band-btn) {
+  border: 1px solid #333;
+  border-radius: 0.25rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+:where(.pod-infographic-content-shell) :where(.band-btn):hover,
+:where([data-infographic-section-id]) :where(.band-btn):hover {
+  border-color: #c6a655;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+:where(.pod-infographic-content-shell) :where(.band-btn).active,
+:where([data-infographic-section-id]) :where(.band-btn).active {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: currentColor;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Footer emblem sizing fallback.
+   The generated utility bundle currently omits some width/height scale classes
+   (e.g. w-12/h-12, w-16/h-16), causing oversized SVG defaults in infographic footers. */
+.pod-infographic-content-shell footer .w-12 {
+  width: 1.75rem;
+}
+
+.pod-infographic-content-shell footer .h-12 {
+  height: 1.75rem;
+}
+
+/* Default footer icon size should be modest; many shells use w-16/h-16 for the sun glyph. */
+.pod-infographic-content-shell footer .w-16 {
+  width: 2rem;
+}
+
+.pod-infographic-content-shell footer .h-16 {
+  height: 2rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .chapter-content [data-infographic-section-id] :where(p):hover {
+    background-color: transparent;
+  }
+}
+
+/* Part III / Section 01: Shadow Threshold - build a mirror that communicates
+   Dark -> Gray -> Golden (integration, not exorcism). */
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0) 18%,
+    rgba(0, 0, 0, 0.92) 82%
+  );
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb {
+  --mx: 50%;
+  --my: 35%;
+  --reveal: 0%;
+
+  position: relative;
+  z-index: 2;
+  width: 11.25rem;
+  height: 11.25rem;
+  padding: 0;
+  margin: 0;
+  border-radius: 9999px;
+  border: 1px solid rgba(94, 79, 43, 0.62);
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at var(--mx) var(--my), rgba(238, 207, 118, 0.18), rgba(0, 0, 0, 0) 58%),
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.07), rgba(0, 0, 0, 0) 55%),
+    linear-gradient(180deg, #1b1917 0%, #040404 78%);
+  box-shadow:
+    0 0 55px rgba(0, 0, 0, 0.65),
+    inset 0 0 0 1px rgba(198, 166, 85, 0.2);
+
+  transition:
+    transform 700ms ease,
+    border-color 400ms ease,
+    box-shadow 600ms ease;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(238, 207, 118, 0.12), rgba(0, 0, 0, 0) 58%),
+    repeating-radial-gradient(circle at center, rgba(94, 79, 43, 0.18) 0 1px, rgba(0, 0, 0, 0) 1px 34px);
+  opacity: 0.35;
+  mix-blend-mode: screen;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb::after {
+  content: "";
+  position: absolute;
+  inset: 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(94, 79, 43, 0.45);
+  opacity: 0.55;
+  pointer-events: none;
+  transition: opacity 400ms ease, border-color 400ms ease;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb:hover,
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb:focus-visible {
+  transform: scale(1.05);
+  border-color: rgba(198, 166, 85, 0.9);
+  box-shadow:
+    0 0 65px rgba(0, 0, 0, 0.75),
+    0 0 45px rgba(198, 166, 85, 0.2),
+    inset 0 0 0 1px rgba(238, 207, 118, 0.22);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb:focus-visible::after {
+  opacity: 0.85;
+  border-color: rgba(238, 207, 118, 0.7);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-panel[data-shadow-stage="dark"] .shadow-threshold-orb {
+  --reveal: 0%;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-panel[data-shadow-stage="gray"] .shadow-threshold-orb {
+  --reveal: 22%;
+  border-color: rgba(198, 166, 85, 0.75);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-panel[data-shadow-stage="gold"] .shadow-threshold-orb {
+  --reveal: 78%;
+  border-color: rgba(238, 207, 118, 0.85);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-panel[data-shadow-stage="gold"] .shadow-threshold-orb::before {
+  opacity: 0.5;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-core {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-core-shadow,
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-core-gift {
+  font-family: "Cinzel", "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-core-shadow {
+  color: rgba(220, 219, 213, 0.22);
+  text-shadow: 0 0 24px rgba(0, 0, 0, 0.85);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-core-gift {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(238, 207, 118, 0.92);
+  text-shadow: 0 0 22px rgba(198, 166, 85, 0.28);
+  clip-path: circle(var(--reveal) at 50% 45%);
+  transition: clip-path 650ms ease;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-stage {
+  position: absolute;
+  left: 50%;
+  bottom: 1.05rem;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: rgba(138, 136, 133, 0.82);
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.64rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-shadow: 0 0 18px rgba(0, 0, 0, 0.75);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-panel[data-shadow-stage="gold"] .shadow-threshold-orb-stage {
+  color: rgba(238, 207, 118, 0.95);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 0.45rem;
+  transform: translateX(-50%);
+  z-index: 3;
+  pointer-events: none;
+  color: rgba(138, 136, 133, 0.72);
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 300ms ease, color 400ms ease;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-panel:hover .shadow-threshold-orb-hint,
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb:focus-visible .shadow-threshold-orb-hint {
+  opacity: 0.85;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-panel[data-shadow-stage="gold"] .shadow-threshold-orb-hint {
+  color: rgba(238, 207, 118, 0.7);
+}
+
+@keyframes pod-shadow-threshold-float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-6px);
+  }
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-words {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-word {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: rgba(138, 136, 133, 0.82);
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.16;
+  animation: pod-shadow-threshold-float 10s ease-in-out infinite;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-word[data-tone="gold"] {
+  color: rgba(198, 166, 85, 0.6);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-panel[data-shadow-stage="gray"] .shadow-threshold-orb-word {
+  opacity: 0.28;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-panel[data-shadow-stage="gold"] .shadow-threshold-orb-word {
+  opacity: 0.38;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-panel[data-shadow-stage="gold"] .shadow-threshold-orb-word[data-tone="gold"] {
+  color: rgba(238, 207, 118, 0.82);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-word:nth-child(1) {
+  top: 25%;
+  left: 26%;
+  animation-delay: -1.5s;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-word:nth-child(2) {
+  top: 28%;
+  left: 76%;
+  animation-delay: -4.2s;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-word:nth-child(3) {
+  top: 68%;
+  left: 22%;
+  animation-delay: -2.8s;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-word:nth-child(4) {
+  top: 74%;
+  left: 76%;
+  animation-delay: -6.0s;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-word:nth-child(5) {
+  top: 16%;
+  left: 50%;
+  animation-delay: -3.3s;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-orb-word:nth-child(6) {
+  top: 54%;
+  left: 85%;
+  animation-delay: -5.2s;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-stage-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.18rem 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(94, 79, 43, 0.45);
+  background: rgba(0, 0, 0, 0.42);
+  color: rgba(138, 136, 133, 0.82);
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-stage-divider {
+  opacity: 0.45;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-panel[data-shadow-stage="dark"] [data-stage="dark"],
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-panel[data-shadow-stage="gray"] [data-stage="gray"],
+[data-infographic-section-id="part-iii-archetype-portals-section-01-the-shadow-threshold"] .shadow-threshold-panel[data-shadow-stage="gold"] [data-stage="gold"] {
+  color: rgba(238, 207, 118, 0.92);
+  text-shadow: 0 0 16px rgba(198, 166, 85, 0.28);
+}
+
+/* Part III / Section 02: tighten composition around the interactive wheel so
+   the panel and the moving area read as one visual unit. */
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-intro {
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: #8a8885;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  gap: 1.25rem;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  padding: 1.5rem;
+  border-left: 3px solid #c6a655;
+  background:
+    linear-gradient(160deg, rgba(198, 166, 85, 0.07), rgba(10, 10, 10, 0) 35%),
+    rgba(12, 11, 11, 0.92);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-kicker {
+  margin-bottom: 0.75rem;
+  color: #8a8885;
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-polarity {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-polarity-item {
+  border: 1px solid rgba(94, 79, 43, 0.45);
+  border-radius: 0.55rem;
+  padding: 0.6rem 0.7rem;
+  background: rgba(8, 8, 8, 0.7);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-polarity-item[data-tone="light"] {
+  box-shadow: inset 0 0 0 1px rgba(198, 166, 85, 0.2);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-polarity-item[data-tone="shadow"] {
+  box-shadow: inset 0 0 0 1px rgba(138, 136, 133, 0.14);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-polarity-label {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: #c6a655;
+  font-family: "Cinzel", "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-wheel-panel {
+  position: relative;
+  min-height: 500px;
+  padding: 0.65rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(94, 79, 43, 0.2), transparent 60%),
+    rgba(8, 8, 8, 0.95);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-wheel-frame,
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-wheel-rings {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-wheel-rings {
+  border-radius: 0.9rem;
+  border: 1px solid rgba(94, 79, 43, 0.4);
+  background:
+    radial-gradient(circle at center, rgba(198, 166, 85, 0.08) 0, rgba(198, 166, 85, 0) 54%),
+    repeating-radial-gradient(circle at center, rgba(94, 79, 43, 0.22) 0 1px, rgba(0, 0, 0, 0) 1px 42px);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-wheel-canvas {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-wheel-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  text-align: center;
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-wheel-center-word {
+  display: block;
+  color: rgba(94, 79, 43, 0.42);
+  font-family: "Cinzel", "Cormorant Garamond", "Times New Roman", serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  letter-spacing: 0.22em;
+  line-height: 1;
+  transform: translateY(calc(-0.45rem - 10%));
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-wheel-center-sub {
+  display: block;
+  margin-top: 0.35rem;
+  color: rgba(138, 136, 133, 0.7);
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transform: translateY(0.25rem);
+}
+
+[data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-wheel-hint {
+  position: absolute;
+  right: 0.95rem;
+  bottom: 0.95rem;
+  z-index: 3;
+  pointer-events: none;
+  padding: 0.25rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid rgba(94, 79, 43, 0.58);
+  background: rgba(0, 0, 0, 0.48);
+  color: #8a8885;
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  [data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-layout {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.45fr);
+    gap: 1.45rem;
+  }
+
+  [data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-card {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  [data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-intro {
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.08em;
+    font-size: 0.74rem;
+  }
+
+  [data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-card {
+    min-height: auto;
+    padding: 1.1rem;
+  }
+
+  [data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-action-polarity {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  [data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-wheel-panel {
+    min-height: 420px;
+    padding: 0.45rem;
+  }
+
+  [data-infographic-section-id="part-iii-archetype-portals-section-03-archetypes-of-action"] .archetype-wheel-hint {
+    right: 0.65rem;
+    bottom: 0.65rem;
+  }
+}
+
+/* Part II / Section 04: Lens hover effect for the blur-to-focus panel. */
+[data-infographic-section-id="part-ii-entangled-firmament-section-04-participatory-reality"] .lens-container {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-infographic-section-id="part-ii-entangled-firmament-section-04-participatory-reality"] .lens-blur {
+  filter: blur(8px) grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+[data-infographic-section-id="part-ii-entangled-firmament-section-04-participatory-reality"] .lens-container:hover .lens-blur {
+  filter: blur(0px) grayscale(0%);
+}
+
+[data-infographic-section-id="part-ii-entangled-firmament-section-04-participatory-reality"] .lens-overlay {
+  background: radial-gradient(circle at center, transparent 100px, rgba(0, 0, 0, 0.8) 150px);
+  pointer-events: none;
+}
+
+/* Part II / Section 07: keep left/right lists visually symmetric.
+   Default ul bullets + right-aligned text can push markers far left on "The Architect". */
+[data-infographic-section-id="part-ii-entangled-firmament-section-07-the-two-minds-within"] .two-minds-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+[data-infographic-section-id="part-ii-entangled-firmament-section-07-the-two-minds-within"] .two-minds-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+[data-infographic-section-id="part-ii-entangled-firmament-section-07-the-two-minds-within"] .two-minds-list--weaver li::before {
+  content: "•";
+  color: #c6a655;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+[data-infographic-section-id="part-ii-entangled-firmament-section-07-the-two-minds-within"] .two-minds-list--architect li {
+  justify-content: flex-end;
+}
+
+[data-infographic-section-id="part-ii-entangled-firmament-section-07-the-two-minds-within"] .two-minds-list--architect li::after {
+  content: "•";
+  color: #c6a655;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+/* Part V / Section 02: place state labels at the start of their respective bands and
+   add a low-key hover/pin interaction for scanning the ladder. */
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-shell {
+  position: relative;
+  height: 500px;
+  border: 1px solid #333;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #0c0b0b;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-bands {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 33.3333%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: rgba(51, 51, 51, 0.85);
+  opacity: 0;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band--ventral {
+  top: 0;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band--sympathetic {
+  top: 33.3333%;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band--sympathetic::after {
+  opacity: 1;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band--dorsal {
+  top: 66.6666%;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band--dorsal::after {
+  opacity: 1;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band--ventral::before {
+  background: linear-gradient(90deg, rgba(74, 222, 128, 0.18), rgba(0, 0, 0, 0) 55%);
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band--sympathetic::before {
+  background: linear-gradient(90deg, rgba(250, 204, 21, 0.18), rgba(0, 0, 0, 0) 55%);
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band--dorsal::before {
+  background: linear-gradient(90deg, rgba(248, 113, 113, 0.16), rgba(0, 0, 0, 0) 55%);
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band-label {
+  position: absolute;
+  left: 1rem;
+  top: 0.9rem;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band-label-name {
+  font-family: "Cinzel", "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band--ventral .polyvagal-band-label-name {
+  color: #4ade80;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band--sympathetic .polyvagal-band-label-name {
+  color: #facc15;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band--dorsal .polyvagal-band-label-name {
+  color: #f87171;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band-label-meta {
+  color: rgba(138, 136, 133, 0.85);
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band:hover::before,
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band:focus-visible::before {
+  opacity: 0.16;
+  transform: translateX(6px);
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band:hover .polyvagal-band-label-name,
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-band:focus-visible .polyvagal-band-label-name {
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"][data-polyvagal-band="ventral"] .polyvagal-band--ventral::before,
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"][data-polyvagal-band="sympathetic"] .polyvagal-band--sympathetic::before,
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"][data-polyvagal-band="dorsal"] .polyvagal-band--dorsal::before {
+  opacity: 0.18;
+  transform: translateX(6px);
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-legend {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid rgba(51, 51, 51, 0.65);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-top: 0.9rem;
+  color: rgba(138, 136, 133, 0.9);
+  font-family: "JetBrains Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-legend-item {
+  padding: 0.75rem 0.6rem;
+  background: rgba(0, 0, 0, 0.32);
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"] .polyvagal-legend-item + .polyvagal-legend-item {
+  border-left: 1px solid rgba(51, 51, 51, 0.65);
+}
+
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"][data-polyvagal-band="ventral"] .polyvagal-legend-item[data-band="ventral"],
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"][data-polyvagal-band="sympathetic"] .polyvagal-legend-item[data-band="sympathetic"],
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-02-the-ladder-of-states"][data-polyvagal-band="dorsal"] .polyvagal-legend-item[data-band="dorsal"] {
+  color: #dcdbd5;
+  background: rgba(12, 11, 11, 0.7);
+  box-shadow: inset 0 0 0 1px rgba(198, 166, 85, 0.18);
+}
+
+/* Part VI / Section 01: Prism toggle buttons. */
+[data-infographic-section-id="part-vi-ethics-and-intimacy-section-01-the-prism-of-impact"] .toggle-btn {
+  background: transparent;
+  border: 1px solid rgba(94, 79, 43, 0.9);
+  color: #8a8885;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  border-radius: 999px;
+  font-family: "EB Garamond", "Cormorant Garamond", serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease,
+    transform 0.2s ease;
+}
+
+[data-infographic-section-id="part-vi-ethics-and-intimacy-section-01-the-prism-of-impact"] .toggle-btn:hover {
+  border-color: rgba(238, 207, 118, 0.7);
+  color: #dcdbd5;
+  transform: translateY(-1px);
+}
+
+[data-infographic-section-id="part-vi-ethics-and-intimacy-section-01-the-prism-of-impact"] .toggle-btn.active {
+  background: rgba(94, 79, 43, 0.9);
+  color: #eecf76;
+  border-color: rgba(238, 207, 118, 0.9);
+}
+
+/* Part V / Section 03: active state for armor selection. */
+[data-infographic-section-id="part-v-the-crucible-of-flesh-section-03-the-souls-armor"] .active-armor-btn {
+  background-color: rgba(94, 79, 43, 0.9);
+  color: #eecf76;
+  border-color: rgba(238, 207, 118, 0.9);
+}
+
+/* Part VII / Section 02: active plunge step. */
+[data-infographic-section-id="part-vii-void-meditation-section-02-the-dragons-plunge"] .step-active {
+  border-left: 4px solid #eecf76;
+  background: rgba(238, 207, 118, 0.05);
+}
+
+/* Part VIII / Section 02: octave tiles. */
+[data-infographic-section-id="part-viii-the-unfolding-path-section-02-the-resonant-self"] .octave-hover {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+[data-infographic-section-id="part-viii-the-unfolding-path-section-02-the-resonant-self"] .octave-hover:hover,
+[data-infographic-section-id="part-viii-the-unfolding-path-section-02-the-resonant-self"] .octave-hover.is-active {
+  background-color: rgba(238, 207, 118, 0.05);
+  border-color: rgba(238, 207, 118, 0.2);
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(238, 207, 118, 0.1);
+}
+
+/* Part VI / Section 04: active tool selection */
+[data-infographic-section-id="part-vi-ethics-and-intimacy-section-04-the-ethical-compass"] [data-role="compass-tool"][data-active="1"] {
+  border-color: rgba(238, 207, 118, 0.85);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(238, 207, 118, 0.12);
+}
+
+.pod-infographic-content-shell .max-w-sm,
+[data-infographic-section-id].max-w-sm,
+[data-infographic-section-id] .max-w-sm {
+  max-width: 24rem;
+}
+
+.pod-infographic-content-shell .max-w-md,
+[data-infographic-section-id].max-w-md,
+[data-infographic-section-id] .max-w-md {
+  max-width: 28rem;
+}
+
+.pod-infographic-content-shell .max-w-lg,
+[data-infographic-section-id].max-w-lg,
+[data-infographic-section-id] .max-w-lg {
+  max-width: 32rem;
+}
+
+.pod-infographic-content-shell .max-w-xl,
+[data-infographic-section-id].max-w-xl,
+[data-infographic-section-id] .max-w-xl {
+  max-width: 36rem;
+}
+
+.pod-infographic-content-shell .max-w-2xl,
+[data-infographic-section-id].max-w-2xl,
+[data-infographic-section-id] .max-w-2xl {
+  max-width: 42rem;
+}
+
+.pod-infographic-content-shell .max-w-3xl,
+[data-infographic-section-id].max-w-3xl,
+[data-infographic-section-id] .max-w-3xl {
+  max-width: 48rem;
+}
+
+.pod-infographic-content-shell .max-w-4xl,
+[data-infographic-section-id].max-w-4xl,
+[data-infographic-section-id] .max-w-4xl {
+  max-width: 56rem;
+}
+
+.pod-infographic-content-shell .max-w-5xl,
+[data-infographic-section-id].max-w-5xl,
+[data-infographic-section-id] .max-w-5xl {
+  max-width: 64rem;
+}
+
+.pod-infographic-content-shell .max-w-6xl,
+[data-infographic-section-id].max-w-6xl,
+[data-infographic-section-id] .max-w-6xl {
+  max-width: 72rem;
+}
+
+.pod-infographic-content-shell .max-w-7xl,
+[data-infographic-section-id].max-w-7xl,
+[data-infographic-section-id] .max-w-7xl {
+  max-width: 80rem;
+}
+
+.pod-infographic-content-shell .mx-auto,
+[data-infographic-section-id].mx-auto,
+[data-infographic-section-id] .mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pod-infographic-content-shell .px-6,
+[data-infographic-section-id].px-6,
+[data-infographic-section-id] .px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.pod-infographic-content-shell .px-5,
+[data-infographic-section-id].px-5,
+[data-infographic-section-id] .px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.pod-infographic-content-shell .px-4,
+[data-infographic-section-id].px-4,
+[data-infographic-section-id] .px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.pod-infographic-content-shell .px-3,
+[data-infographic-section-id].px-3,
+[data-infographic-section-id] .px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.pod-infographic-content-shell .px-2,
+[data-infographic-section-id].px-2,
+[data-infographic-section-id] .px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.pod-infographic-content-shell .pl-4,
+[data-infographic-section-id].pl-4,
+[data-infographic-section-id] .pl-4 {
+  padding-left: 1rem;
+}
+
+.pod-infographic-content-shell .pl-5,
+[data-infographic-section-id].pl-5,
+[data-infographic-section-id] .pl-5 {
+  padding-left: 1.25rem;
+}
+
+.pod-infographic-content-shell .pl-8,
+[data-infographic-section-id].pl-8,
+[data-infographic-section-id] .pl-8 {
+  padding-left: 2rem;
+}
+
+.pod-infographic-content-shell .pr-2,
+[data-infographic-section-id].pr-2,
+[data-infographic-section-id] .pr-2 {
+  padding-right: 0.5rem;
+}
+
+.pod-infographic-content-shell .pr-4,
+[data-infographic-section-id].pr-4,
+[data-infographic-section-id] .pr-4 {
+  padding-right: 1rem;
+}
+
+.pod-infographic-content-shell .py-20,
+[data-infographic-section-id].py-20,
+[data-infographic-section-id] .py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.pod-infographic-content-shell .py-4,
+[data-infographic-section-id].py-4,
+[data-infographic-section-id] .py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.pod-infographic-content-shell .py-2,
+[data-infographic-section-id].py-2,
+[data-infographic-section-id] .py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.pod-infographic-content-shell .py-1,
+[data-infographic-section-id].py-1,
+[data-infographic-section-id] .py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
+.pod-infographic-content-shell .pb-1,
+[data-infographic-section-id] .pb-1 {
+  padding-bottom: 0.25rem;
+}
+
+.pod-infographic-content-shell .pb-2,
+[data-infographic-section-id] .pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pod-infographic-content-shell .pb-10,
+[data-infographic-section-id] .pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pod-infographic-content-shell .pb-24,
+[data-infographic-section-id] .pb-24 {
+  padding-bottom: 6rem;
+}
+
+[data-infographic-section-id].mb-32 {
+  margin-bottom: 8rem;
+}
+
+[data-infographic-section-id].relative {
+  position: relative;
+}
+
+.pod-infographic-content-shell .absolute,
+[data-infographic-section-id] .absolute {
+  position: absolute;
+}
+
+.pod-infographic-content-shell .inset-0,
+[data-infographic-section-id] .inset-0 {
+  inset: 0;
+}
+
+.pod-infographic-content-shell .top-0,
+[data-infographic-section-id] .top-0 {
+  top: 0;
+}
+
+.pod-infographic-content-shell .top-4,
+[data-infographic-section-id] .top-4 {
+  top: 1rem;
+}
+
+.pod-infographic-content-shell .right-0,
+[data-infographic-section-id] .right-0 {
+  right: 0;
+}
+
+.pod-infographic-content-shell .right-4,
+[data-infographic-section-id] .right-4 {
+  right: 1rem;
+}
+
+.pod-infographic-content-shell .bottom-4,
+[data-infographic-section-id] .bottom-4 {
+  bottom: 1rem;
+}
+
+.pod-infographic-content-shell .bottom-8,
+[data-infographic-section-id] .bottom-8 {
+  bottom: 2rem;
+}
+
+.pod-infographic-content-shell .bottom-10,
+[data-infographic-section-id] .bottom-10 {
+  bottom: 2.5rem;
+}
+
+.pod-infographic-content-shell .bottom-12,
+[data-infographic-section-id] .bottom-12 {
+  bottom: 3rem;
+}
+
+.pod-infographic-content-shell .left-0,
+[data-infographic-section-id] .left-0 {
+  left: 0;
+}
+
+.pod-infographic-content-shell .left-4,
+[data-infographic-section-id] .left-4 {
+  left: 1rem;
+}
+
+[data-infographic-section-id].z-10 {
+  z-index: 10;
+}
+
+:where(.pod-infographic-content-shell) :where(.panel),
+:where([data-infographic-section-id]) :where(.panel) {
+  background-color: var(--ifg-bg-panel);
+  border: 1px solid var(--ifg-border-gold);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+:where(.pod-infographic-content-shell) :where(.panel):hover,
+:where([data-infographic-section-id]) :where(.panel):hover {
+  border-color: #c6a655;
+}
+
+[data-infographic-section-id] .hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+[data-infographic-section-id] .hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
+}
+
+[data-infographic-section-id] .grid {
+  display: grid;
+}
+
+.pod-infographic-content-shell .gap-4,
+[data-infographic-section-id] .gap-4 {
+  gap: 1rem;
+}
+
+.pod-infographic-content-shell .gap-0,
+[data-infographic-section-id] .gap-0 {
+  gap: 0;
+}
+
+.pod-infographic-content-shell .gap-2,
+[data-infographic-section-id] .gap-2 {
+  gap: 0.5rem;
+}
+
+.pod-infographic-content-shell .gap-3,
+[data-infographic-section-id] .gap-3 {
+  gap: 0.75rem;
+}
+
+.pod-infographic-content-shell .gap-6,
+[data-infographic-section-id] .gap-6 {
+  gap: 1.5rem;
+}
+
+.pod-infographic-content-shell .gap-10,
+[data-infographic-section-id] .gap-10 {
+  gap: 2.5rem;
+}
+
+.pod-infographic-content-shell .gap-8,
+[data-infographic-section-id] .gap-8 {
+  gap: 2rem;
+}
+
+.pod-infographic-content-shell .gap-12,
+[data-infographic-section-id] .gap-12 {
+  gap: 3rem;
+}
+
+.pod-infographic-content-shell .space-y-1 > :not([hidden]) ~ :not([hidden]),
+[data-infographic-section-id] .space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.25rem;
+}
+
+[data-infographic-section-id] .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.5rem;
+}
+
+[data-infographic-section-id] .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.75rem;
+}
+
+[data-infographic-section-id] .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 1rem;
+}
+
+[data-infographic-section-id] .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 1.5rem;
+}
+
+[data-infographic-section-id] .space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 2rem;
+}
+
+[data-infographic-section-id] .space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 2.5rem;
+}
+
+.pod-infographic-content-shell .space-x-2 > :not([hidden]) ~ :not([hidden]),
+[data-infographic-section-id] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 0.5rem;
+}
+
+.pod-infographic-content-shell .space-x-4 > :not([hidden]) ~ :not([hidden]),
+[data-infographic-section-id] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 1rem;
+}
+
+.pod-infographic-content-shell .space-x-6 > :not([hidden]) ~ :not([hidden]),
+[data-infographic-section-id] .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 1.5rem;
+}
+
+.pod-infographic-content-shell .space-x-10 > :not([hidden]) ~ :not([hidden]),
+[data-infographic-section-id] .space-x-10 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 2.5rem;
+}
+
+.pod-infographic-content-shell .p-1,
+[data-infographic-section-id] .p-1 {
+  padding: 0.25rem;
+}
+
+.pod-infographic-content-shell .p-3,
+[data-infographic-section-id] .p-3 {
+  padding: 0.75rem;
+}
+
+.pod-infographic-content-shell .p-4,
+[data-infographic-section-id] .p-4 {
+  padding: 1rem;
+}
+
+.pod-infographic-content-shell .p-5,
+[data-infographic-section-id] .p-5 {
+  padding: 1.25rem;
+}
+
+.pod-infographic-content-shell .p-6,
+[data-infographic-section-id] .p-6 {
+  padding: 1.5rem;
+}
+
+.pod-infographic-content-shell .p-8,
+[data-infographic-section-id] .p-8 {
+  padding: 2rem;
+}
+
+.pod-infographic-content-shell .p-10,
+[data-infographic-section-id] .p-10 {
+  padding: 2.5rem;
+}
+
+.pod-infographic-content-shell .p-12,
+[data-infographic-section-id] .p-12 {
+  padding: 3rem;
+}
+
+.pod-infographic-content-shell .pt-2,
+[data-infographic-section-id] .pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pod-infographic-content-shell .pt-6,
+[data-infographic-section-id] .pt-6 {
+  padding-top: 1.5rem;
+}
+
+.pod-infographic-content-shell .pt-8,
+[data-infographic-section-id] .pt-8 {
+  padding-top: 2rem;
+}
+
+.pod-infographic-content-shell .pt-12,
+[data-infographic-section-id] .pt-12 {
+  padding-top: 3rem;
+}
+
+.pod-infographic-content-shell .text-center,
+[data-infographic-section-id] .text-center {
+  text-align: center;
+}
+
+.pod-infographic-content-shell .font-display,
+[data-infographic-section-id] .font-display {
+  font-family: "Cinzel", "Cormorant Garamond", "Times New Roman", serif;
+}
+
+.pod-infographic-content-shell .uppercase,
+[data-infographic-section-id] .uppercase {
+  text-transform: uppercase;
+}
+
+.pod-infographic-content-shell .tracking-widest,
+[data-infographic-section-id] .tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+.pod-infographic-content-shell .list-disc,
+[data-infographic-section-id] .list-disc {
+  list-style-type: disc;
+}
+
+.pod-infographic-content-shell .text-sm,
+[data-infographic-section-id] .text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.pod-infographic-content-shell .text-base,
+[data-infographic-section-id] .text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.pod-infographic-content-shell .text-xs,
+[data-infographic-section-id] .text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.pod-infographic-content-shell .text-\[10px\],
+[data-infographic-section-id] .text-\[10px\] {
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+.pod-infographic-content-shell .text-xl,
+[data-infographic-section-id] .text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.pod-infographic-content-shell .text-lg,
+[data-infographic-section-id] .text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.pod-infographic-content-shell .text-2xl,
+[data-infographic-section-id] .text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.pod-infographic-content-shell .text-3xl,
+[data-infographic-section-id] .text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.pod-infographic-content-shell .text-4xl,
+[data-infographic-section-id] .text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.pod-infographic-content-shell .text-6xl,
+[data-infographic-section-id] .text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.pod-infographic-content-shell .text-8xl,
+[data-infographic-section-id] .text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.pod-infographic-content-shell .mt-1,
+[data-infographic-section-id] .mt-1 {
+  margin-top: 0.25rem;
+}
+
+.pod-infographic-content-shell .mt-4,
+[data-infographic-section-id] .mt-4 {
+  margin-top: 1rem;
+}
+
+.pod-infographic-content-shell .mt-10,
+[data-infographic-section-id] .mt-10 {
+  margin-top: 2.5rem;
+}
+
+[data-infographic-section-id].mt-16,
+.pod-infographic-content-shell .mt-16,
+[data-infographic-section-id] .mt-16 {
+  margin-top: 4rem;
+}
+
+.pod-infographic-content-shell .mt-2,
+[data-infographic-section-id] .mt-2 {
+  margin-top: 0.5rem;
+}
+
+.pod-infographic-content-shell .mt-6,
+[data-infographic-section-id] .mt-6 {
+  margin-top: 1.5rem;
+}
+
+.pod-infographic-content-shell .mt-8,
+[data-infographic-section-id] .mt-8 {
+  margin-top: 2rem;
+}
+
+.pod-infographic-content-shell .mt-12,
+[data-infographic-section-id] .mt-12 {
+  margin-top: 3rem;
+}
+
+.pod-infographic-content-shell .mt-20,
+[data-infographic-section-id] .mt-20 {
+  margin-top: 5rem;
+}
+
+.pod-infographic-content-shell .mr-3,
+[data-infographic-section-id] .mr-3 {
+  margin-right: 0.75rem;
+}
+
+.pod-infographic-content-shell .mb-1,
+[data-infographic-section-id] .mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.pod-infographic-content-shell .mb-5,
+[data-infographic-section-id] .mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.pod-infographic-content-shell .mb-6,
+[data-infographic-section-id] .mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.pod-infographic-content-shell .mb-10,
+[data-infographic-section-id] .mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.pod-infographic-content-shell .mb-16,
+[data-infographic-section-id] .mb-16 {
+  margin-bottom: 4rem;
+}
+
+.pod-infographic-content-shell .mb-2,
+[data-infographic-section-id] .mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.pod-infographic-content-shell .mb-4,
+[data-infographic-section-id] .mb-4 {
+  margin-bottom: 1rem;
+}
+
+.pod-infographic-content-shell .mb-8,
+[data-infographic-section-id] .mb-8 {
+  margin-bottom: 2rem;
+}
+
+.pod-infographic-content-shell .mb-12,
+[data-infographic-section-id] .mb-12 {
+  margin-bottom: 3rem;
+}
+
+.pod-infographic-content-shell .mb-24,
+[data-infographic-section-id] .mb-24 {
+  margin-bottom: 6rem;
+}
+
+[data-infographic-section-id] .border-t-4 {
+  border-top-width: 4px;
+  border-top-style: solid;
+}
+
+[data-infographic-section-id] .border-t-\[\#c6a655\] {
+  border-top-color: #c6a655;
+}
+
+[data-infographic-section-id] .flex {
+  display: flex;
+}
+
+[data-infographic-section-id] .items-center {
+  align-items: center;
+}
+
+[data-infographic-section-id] .justify-center {
+  justify-content: center;
+}
+
+[data-infographic-section-id] .w-12 {
+  width: 3rem;
+}
+
+[data-infographic-section-id] .w-3 {
+  width: 0.75rem;
+}
+
+[data-infographic-section-id] .w-14 {
+  width: 3.5rem;
+}
+
+[data-infographic-section-id] .w-24 {
+  width: 6rem;
+}
+
+[data-infographic-section-id] .w-32 {
+  width: 8rem;
+}
+
+[data-infographic-section-id] .w-40 {
+  width: 10rem;
+}
+
+.pod-infographic-content-shell .w-48,
+[data-infographic-section-id] .w-48 {
+  width: 12rem;
+}
+
+[data-infographic-section-id] .h-12 {
+  height: 3rem;
+}
+
+[data-infographic-section-id] .h-3 {
+  height: 0.75rem;
+}
+
+[data-infographic-section-id] .h-14 {
+  height: 3.5rem;
+}
+
+[data-infographic-section-id] .h-24 {
+  height: 6rem;
+}
+
+[data-infographic-section-id] .rounded-full {
+  border-radius: 9999px;
+}
+
+.pod-infographic-content-shell .rounded,
+[data-infographic-section-id] .rounded {
+  border-radius: 0.25rem;
+}
+
+.pod-infographic-content-shell .rounded-lg,
+[data-infographic-section-id] .rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.pod-infographic-content-shell .rounded-xl,
+[data-infographic-section-id] .rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.pod-infographic-content-shell .text-\[\#8a8885\],
+[data-infographic-section-id] .text-\[\#8a8885\] {
+  color: #8a8885;
+}
+
+.pod-infographic-content-shell .text-\[\#c6a655\],
+[data-infographic-section-id] .text-\[\#c6a655\] {
+  color: #c6a655;
+}
+
+.pod-infographic-content-shell .text-\[\#dcdbd5\],
+[data-infographic-section-id] .text-\[\#dcdbd5\] {
+  color: #dcdbd5;
+}
+
+.pod-infographic-content-shell .text-\[\#eecf76\],
+[data-infographic-section-id] .text-\[\#eecf76\] {
+  color: #eecf76;
+}
+
+.pod-infographic-content-shell .text-\[\#4ade80\],
+[data-infographic-section-id] .text-\[\#4ade80\] {
+  color: #4ade80;
+}
+
+.pod-infographic-content-shell .text-\[\#5e4f2b\],
+[data-infographic-section-id] .text-\[\#5e4f2b\] {
+  color: #5e4f2b;
+}
+
+.pod-infographic-content-shell .text-\[\#555\],
+[data-infographic-section-id] .text-\[\#555\] {
+  color: #555;
+}
+
+.pod-infographic-content-shell .text-\[\#60a5fa\],
+[data-infographic-section-id] .text-\[\#60a5fa\] {
+  color: #60a5fa;
+}
+
+.pod-infographic-content-shell .text-\[\#d4af37\],
+[data-infographic-section-id] .text-\[\#d4af37\] {
+  color: #d4af37;
+}
+
+.pod-infographic-content-shell .text-\[\#f87171\],
+[data-infographic-section-id] .text-\[\#f87171\] {
+  color: #f87171;
+}
+
+.pod-infographic-content-shell .text-\[\#facc15\],
+[data-infographic-section-id] .text-\[\#facc15\] {
+  color: #facc15;
+}
+
+.pod-infographic-content-shell .text-\[\#fb923c\],
+[data-infographic-section-id] .text-\[\#fb923c\] {
+  color: #fb923c;
+}
+
+.pod-infographic-content-shell .bg-\[\#5e4f2b\]\/20,
+[data-infographic-section-id] .bg-\[\#5e4f2b\]\/20 {
+  background-color: rgba(94, 79, 43, 0.2);
+}
+
+.pod-infographic-content-shell .bg-black\/50,
+[data-infographic-section-id] .bg-black\/50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pod-infographic-content-shell .bg-black\/80,
+[data-infographic-section-id] .bg-black\/80 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.pod-infographic-content-shell .bg-\[\#000\],
+[data-infographic-section-id] .bg-\[\#000\] {
+  background-color: #000;
+}
+
+.pod-infographic-content-shell .bg-\[\#050505\],
+[data-infographic-section-id] .bg-\[\#050505\] {
+  background-color: #050505;
+}
+
+.pod-infographic-content-shell .bg-\[\#0c0b0b\],
+[data-infographic-section-id] .bg-\[\#0c0b0b\] {
+  background-color: #0c0b0b;
+}
+
+.pod-infographic-content-shell .bg-\[\#0e0d0c\],
+[data-infographic-section-id] .bg-\[\#0e0d0c\] {
+  background-color: #0e0d0c;
+}
+
+.pod-infographic-content-shell .bg-\[\#080808\],
+[data-infographic-section-id] .bg-\[\#080808\] {
+  background-color: #080808;
+}
+
+.pod-infographic-content-shell .bg-\[\#131211\]\/50,
+[data-infographic-section-id] .bg-\[\#131211\]\/50 {
+  background-color: rgba(19, 18, 17, 0.5);
+}
+
+.pod-infographic-content-shell .bg-\[\#161514\],
+[data-infographic-section-id] .bg-\[\#161514\] {
+  background-color: #161514;
+}
+
+.pod-infographic-content-shell .bg-\[\#161514\]\/90,
+[data-infographic-section-id] .bg-\[\#161514\]\/90 {
+  background-color: rgba(22, 21, 20, 0.9);
+}
+
+.pod-infographic-content-shell .bg-\[\#1a1816\],
+[data-infographic-section-id] .bg-\[\#1a1816\] {
+  background-color: #1a1816;
+}
+
+.pod-infographic-content-shell .bg-\[\#1a1816\]\/50,
+[data-infographic-section-id] .bg-\[\#1a1816\]\/50 {
+  background-color: rgba(26, 24, 22, 0.5);
+}
+
+.pod-infographic-content-shell .bg-\[\#252220\],
+[data-infographic-section-id] .bg-\[\#252220\] {
+  background-color: #252220;
+}
+
+.pod-infographic-content-shell .bg-\[\#2a2825\],
+[data-infographic-section-id] .bg-\[\#2a2825\] {
+  background-color: #2a2825;
+}
+
+.pod-infographic-content-shell .bg-\[\#4ade80\],
+[data-infographic-section-id] .bg-\[\#4ade80\] {
+  background-color: #4ade80;
+}
+
+.pod-infographic-content-shell .bg-\[\#4ade80\]\/10,
+[data-infographic-section-id] .bg-\[\#4ade80\]\/10 {
+  background-color: rgba(74, 222, 128, 0.1);
+}
+
+.pod-infographic-content-shell .bg-\[\#5e4f2b\],
+[data-infographic-section-id] .bg-\[\#5e4f2b\] {
+  background-color: #5e4f2b;
+}
+
+.pod-infographic-content-shell .bg-\[\#5e4f2b\]\/10,
+[data-infographic-section-id] .bg-\[\#5e4f2b\]\/10 {
+  background-color: rgba(94, 79, 43, 0.1);
+}
+
+.pod-infographic-content-shell .bg-\[\#5e4f2b\]\/30,
+[data-infographic-section-id] .bg-\[\#5e4f2b\]\/30 {
+  background-color: rgba(94, 79, 43, 0.3);
+}
+
+.pod-infographic-content-shell .bg-\[\#c6a655\],
+[data-infographic-section-id] .bg-\[\#c6a655\] {
+  background-color: #c6a655;
+}
+
+.pod-infographic-content-shell .bg-\[\#eecf76\],
+[data-infographic-section-id] .bg-\[\#eecf76\] {
+  background-color: #eecf76;
+}
+
+.pod-infographic-content-shell .bg-\[\#f87171\],
+[data-infographic-section-id] .bg-\[\#f87171\] {
+  background-color: #f87171;
+}
+
+.pod-infographic-content-shell .bg-\[\#f87171\]\/10,
+[data-infographic-section-id] .bg-\[\#f87171\]\/10 {
+  background-color: rgba(248, 113, 113, 0.1);
+}
+
+.pod-infographic-content-shell .bg-\[\#facc15\],
+[data-infographic-section-id] .bg-\[\#facc15\] {
+  background-color: #facc15;
+}
+
+.pod-infographic-content-shell .bg-\[\#facc15\]\/10,
+[data-infographic-section-id] .bg-\[\#facc15\]\/10 {
+  background-color: rgba(250, 204, 21, 0.1);
+}
+
+.pod-infographic-content-shell .bg-\[\#fb923c\]\/10,
+[data-infographic-section-id] .bg-\[\#fb923c\]\/10 {
+  background-color: rgba(251, 146, 60, 0.1);
+}
+
+.pod-infographic-content-shell .bg-\[\#0f0e0d\]\/90 {
+  background-color: rgba(15, 14, 13, 0.9);
+}
+
+.pod-infographic-content-shell .bg-red-600,
+[data-infographic-section-id] .bg-red-600 {
+  background-color: #dc2626;
+}
+
+@media (min-width: 768px) {
+  .pod-infographic-content-shell .md\:flex,
+  [data-infographic-section-id] .md\:flex {
+    display: flex;
+  }
+
+  .pod-infographic-content-shell .md\:block,
+  [data-infographic-section-id] .md\:block {
+    display: block;
+  }
+
+  .pod-infographic-content-shell .md\:flex-row,
+  [data-infographic-section-id] .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .pod-infographic-content-shell .md\:grid-cols-2,
+  [data-infographic-section-id] .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pod-infographic-content-shell .md\:grid-cols-3,
+  [data-infographic-section-id] .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pod-infographic-content-shell .md\:grid-cols-4,
+  [data-infographic-section-id] .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .pod-infographic-content-shell .md\:grid-cols-5,
+  [data-infographic-section-id] .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .pod-infographic-content-shell .md\:col-span-1,
+  [data-infographic-section-id] .md\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .pod-infographic-content-shell .md\:col-span-2,
+  [data-infographic-section-id] .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .pod-infographic-content-shell .md\:order-1,
+  [data-infographic-section-id] .md\:order-1 {
+    order: 1;
+  }
+
+  .pod-infographic-content-shell .md\:order-2,
+  [data-infographic-section-id] .md\:order-2 {
+    order: 2;
+  }
+
+  .pod-infographic-content-shell .md\:p-10,
+  [data-infographic-section-id] .md\:p-10 {
+    padding: 2.5rem;
+  }
+
+  .pod-infographic-content-shell .md\:p-12,
+  [data-infographic-section-id] .md\:p-12 {
+    padding: 3rem;
+  }
+
+  .pod-infographic-content-shell .md\:p-16,
+  [data-infographic-section-id] .md\:p-16 {
+    padding: 4rem;
+  }
+
+  .pod-infographic-content-shell .md\:p-20,
+  [data-infographic-section-id] .md\:p-20 {
+    padding: 5rem;
+  }
+
+  .pod-infographic-content-shell .md\:pl-8,
+  [data-infographic-section-id] .md\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .pod-infographic-content-shell .md\:pr-8,
+  [data-infographic-section-id] .md\:pr-8 {
+    padding-right: 2rem;
+  }
+
+  .pod-infographic-content-shell .md\:gap-10,
+  [data-infographic-section-id] .md\:gap-10 {
+    gap: 2.5rem;
+  }
+
+  .pod-infographic-content-shell .md\:h-\[500px\],
+  [data-infographic-section-id] .md\:h-\[500px\] {
+    height: 500px;
+  }
+
+  .pod-infographic-content-shell .md\:aspect-auto,
+  [data-infographic-section-id] .md\:aspect-auto {
+    aspect-ratio: auto;
+  }
+
+  .pod-infographic-content-shell .md\:left-10,
+  [data-infographic-section-id] .md\:left-10 {
+    left: 2.5rem;
+  }
+
+  .pod-infographic-content-shell .md\:right-10,
+  [data-infographic-section-id] .md\:right-10 {
+    right: 2.5rem;
+  }
+
+  .pod-infographic-content-shell .md\:text-2xl,
+  [data-infographic-section-id] .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .pod-infographic-content-shell .md\:text-7xl,
+  [data-infographic-section-id] .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .pod-infographic-content-shell .md\:text-8xl,
+  [data-infographic-section-id] .md\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pod-infographic-content-shell .lg\:grid-cols-2,
+  [data-infographic-section-id] .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pod-infographic-content-shell .lg\:grid-cols-3,
+  [data-infographic-section-id] .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pod-infographic-content-shell .lg\:col-span-1,
+  [data-infographic-section-id] .lg\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .pod-infographic-content-shell .lg\:col-span-2,
+  [data-infographic-section-id] .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .pod-infographic-content-shell .lg\:order-1,
+  [data-infographic-section-id] .lg\:order-1 {
+    order: 1;
+  }
+
+  .pod-infographic-content-shell .lg\:order-2,
+  [data-infographic-section-id] .lg\:order-2 {
+    order: 2;
+  }
+
+  .pod-infographic-content-shell .lg\:h-full,
+  [data-infographic-section-id] .lg\:h-full {
+    height: 100%;
+  }
+
+  .pod-infographic-content-shell .lg\:h-\[750px\],
+  [data-infographic-section-id] .lg\:h-\[750px\] {
+    height: 750px;
+  }
+
+  .pod-infographic-content-shell .lg\:pb-10,
+  [data-infographic-section-id] .lg\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* Prose-embed safety rail: keep chapter/blog infographic fragments aligned
+   with the reading column and degrade multi-column panels responsively. */
+.chapter-content [data-infographic-section-id],
+.blog-post-content [data-infographic-section-id],
+.chapter-content .infographic-include,
+.blog-post-content .infographic-include {
+  width: 100%;
+  max-width: min(32.7rem, 100%) !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Chapter/blog prose rhythm: give infographic embeds more breathing room above,
+   and prevent source fragment utility classes (e.g. mb-32) from creating giant tails. */
+.chapter-content > [data-infographic-section-id],
+.blog-post-content > [data-infographic-section-id],
+.chapter-content > .infographic-include,
+.blog-post-content > .infographic-include {
+  margin-top: clamp(1.35rem, 2.7vw, 2.25rem) !important;
+  margin-bottom: clamp(0.7rem, 1.45vw, 1.15rem) !important;
+}
+
+.chapter-content [data-infographic-section-id],
+.blog-post-content [data-infographic-section-id] {
+  padding-left: clamp(0.35rem, 1vw, 0.75rem) !important;
+  padding-right: clamp(0.35rem, 1vw, 0.75rem) !important;
+  overflow-x: clip;
+}
+
+.chapter-content [data-infographic-section-id] .grid-cols-2,
+.chapter-content [data-infographic-section-id] .md\:grid-cols-2,
+.chapter-content [data-infographic-section-id] .lg\:grid-cols-2,
+.blog-post-content [data-infographic-section-id] .grid-cols-2,
+.blog-post-content [data-infographic-section-id] .md\:grid-cols-2,
+.blog-post-content [data-infographic-section-id] .lg\:grid-cols-2 {
+  grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr)) !important;
+}
+
+.chapter-content [data-infographic-section-id] .grid-cols-3,
+.chapter-content [data-infographic-section-id] .md\:grid-cols-3,
+.chapter-content [data-infographic-section-id] .lg\:grid-cols-3,
+.blog-post-content [data-infographic-section-id] .grid-cols-3,
+.blog-post-content [data-infographic-section-id] .md\:grid-cols-3,
+.blog-post-content [data-infographic-section-id] .lg\:grid-cols-3 {
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr)) !important;
+}
+
+.chapter-content [data-infographic-section-id] .grid-cols-5,
+.chapter-content [data-infographic-section-id] .md\:grid-cols-5,
+.blog-post-content [data-infographic-section-id] .grid-cols-5,
+.blog-post-content [data-infographic-section-id] .md\:grid-cols-5 {
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr)) !important;
+}
+
+/* Custom fragment layout override: this section still uses a desktop two-column
+   authored grid that ignores utility-class fallbacks and appears too wide in prose embeds. */
+.chapter-content [data-infographic-section-id] .archetype-action-layout,
+.blog-post-content [data-infographic-section-id] .archetype-action-layout {
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: clamp(0.6rem, 1.5vw, 1rem) !important;
+}
