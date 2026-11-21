@@ -1,0 +1,10 @@
+This favicon was generated using the following graphics from Twitter Twemoji:
+
+- Graphics Title: 1f30c.svg
+- Graphics Author: Copyright 2020 Twitter, Inc and other contributors (https://github.com/twitter/twemoji)
+- Graphics Source: https://github.com/twitter/twemoji/blob/master/assets/svg/1f30c.svg
+- Graphics License: CC-BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+
+Share button icons:
+- Simple Icons (brand logos): CC0 1.0 (https://github.com/simple-icons/simple-icons)
+- Bootstrap Icons (share/link/email): MIT (https://github.com/twbs/icons)

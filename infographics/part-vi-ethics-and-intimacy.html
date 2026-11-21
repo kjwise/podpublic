@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Path of the Dragon: Part VI Infographic</title>
+<script defer="" src="analytics.js"></script>
+<!-- Marked.js -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Crimson+Text:ital,wght@0,400;0,600;1,400&amp;family=Lato:wght@300;400&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --bg-dark: #0c0b0b;
+            --bg-panel: #161514;
+            --text-gold: #c6a655;
+            --text-gold-bright: #eecf76;
+            --text-body: #dcdbd5;
+            --text-dim: #8a8885;
+            --border-gold: #5e4f2b;
+            --nebula: rgba(68, 56, 80, 0.2);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-body);
+            font-family: 'Crimson Text', serif;
+        }
+
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Cinzel', serif;
+        }
+
+        .gold-text {
+            color: var(--text-gold);
+            background: linear-gradient(45deg, #aa893c, #eecf76, #aa893c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .panel {
+            background-color: var(--bg-panel);
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            transition: all 0.3s ease;
+        }
+
+        .panel:hover {
+            border-color: var(--text-gold);
+            box-shadow: 0 0 20px rgba(198, 166, 85, 0.15);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px rgba(198, 166, 85, 0.3);
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.1; }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-gold); }
+
+        canvas {
+            touch-action: manipulation;
+        }
+
+        .toggle-btn {
+            background: transparent;
+            border: 1px solid #5e4f2b;
+            color: #8a8885;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn.active {
+            background: #5e4f2b;
+            color: #eecf76;
+            border-color: #eecf76;
+        }
+    </style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&amp;family=EB+Garamond:ital,wght@0,400;1,400&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/><script defer="" src="../infographic-deck-runtime.js?v=19"></script><link href="../infographic-tailwind-utilities.css?v=19" rel="stylesheet"/><link href="../infographic-deck-runtime.css?v=19" rel="stylesheet"/></head>
+<body class="min-h-screen pb-20 relative overflow-x-hidden">
+<!-- Background Nebula Effect -->
+<div class="fixed inset-0 z-0 pointer-events-none">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,var(--nebula)_0%,transparent_70%)] opacity-30"></div>
+<div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(30,40,60,0.2)_0%,transparent_70%)] opacity-30"></div>
+</div>
+<!-- Navbar -->
+<nav class="border-b border-[#333] bg-[#0f0e0d]/90 backdrop-blur-sm py-4 sticky top-0 z-50">
+<div class="max-w-4xl mx-auto flex justify-between items-center px-6">
+<div class="font-display text-xl text-[#c6a655] tracking-widest">PATH OF THE DRAGON</div>
+<div class="hidden md:flex space-x-6 font-display text-xs tracking-widest text-[#8a8885]">
+<a class="opacity-50 hover:opacity-100 hover:text-[#eecf76] transition-colors" href="part-iv-practices-for-embodied-transformation">PART IV</a>
+<a class="opacity-50 hover:opacity-100 hover:text-[#eecf76] transition-colors" href="part-v-the-crucible-of-flesh">PART V</a>
+<span class="text-[#eecf76]">PART VI</span>
+<a class="opacity-50 hover:opacity-100 hover:text-[#eecf76] transition-colors" href="part-vii-void-meditation">PART VII</a>
+</div>
+</div>
+</nav>
+<!-- Header -->
+<header class="max-w-3xl mx-auto text-center mt-20 px-6 mb-24 relative z-10">
+<p class="font-display text-sm tracking-[0.3em] text-[#8a8885] mb-4 uppercase">Part VI</p>
+<h1 class="text-5xl md:text-7xl text-[#eecf76] mb-8 glow-text leading-tight">Ethics and<br/>Intimacy</h1>
+<p class="text-xl md:text-2xl italic text-[#dcdbd5] opacity-90 leading-relaxed max-w-2xl mx-auto">
+            "Accountability is the bridge from impact to repair."
+        </p>
+<div class="flex items-center justify-center mt-12 opacity-60">
+<div class="h-px w-16 bg-gradient-to-l from-[#c6a655] to-transparent"></div>
+<div class="mx-4 text-[#c6a655] text-xl">❖</div>
+<div class="h-px w-16 bg-gradient-to-r from-[#c6a655] to-transparent"></div>
+</div>
+</header>
+<!-- 1. The Prism of Impact -->
+<section class="max-w-6xl mx-auto px-6 mb-32 relative z-10" data-infographic-section-id="part-vi-ethics-and-intimacy-section-01-the-prism-of-impact" data-infographic-selector="#part-vi-ethics-and-intimacy-section-01-the-prism-of-impact" data-infographic-source="part-vi-ethics-and-intimacy.html" data-infographic-status="published" id="part-vi-ethics-and-intimacy-section-01-the-prism-of-impact">
+<h2 class="font-display text-3xl text-center text-[#c6a655] mb-4">The Prism of Impact</h2>
+<p class="text-center text-[#8a8885] mb-6 text-sm uppercase tracking-widest">Intent, Beam, Prism, Impact, Refraction</p>
+<p class="text-center text-[#8a8885] max-w-3xl mx-auto mb-12 leading-relaxed">Intent is what you meant. The Beam is what you actually sent. The Prism is the whole encounter across which Impact lands and Refraction emerges. Do not use this tool to erase impact or debate someone in pain.</p>
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<!-- Left: Visualization -->
+<div class="panel p-1 relative h-[450px] w-full bg-[#080808] flex items-center justify-center overflow-hidden">
+<canvas class="w-full h-full" id="prismCanvas"></canvas>
+<!-- Controls overlay -->
+<div class="absolute top-4 left-1/2 -translate-x-1/2 flex space-x-2">
+<button class="toggle-btn active" data-mode="clear" data-role="prism-toggle" type="button">LEGIBLE BEAM</button>
+<button class="toggle-btn" data-mode="refract" data-role="prism-toggle" type="button">HIGH REFRACTION</button>
+</div>
+<!-- Flow labels -->
+<div aria-hidden="true" class="absolute inset-x-0 bottom-5 px-3 pointer-events-none">
+<div class="flex items-center gap-2 text-[10px] tracking-[0.22em] uppercase font-display">
+<span class="w-14 text-left px-2 py-1 rounded bg-black/50 text-[#dcdbd5]">You</span>
+<div class="flex-1 h-px bg-gradient-to-r from-[#c6a655] to-transparent opacity-70"></div>
+<span class="px-2 py-1 rounded bg-black/50 text-[#8a8885]">Prism</span>
+<div class="flex-1 h-px bg-gradient-to-r from-transparent to-[#f87171] opacity-70"></div>
+<span class="w-14 text-right px-2 py-1 rounded bg-black/50 text-[#dcdbd5]">Other</span>
+</div>
+<div class="mt-2 grid grid-cols-2 text-[9px] tracking-[0.24em] uppercase text-[#8a8885] font-display">
+<span class="text-left">Beam</span>
+<span class="text-right">Impact / Refraction</span>
+</div>
+</div>
+</div>
+<!-- Right: Explanation -->
+<div class="space-y-6">
+<div class="panel p-8 border-l-4 border-l-[#eecf76]">
+<h3 class="font-display text-xl text-[#eecf76] mb-2">Reading Divergence Cleanly</h3>
+<p class="text-[#dcdbd5] mb-4">
+                        Intent is your aim or account. The Beam is observable conduct. The Prism is the irreducible boundary and whole encounter; Impact is what lands, while Refraction is what the encounter comes to mean.
+                    </p>
+<div id="prismText">
+<p class="text-sm text-[#8a8885] italic">
+                            Legible Beam: conduct is easier to name, but intent still does not erase impact and some refraction remains.
+                        </p>
+</div>
+<div class="mt-5 h-px bg-gradient-to-r from-[#c6a655] to-transparent opacity-35"></div>
+<p class="mt-4 text-xs text-[#8a8885] leading-relaxed">
+<span class="text-[#c6a655]">Beam</span>: words, tone, action, leverage. <span class="text-[#c6a655]">Prism</span>: sender, receiver, injury, power, state, context. <span class="text-[#c6a655]">Impact</span>: what lands. <span class="text-[#c6a655]">Refraction</span>: what is inferred.
+                    </p>
+</div>
+<div class="panel p-5">
+<p class="text-[11px] uppercase tracking-[0.22em] text-[#c6a655] mb-2">Use</p>
+<p class="text-sm text-[#8a8885] leading-relaxed">For self-audit, slower reality checks, repair where real, and boundary or oversight when needed. Not for winning a narrative with projection language.</p>
+</div>
+</div>
+</div>
+<script>
+(function () {
+  const script = document.currentScript;
+  const root = script
+    ? script.closest(
+        '[data-infographic-section-id="part-vi-ethics-and-intimacy-section-01-the-prism-of-impact"]'
+      )
+    : null;
+  if (!root || root.dataset.prismReady === "1") return;
+  root.dataset.prismReady = "1";
+
+  const canvas = root.querySelector("#prismCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  const buttons = Array.from(root.querySelectorAll('[data-role="prism-toggle"]'));
+  const textBox = root.querySelector("#prismText");
+
+  let mode = "clear";
+  let particles = [];
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+  let time = 0;
+
+  function setMode(newMode) {
+    mode = newMode === "refract" ? "refract" : "clear";
+    buttons.forEach((btn) => {
+      const isActive = btn.dataset.mode === mode;
+      btn.classList.toggle("active", isActive);
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+
+    if (textBox) {
+      if (mode === "clear") {
+        textBox.innerHTML =
+          '<p class="text-sm text-[#8a8885] italic">Legible Beam: conduct is easier to name, but intent still does not erase impact and some refraction remains.</p>';
+      } else {
+        textBox.innerHTML =
+          '<p class="text-sm text-[#8a8885] italic">High Refraction: power, injury, activation, history, and context make interpretation harder to separate from what landed. Slow down, check behaviour, and seek outside perspective when needed.</p>';
+      }
+    }
+  }
+
+  function initParticles() {
+    particles = [];
+    for (let i = 0; i < 50; i++) {
+      particles.push({
+        x: 0,
+        y: height / 2 + (Math.random() - 0.5) * 20,
+        speed: 2 + Math.random(),
+        angle: 0,
+        deflect: (Math.random() - 0.5) * 2,
+        wobble: Math.random() * Math.PI * 2,
+      });
+    }
+  }
+
+  function resize() {
+    const parent = canvas.parentElement;
+    if (!parent) return;
+    width = Math.max(1, Math.floor(parent.clientWidth));
+    height = Math.max(1, Math.floor(parent.clientHeight));
+    dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    initParticles();
+  }
+
+  window.addEventListener("resize", resize);
+  resize();
+  setMode(mode);
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const nextMode = btn.dataset.mode || "clear";
+      setMode(nextMode);
+    });
+  });
+
+  function draw() {
+    time += 0.04;
+    ctx.clearRect(0, 0, width, height);
+    const cx = width / 2;
+    const cy = height / 2;
+
+    const prismHeight = Math.min(width, height) * 0.46;
+    const prismHalfWidth = Math.min(prismHeight * 0.58, width * 0.24);
+    const prismTopY = cy - prismHeight / 2;
+    const prismBaseY = cy + prismHeight / 2;
+
+    ctx.save();
+    ctx.globalCompositeOperation = "lighter";
+    ctx.lineCap = "round";
+
+    const entryX = cx - prismHalfWidth * 0.22;
+    const exitX = cx + prismHalfWidth * 0.22;
+
+    ctx.strokeStyle = "rgba(198, 166, 85, 0.14)";
+    ctx.lineWidth = 14;
+    ctx.beginPath();
+    ctx.moveTo(0, cy);
+    ctx.lineTo(entryX, cy);
+    ctx.stroke();
+
+    ctx.strokeStyle = "rgba(238, 207, 118, 0.45)";
+    ctx.lineWidth = 3.5;
+    ctx.beginPath();
+    ctx.moveTo(0, cy);
+    ctx.lineTo(entryX, cy);
+    ctx.stroke();
+
+    const rayCount = mode === "refract" ? 7 : 3;
+    const raySpread = mode === "refract" ? 0.42 : 0.08;
+    for (let i = 0; i < rayCount; i += 1) {
+      const center = (rayCount - 1) / 2;
+      const unit = center === 0 ? 0 : (i - center) / center;
+      const clearHue = 44 + unit * 7 + Math.sin(time * 0.4 + i * 1.7) * 1.2;
+      const wobble =
+        Math.sin(time * (mode === "refract" ? 0.55 : 0.35) + i * 1.7) *
+        (mode === "refract" ? 0.02 : 0.01);
+      const angle = unit * raySpread + wobble;
+      const endY = cy + Math.tan(angle) * (width - exitX);
+
+      ctx.strokeStyle =
+        mode === "refract"
+          ? "rgba(248, 113, 113, 0.18)"
+          : `hsla(${clearHue}, 72%, 55%, 0.11)`;
+      ctx.lineWidth = mode === "refract" ? 10 : 12;
+      ctx.beginPath();
+      ctx.moveTo(exitX, cy);
+      ctx.lineTo(width, endY);
+      ctx.stroke();
+
+      ctx.strokeStyle =
+        mode === "refract"
+          ? "rgba(248, 113, 113, 0.35)"
+          : `hsla(${clearHue}, 82%, 66%, 0.34)`;
+      ctx.lineWidth = 2.6;
+      ctx.beginPath();
+      ctx.moveTo(exitX, cy);
+      ctx.lineTo(width, endY);
+      ctx.stroke();
+    }
+
+    ctx.restore();
+
+    ctx.strokeStyle = "#eecf76";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(cx, prismTopY);
+    ctx.lineTo(cx + prismHalfWidth, prismBaseY);
+    ctx.lineTo(cx - prismHalfWidth, prismBaseY);
+    ctx.closePath();
+    ctx.stroke();
+
+    const grad = ctx.createLinearGradient(cx, prismTopY, cx, prismBaseY);
+    grad.addColorStop(0, "rgba(238, 207, 118, 0.1)");
+    grad.addColorStop(1, "transparent");
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    particles.forEach((p) => {
+      const afterPrism = p.x > cx + prismHalfWidth * 0.08;
+      const maxAngle = mode === "refract" ? 1.05 : 0.18;
+      const jitter =
+        Math.sin(time * (afterPrism ? 1.3 : 0.9) + p.wobble) *
+        (mode === "refract" ? 0.05 : 0.02);
+      const targetAngle = afterPrism ? p.deflect * maxAngle + jitter : 0;
+      p.angle += (targetAngle - p.angle) * (afterPrism ? 0.12 : 0.18);
+
+      p.x += Math.cos(p.angle) * p.speed;
+      p.y += Math.sin(p.angle) * p.speed;
+
+      if (p.x > width) {
+        p.x = 0;
+        p.y = cy + (Math.random() - 0.5) * 20;
+        p.angle = 0;
+        p.deflect = (Math.random() - 0.5) * 2;
+        p.wobble = Math.random() * Math.PI * 2;
+      }
+
+      ctx.fillStyle = mode === "refract" && p.x > cx ? "#f87171" : "#c6a655";
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  requestAnimationFrame(draw);
+})();
+</script>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-vi-ethics-and-intimacy-section-01-the-prism-of-impact</div></section>
+<!-- 2. The Wheel of Consent -->
+<section class="max-w-4xl mx-auto px-6 mb-32 relative z-10" data-infographic-section-id="part-vi-ethics-and-intimacy-section-02-the-wheel-of-consent" data-infographic-selector="#part-vi-ethics-and-intimacy-section-02-the-wheel-of-consent" data-infographic-source="part-vi-ethics-and-intimacy.html" data-infographic-status="published" id="part-vi-ethics-and-intimacy-section-02-the-wheel-of-consent">
+<h2 class="font-display text-3xl text-center text-[#c6a655] mb-4">The Wheel of Consent</h2>
+<p class="text-center text-[#8a8885] mb-6 text-sm uppercase tracking-widest">Who is doing? Who is it for?</p>
+<p class="text-center text-[#8a8885] max-w-3xl mx-auto mb-12 leading-relaxed">Use the Wheel for touch, attention, conversation, and facilitation. The point is not speed. It is clarity, living consent, and enough pause that a clean yes or no can stay sovereign.</p>
+<div class="relative aspect-square max-w-lg mx-auto panel p-1 bg-[#080808]">
+<canvas class="w-full h-full cursor-pointer" id="wheelCanvas"></canvas>
+<!-- Quadrant Labels (Static overlay for clarity) -->
+<div class="absolute top-4 left-1/2 -translate-x-1/2 text-[#8a8885] text-xs tracking-widest bg-black/50 px-2 pointer-events-none">I DO</div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-[#8a8885] text-xs tracking-widest bg-black/50 px-2 pointer-events-none">YOU DO</div>
+<div class="absolute left-4 top-1/2 -translate-y-1/2 -rotate-90 text-[#8a8885] text-xs tracking-widest bg-black/50 px-2 pointer-events-none">FOR ME</div>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 rotate-90 text-[#8a8885] text-xs tracking-widest bg-black/50 px-2 pointer-events-none">FOR YOU</div>
+</div>
+<div class="text-center mt-8 text-[#dcdbd5] min-h-[72px] italic" id="wheelDesc">
+            Hover or tap a quadrant to explore the dynamic. “Let me think about it” is a valid consent response.
+        </div>
+<div class="grid md:grid-cols-2 gap-4 mt-6">
+<div class="panel p-5">
+<p class="text-[11px] uppercase tracking-[0.22em] text-[#c6a655] mb-2">Living-Consent</p>
+<p class="text-sm text-[#8a8885] leading-relaxed">Treat the agreement as ongoing and revocable. If the body wavers, pause. Clarity is cleaner than momentum.</p>
+</div>
+<div class="panel p-5">
+<p class="text-[11px] uppercase tracking-[0.22em] text-[#c6a655] mb-2">Processing Time</p>
+<p class="text-sm text-[#8a8885] leading-relaxed">The Wheel does not have to happen in real time. Step away, check the body, and come back with a truer answer.</p>
+</div>
+</div>
+<script>
+(function () {
+  const script = document.currentScript;
+  const root = script
+    ? script.closest(
+        '[data-infographic-section-id="part-vi-ethics-and-intimacy-section-02-the-wheel-of-consent"]'
+      )
+    : null;
+  if (!root || root.dataset.consentWheelReady === "1") return;
+  root.dataset.consentWheelReady = "1";
+
+  const canvas = root.querySelector("#wheelCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+  const desc = root.querySelector("#wheelDesc");
+  canvas.style.touchAction = "manipulation";
+
+  const quadrants = [
+    {
+      id: "taking",
+      name: "TAKING",
+      sub: "I do, For Me",
+      color: "#facc15",
+      startAngle: -Math.PI,
+      endAngle: -Math.PI / 2,
+      text: "Reach out and claim what you desire, with explicit permission. Check: Am I willing to hear no without collapsing?",
+    },
+    {
+      id: "serving",
+      name: "SERVING",
+      sub: "I do, For You",
+      color: "#4ade80",
+      startAngle: -Math.PI / 2,
+      endAngle: 0,
+      text: "Offer your energy to support another. Watch for martyrdom when you are depleted or giving to be liked rather than to serve.",
+    },
+    {
+      id: "allowing",
+      name: "ALLOWING",
+      sub: "You do, For You",
+      color: "#60a5fa",
+      startAngle: 0,
+      endAngle: Math.PI / 2,
+      text: "Hold space while another takes what they need from you within your boundaries. Watch for resentment when you did not set a limit.",
+    },
+    {
+      id: "accepting",
+      name: "ACCEPTING",
+      sub: "You do, For Me",
+      color: "#f87171",
+      startAngle: Math.PI / 2,
+      endAngle: Math.PI,
+      text: "Receive while another does the action for your benefit. Stay in choice and watch for dissociation or fawning if the body starts leaving.",
+    },
+  ];
+
+  let hoverQuad = null;
+  let selectedQuad = null;
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
+
+  function resize() {
+    const parent = canvas.parentElement;
+    if (!parent) return;
+    width = Math.max(1, Math.floor(parent.clientWidth));
+    height = Math.max(1, Math.floor(parent.clientHeight));
+    dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    draw();
+  }
+
+  window.addEventListener("resize", resize);
+
+  function updateDesc() {
+    if (!desc) return;
+    const active = hoverQuad || selectedQuad;
+    if (active) {
+      desc.innerHTML = `<strong style="color:${active.color}">${active.name} (${active.sub})</strong><br>${active.text}`;
+      return;
+    }
+    desc.innerHTML = "Hover or tap a quadrant to explore the dynamic. “Let me think about it” is a valid consent response.";
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+    const cx = width / 2;
+    const cy = height / 2;
+    const r = Math.min(cx, cy) - 20;
+    const activeQuad = hoverQuad || selectedQuad;
+
+    quadrants.forEach((q) => {
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.arc(cx, cy, r, q.startAngle, q.endAngle);
+      ctx.closePath();
+
+      if (activeQuad === q) {
+        ctx.fillStyle = q.color;
+        ctx.globalAlpha = 0.8;
+      } else {
+        ctx.strokeStyle = "#333";
+        ctx.lineWidth = 1;
+        ctx.fillStyle = "transparent";
+        ctx.globalAlpha = 1;
+        ctx.stroke();
+      }
+      ctx.fill();
+      ctx.globalAlpha = 1;
+
+      const midAngle = (q.startAngle + q.endAngle) / 2;
+      const tx = cx + Math.cos(midAngle) * (r * 0.6);
+      const ty = cy + Math.sin(midAngle) * (r * 0.6);
+
+      ctx.fillStyle = activeQuad === q ? "#000" : "#8a8885";
+      ctx.font = '12px "JetBrains Mono", monospace';
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(q.name, tx, ty);
+    });
+  }
+
+  function getQuad(x, y) {
+    const cx = width / 2;
+    const cy = height / 2;
+    const dx = x - cx;
+    const dy = y - cy;
+    const dist = Math.hypot(dx, dy);
+    if (dist > Math.min(cx, cy) - 20) return null;
+
+    const angle = Math.atan2(dy, dx);
+    return quadrants.find((q) => angle >= q.startAngle && angle < q.endAngle) || null;
+  }
+
+  canvas.addEventListener("pointermove", (event) => {
+    // Only treat pointer movement as hover for mouse. On touch devices, use tap-to-select.
+    if (event.pointerType && event.pointerType !== "mouse") {
+      return;
+    }
+
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    const hit = getQuad(x, y);
+    if (hit === hoverQuad) return;
+    hoverQuad = hit;
+    draw();
+
+    updateDesc();
+    canvas.style.cursor = hit ? "pointer" : "default";
+  });
+
+  canvas.addEventListener("pointerdown", (event) => {
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    const hit = getQuad(x, y);
+    if (!hit) {
+      selectedQuad = null;
+    } else if (selectedQuad === hit) {
+      selectedQuad = null;
+    } else {
+      selectedQuad = hit;
+    }
+    hoverQuad = null;
+    draw();
+    updateDesc();
+  });
+
+  canvas.addEventListener("pointerleave", () => {
+    hoverQuad = null;
+    draw();
+    updateDesc();
+    canvas.style.cursor = "default";
+  });
+
+  resize();
+  updateDesc();
+})();
+</script>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-vi-ethics-and-intimacy-section-02-the-wheel-of-consent</div></section>
+<!-- 3. The Trust Inventory -->
+<section class="max-w-5xl mx-auto px-6 mb-32 relative z-10" data-infographic-section-id="part-vi-ethics-and-intimacy-section-03-the-threads-of-trust" data-infographic-selector="#part-vi-ethics-and-intimacy-section-03-the-threads-of-trust" data-infographic-source="part-vi-ethics-and-intimacy.html" data-infographic-status="published" id="part-vi-ethics-and-intimacy-section-03-the-threads-of-trust">
+<h2 class="font-display text-3xl text-center text-[#c6a655] mb-4">The Threads of Trust</h2>
+<p class="text-center text-[#8a8885] mb-6 text-sm uppercase tracking-widest">Trust is not a binary switch.</p>
+<p class="text-center text-[#8a8885] max-w-3xl mx-auto mb-12 leading-relaxed">When trust feels shaky, do not ask “Do I trust them?” Ask which thread is fraying. Specific diagnosis gives you a cleaner response: repair, boundary, or a quieter exit.</p>
+<div class="grid md:grid-cols-4 gap-4">
+<!-- Thread 1 -->
+<div class="panel p-6 border-t-4 border-t-[#c6a655] hover:bg-[#1a1816] transition-colors group">
+<div class="w-12 h-12 bg-[#5e4f2b]/20 rounded-full flex items-center justify-center mb-4 text-[#eecf76] text-xl font-display group-hover:scale-110 transition-transform">S</div>
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2">Sincerity</h3>
+<p class="text-xs text-[#8a8885]">"Do you mean what you say?"</p>
+<p class="text-[11px] text-[#8a8885] mt-3 leading-relaxed">Are values visible, or is the signal mostly image and spin?</p>
+<div class="mt-4 h-px bg-gradient-to-r from-[#c6a655] to-transparent opacity-50"></div>
+</div>
+<!-- Thread 2 -->
+<div class="panel p-6 border-t-4 border-t-[#c6a655] hover:bg-[#1a1816] transition-colors group">
+<div class="w-12 h-12 bg-[#5e4f2b]/20 rounded-full flex items-center justify-center mb-4 text-[#eecf76] text-xl font-display group-hover:scale-110 transition-transform">R</div>
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2">Reliability</h3>
+<p class="text-xs text-[#8a8885]">"Do you do what you say?"</p>
+<p class="text-[11px] text-[#8a8885] mt-3 leading-relaxed">Can the nervous system stop bracing because follow-through is consistent?</p>
+<div class="mt-4 h-px bg-gradient-to-r from-[#c6a655] to-transparent opacity-50"></div>
+</div>
+<!-- Thread 3 -->
+<div class="panel p-6 border-t-4 border-t-[#c6a655] hover:bg-[#1a1816] transition-colors group">
+<div class="w-12 h-12 bg-[#5e4f2b]/20 rounded-full flex items-center justify-center mb-4 text-[#eecf76] text-xl font-display group-hover:scale-110 transition-transform">C</div>
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2">Competence</h3>
+<p class="text-xs text-[#8a8885]">"Can you do what you promised?"</p>
+<p class="text-[11px] text-[#8a8885] mt-3 leading-relaxed">Good intent is not enough if the person lacks skill, scope, or capacity.</p>
+<div class="mt-4 h-px bg-gradient-to-r from-[#c6a655] to-transparent opacity-50"></div>
+</div>
+<!-- Thread 4 -->
+<div class="panel p-6 border-t-4 border-t-[#c6a655] hover:bg-[#1a1816] transition-colors group">
+<div class="w-12 h-12 bg-[#5e4f2b]/20 rounded-full flex items-center justify-center mb-4 text-[#eecf76] text-xl font-display group-hover:scale-110 transition-transform">C</div>
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2">Care</h3>
+<p class="text-xs text-[#8a8885]">"Do you hold my interest with yours?"</p>
+<p class="text-[11px] text-[#8a8885] mt-3 leading-relaxed">Do they keep your dignity in frame, or only their own urgency and need?</p>
+<div class="mt-4 h-px bg-gradient-to-r from-[#c6a655] to-transparent opacity-50"></div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-4 mt-6">
+<div class="panel p-5">
+<p class="text-[11px] uppercase tracking-[0.22em] text-[#c6a655] mb-2">Name the Thread</p>
+<p class="text-sm text-[#8a8885] leading-relaxed">“I trust your care, but not your reliability” is far more useful than “I don’t trust you.” Specificity turns judgment into discernment.</p>
+</div>
+<div class="panel p-5">
+<p class="text-[11px] uppercase tracking-[0.22em] text-[#c6a655] mb-2">Repair With a Seam</p>
+<p class="text-sm text-[#8a8885] leading-relaxed">A repair is a conscious fold in the relational fabric. You can mend what frayed without collapsing a person into identity.</p>
+</div>
+</div>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-vi-ethics-and-intimacy-section-03-the-threads-of-trust</div></section>
+<!-- 4. The Ethical Compass -->
+<section class="max-w-4xl mx-auto px-6 mb-32 relative z-10" data-infographic-section-id="part-vi-ethics-and-intimacy-section-04-the-ethical-compass" data-infographic-selector="#part-vi-ethics-and-intimacy-section-04-the-ethical-compass" data-infographic-source="part-vi-ethics-and-intimacy.html" data-infographic-status="published" id="part-vi-ethics-and-intimacy-section-04-the-ethical-compass">
+<h2 class="font-display text-3xl text-center text-[#c6a655] mb-4">The Ethical Compass</h2>
+<p class="text-center text-[#8a8885] mb-6 text-sm uppercase tracking-widest">When Heat Rises</p>
+<p class="text-center text-[#8a8885] max-w-3xl mx-auto mb-12 leading-relaxed">These tools are scaffolding, not trophies. Presence, consent, and truthful response are the work. Use the compass for self-audit, cleaner boundaries, and repair where real.</p>
+<div class="grid md:grid-cols-2 gap-6">
+<button aria-pressed="true" class="panel p-6 cursor-pointer hover:border-[#eecf76] transition-colors group text-left w-full" data-active="1" data-role="compass-tool" data-tool="reality" type="button">
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2 group-hover:text-[#eecf76]">Reality Tether</h3>
+<p class="text-xs text-[#8a8885]">Facts, experience, boundary.</p>
+</button>
+<button aria-pressed="false" class="panel p-6 cursor-pointer hover:border-[#eecf76] transition-colors group text-left w-full" data-role="compass-tool" data-tool="repair" type="button">
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2 group-hover:text-[#eecf76]">Repair Protocol</h3>
+<p class="text-xs text-[#8a8885]">Pause, listen, own, follow through.</p>
+</button>
+<button aria-pressed="false" class="panel p-6 cursor-pointer hover:border-[#eecf76] transition-colors group text-left w-full" data-role="compass-tool" data-tool="wheel" type="button">
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2 group-hover:text-[#eecf76]">Wheel of Consent</h3>
+<p class="text-xs text-[#8a8885]">Who is doing, and who is it for?</p>
+</button>
+<button aria-pressed="false" class="panel p-6 cursor-pointer hover:border-[#eecf76] transition-colors group text-left w-full" data-role="compass-tool" data-tool="nvc" type="button">
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2 group-hover:text-[#eecf76]">Embodied NVC</h3>
+<p class="text-xs text-[#8a8885]">Observation, feeling, need, request.</p>
+</button>
+<button aria-pressed="false" class="panel p-6 cursor-pointer hover:border-[#eecf76] transition-colors group text-left w-full" data-role="compass-tool" data-tool="blast" type="button">
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2 group-hover:text-[#eecf76]">Blast Radius</h3>
+<p class="text-xs text-[#8a8885]">Containment should match voltage.</p>
+</button>
+<button aria-pressed="false" class="panel p-6 cursor-pointer hover:border-[#eecf76] transition-colors group text-left w-full" data-role="compass-tool" data-tool="trust" type="button">
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2 group-hover:text-[#eecf76]">Trust Inventory</h3>
+<p class="text-xs text-[#8a8885]">Which thread is fraying?</p>
+</button>
+<button aria-pressed="false" class="panel p-6 cursor-pointer hover:border-[#eecf76] transition-colors group text-left w-full md:col-span-2" data-role="compass-tool" data-tool="generous" type="button">
+<h3 class="font-display text-[#dcdbd5] text-lg mb-2 group-hover:text-[#eecf76]">Generous Interpretation</h3>
+<p class="text-xs text-[#8a8885]">Find three non-malice stories before confrontation.</p>
+</button>
+</div>
+<div class="mt-8 p-6 border border-[#5e4f2b] bg-[#0c0b0b] rounded text-center min-h-[100px] flex items-center justify-center" id="compassOutput">
+<p class="text-[#eecf76]"><strong>Reality Tether</strong><br/>Start with what is observable. Acknowledge their experience without swallowing it, state what you actually did, name the gap, and set the next boundary or pause.</p>
+</div>
+<p class="text-center text-xs text-[#8a8885] mt-4 max-w-3xl mx-auto">If you hold structural power, treat feedback as signal and do not judge your own case. Name what recourse actually exists. These tools are not for dismissing someone naming harm.</p>
+<script>
+(function () {
+  const script = document.currentScript;
+  const root = script
+    ? script.closest(
+        '[data-infographic-section-id="part-vi-ethics-and-intimacy-section-04-the-ethical-compass"]'
+      )
+    : null;
+  if (!root || root.dataset.ethicalCompassReady === "1") return;
+  root.dataset.ethicalCompassReady = "1";
+
+  const output = root.querySelector("#compassOutput");
+  const tools = Array.from(root.querySelectorAll('[data-role="compass-tool"]'));
+  if (!output || !tools.length) return;
+
+  const data = {
+    reality:
+      "<strong>Reality Tether</strong><br>Start with what is observable. Acknowledge their experience without swallowing it, state what you actually did, name the gap, and set the next boundary or pause.",
+    wheel:
+      "<strong>Wheel of Consent</strong><br>Ask who is doing and who it is for when boundaries feel muddy, resentment is building, or a yes is becoming performative.",
+    nvc:
+      "<strong>Embodied NVC</strong><br>Return to observation, feeling, need, and request after you have found enough Serene Center that the tool is not being spoken by pure charge.",
+    blast: "<strong>Blast Radius Check</strong><br>Who is in range? Does your containment match your voltage?",
+    trust:
+      "<strong>Trust Inventory</strong><br>Name the thread: sincerity, reliability, competence, or care. Specific diagnosis makes cleaner repair, boundary, or severance possible.",
+    generous:
+      "<strong>Generous Interpretation</strong><br>Draft three non-malice stories before confrontation so your first draft is not war.",
+    repair:
+      "<strong>Repair Protocol</strong><br>1. Acknowledge 2. Listen 3. Reflect 4. Own your part 5. Ask what repair looks like 6. Follow through or clearly renegotiate.",
+  };
+
+  function showTip(key) {
+    if (!data[key]) return;
+    output.innerHTML = `<p class="text-[#eecf76]">${data[key]}</p>`;
+    tools.forEach((btn) => {
+      const isActive = btn.dataset.tool === key;
+      btn.dataset.active = isActive ? "1" : "0";
+      btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+  }
+
+  tools.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const key = btn.dataset.tool;
+      if (!key) return;
+      showTip(key);
+    });
+  });
+
+  showTip("reality");
+})();
+</script>
+<div aria-label="Infographic Section ID" class="infographic-shell-badge">part-vi-ethics-and-intimacy-section-04-the-ethical-compass</div></section>
+<!-- Footer -->
+<footer class="text-center py-20 px-6 border-t border-[#1a1816] bg-[#080808]">
+<div class="max-w-2xl mx-auto">
+<div class="mb-8 opacity-40">
+<svg class="mx-auto w-12 h-12 text-[#c6a655]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path>
+</svg>
+</div>
+<p class="font-display text-2xl text-[#eecf76] mb-4">"Your presence is the intervention."</p>
+<p class="text-[#5e4f2b] text-sm tracking-widest uppercase">Path of the Dragon</p>
+<a aria-label="Go to the beginning of Part VI" class="inline-flex items-center justify-center mt-6 px-5 py-2 border border-[#5e4f2b] text-[#eecf76] text-xs tracking-[0.22em] uppercase hover:bg-[#161514] transition-colors duration-300" href="../ethics-and-intimacy">
+                Read Part VI From The Beginning
+            </a>
+</div>
+</footer>
+</body>
+</html>
